@@ -7,8 +7,8 @@ export default function Home() {
       <Hero />
       <About />
       <Process />
-      <CTA />
       <Testimonials />
+      <CTA />
       <Footer />
     </main>
   );

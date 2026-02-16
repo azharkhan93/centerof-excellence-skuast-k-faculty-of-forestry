@@ -13,77 +13,82 @@ interface TestimonialCardProps {
 export const TestimonialCard: React.FC<TestimonialCardProps> = ({ testimonial, index }) => {
     return (
         <motion.div
-            initial={{ opacity: 0, y: 50 }}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
-            whileHover={{ y: -8, scale: 1.02 }}
-            className="relative bg-slate-900/50 backdrop-blur-sm border border-slate-800 rounded-2xl p-8 h-full flex flex-col group"
+            transition={{ duration: 0.4, delay: index * 0.1 }}
+            whileHover={{ y: -4 }}
+            className="relative bg-slate-800 rounded-xl p-6 h-full flex flex-col group testimonial-card-advanced overflow-hidden"
+            style={{
+                clipPath: "polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%)"
+            }}
         >
-            {/* Gradient Border Effect */}
-            <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500/20 via-transparent to-purple-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+            {/* Shimmer Effect Container */}
+            <span className="testimonial-shimmer-container">
+                <span className="testimonial-card-shimmer" />
+            </span>
+
+            {/* Advanced Border */}
+            <div className="absolute inset-0 rounded-xl border-2 border-blue-500/30 group-hover:border-blue-500/60 transition-all duration-300 pointer-events-none"
+                style={{
+                    clipPath: "polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%)"
+                }}
+            />
+
+            {/* Notched Corner Accent */}
+            <div className="absolute top-0 right-0 w-5 h-5 bg-blue-500/20 group-hover:bg-blue-500/40 transition-all duration-300"
+                style={{
+                    clipPath: "polygon(100% 0, 100% 100%, 0 0)"
+                }}
+            />
 
             {/* Quote Icon */}
-            <div className="absolute -top-4 -left-4 w-16 h-16 bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30">
-                <Quote className="w-8 h-8 text-white" fill="currentColor" />
-            </div>
-
-            {/* Project Type Badge */}
-            <div className="mb-6 mt-4">
-                <span className="inline-block px-4 py-1.5 bg-blue-500/10 border border-blue-500/30 rounded-full text-blue-400 text-xs font-semibold uppercase tracking-wider">
-                    {testimonial.projectType}
-                </span>
+            <div className="mb-4 relative z-10">
+                <div className="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center border border-blue-500/30">
+                    <Quote className="w-5 h-5 text-blue-400" />
+                </div>
             </div>
 
             {/* Rating Stars */}
-            <div className="flex items-center gap-1 mb-4">
+            <div className="flex items-center gap-0.5 mb-3 relative z-10">
                 {Array.from({ length: testimonial.rating }).map((_, i) => (
-                    <motion.div
-                        key={i}
-                        initial={{ opacity: 0, scale: 0 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.3, delay: index * 0.1 + i * 0.05 }}
-                    >
-                        <Star className="w-5 h-5 text-yellow-400 fill-yellow-400" />
-                    </motion.div>
+                    <Star key={i} className="w-3.5 h-3.5 text-yellow-400 fill-yellow-400" />
                 ))}
             </div>
 
             {/* Testimonial Text */}
-            <blockquote className="flex-1 mb-6">
-                <p className="text-gray-300 text-base leading-relaxed italic">
+            <blockquote className="flex-1 mb-4 relative z-10">
+                <p className="text-gray-300 text-sm leading-relaxed line-clamp-4">
                     "{testimonial.testimonial}"
                 </p>
             </blockquote>
 
             {/* Author Info */}
-            <div className="flex items-center gap-4 pt-6 border-t border-slate-800">
+            <div className="flex items-center gap-3 pt-4 border-t border-slate-700/50 relative z-10">
                 {/* Avatar */}
-                <div className="relative w-14 h-14 rounded-full bg-gradient-to-br from-blue-600 to-purple-600 p-0.5 flex-shrink-0">
-                    <div className="w-full h-full rounded-full bg-slate-900 flex items-center justify-center">
-                        <span className="text-white font-bold text-lg">
-                            {testimonial.name.split(' ').map(n => n[0]).join('')}
-                        </span>
-                    </div>
+                <div className="relative w-10 h-10 rounded-full bg-gradient-to-br from-blue-500 to-blue-700 flex items-center justify-center flex-shrink-0">
+                    <span className="text-white font-semibold text-sm">
+                        {testimonial.name.split(' ').map(n => n[0]).join('')}
+                    </span>
                 </div>
 
                 {/* Name and Role */}
                 <div className="flex-1 min-w-0">
-                    <h4 className="text-white font-bold text-base truncate">
+                    <h4 className="text-white font-semibold text-sm truncate">
                         {testimonial.name}
                     </h4>
-                    <p className="text-gray-400 text-sm truncate">
-                        {testimonial.role}
-                    </p>
-                    <p className="text-blue-400 text-sm font-medium truncate">
-                        {testimonial.company}
+                    <p className="text-gray-400 text-xs truncate">
+                        {testimonial.role} at {testimonial.company}
                     </p>
                 </div>
-            </div>
 
-            {/* Decorative Gradient Orb */}
-            <div className="absolute -bottom-8 -right-8 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+                {/* Project Type Badge */}
+                <div className="flex-shrink-0">
+                    <span className="inline-block px-2 py-1 bg-blue-500/10 border border-blue-500/20 rounded text-blue-400 text-[10px] font-medium uppercase tracking-wide">
+                        {testimonial.projectType}
+                    </span>
+                </div>
+            </div>
         </motion.div>
     );
 };

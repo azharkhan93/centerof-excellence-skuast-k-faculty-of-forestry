@@ -2,7 +2,7 @@
 
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronLeft, ChevronRight, Pause, Play } from "lucide-react";
+import { Users, CheckCircle, TrendingUp, Award } from "lucide-react";
 
 import { TESTIMONIALS } from "@/constants";
 import { useTestimonialSlider } from "@/hooks/useTestimonialSlider";
@@ -11,12 +11,7 @@ import { TestimonialCard } from "./TestimonialCard";
 export const Testimonials: React.FC = () => {
     const {
         currentIndex,
-        nextSlide,
-        prevSlide,
-        goToSlide,
-        isPaused,
-        pauseAutoPlay,
-        resumeAutoPlay
+        goToSlide
     } = useTestimonialSlider({
         totalSlides: TESTIMONIALS.length,
         autoPlayInterval: 5000,
@@ -32,22 +27,7 @@ export const Testimonials: React.FC = () => {
     const visibleTestimonials = getVisibleTestimonials();
 
     return (
-        <section className="relative py-24 bg-slate-950 overflow-hidden">
-            {/* Background Pattern */}
-            <div className="absolute inset-0 opacity-5">
-                <div
-                    className="absolute inset-0"
-                    style={{
-                        backgroundImage: 'linear-gradient(rgba(59, 130, 246, 0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(59, 130, 246, 0.3) 1px, transparent 1px)',
-                        backgroundSize: '50px 50px'
-                    }}
-                />
-            </div>
-
-            {/* Gradient Overlays */}
-            <div className="absolute top-0 left-0 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
-            <div className="absolute bottom-0 right-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl" />
-
+        <section className="relative py-24 overflow-hidden">
             <div className="container mx-auto px-4 relative z-10">
                 {/* Section Header */}
                 <div className="text-center mb-16">
@@ -72,7 +52,7 @@ export const Testimonials: React.FC = () => {
                 {/* Testimonials Carousel */}
                 <div className="relative">
                     {/* Cards Container */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
                         <AnimatePresence mode="popLayout">
                             {visibleTestimonials.map((testimonial, index) => (
                                 <motion.div
@@ -91,95 +71,61 @@ export const Testimonials: React.FC = () => {
                         </AnimatePresence>
                     </div>
 
-                    {/* Navigation Controls */}
-                    <div className="flex items-center justify-center gap-6">
-                        {/* Previous Button */}
-                        <motion.button
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.95 }}
-                            onClick={prevSlide}
-                            className="w-12 h-12 bg-slate-800/50 backdrop-blur-sm rounded-full flex items-center justify-center border border-slate-700 hover:border-blue-500/50 hover:bg-slate-700/50 transition-all group"
-                            aria-label="Previous testimonial"
-                        >
-                            <ChevronLeft className="w-6 h-6 text-gray-400 group-hover:text-blue-400 transition-colors" />
-                        </motion.button>
-
-                        {/* Dots Indicator */}
-                        <div className="flex items-center gap-2">
-                            {Array.from({ length: TESTIMONIALS.length - 2 }).map((_, index) => (
-                                <motion.button
-                                    key={index}
-                                    whileHover={{ scale: 1.2 }}
-                                    whileTap={{ scale: 0.9 }}
-                                    onClick={() => goToSlide(index)}
-                                    className={`transition-all ${currentIndex === index
-                                            ? "w-8 h-2 bg-blue-500"
-                                            : "w-2 h-2 bg-slate-700 hover:bg-slate-600"
-                                        } rounded-full`}
-                                    aria-label={`Go to slide ${index + 1}`}
-                                />
-                            ))}
-                        </div>
-
-                        {/* Next Button */}
-                        <motion.button
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.95 }}
-                            onClick={nextSlide}
-                            className="w-12 h-12 bg-slate-800/50 backdrop-blur-sm rounded-full flex items-center justify-center border border-slate-700 hover:border-blue-500/50 hover:bg-slate-700/50 transition-all group"
-                            aria-label="Next testimonial"
-                        >
-                            <ChevronRight className="w-6 h-6 text-gray-400 group-hover:text-blue-400 transition-colors" />
-                        </motion.button>
-
-                        {/* Play/Pause Button */}
-                        <motion.button
-                            whileHover={{ scale: 1.1 }}
-                            whileTap={{ scale: 0.95 }}
-                            onClick={isPaused ? resumeAutoPlay : pauseAutoPlay}
-                            className="w-12 h-12 bg-slate-800/50 backdrop-blur-sm rounded-full flex items-center justify-center border border-slate-700 hover:border-blue-500/50 hover:bg-slate-700/50 transition-all group ml-2"
-                            aria-label={isPaused ? "Resume autoplay" : "Pause autoplay"}
-                        >
-                            {isPaused ? (
-                                <Play className="w-5 h-5 text-gray-400 group-hover:text-blue-400 transition-colors ml-0.5" />
-                            ) : (
-                                <Pause className="w-5 h-5 text-gray-400 group-hover:text-blue-400 transition-colors" />
-                            )}
-                        </motion.button>
+                    {/* Pagination Dots Only */}
+                    <div className="flex items-center justify-center gap-2">
+                        {Array.from({ length: TESTIMONIALS.length - 2 }).map((_, index) => (
+                            <motion.button
+                                key={index}
+                                whileHover={{ scale: 1.2 }}
+                                whileTap={{ scale: 0.9 }}
+                                onClick={() => goToSlide(index)}
+                                className={`transition-all ${currentIndex === index
+                                    ? "w-8 h-2 bg-blue-500"
+                                    : "w-2 h-2 bg-slate-700 hover:bg-slate-600"
+                                    } rounded-full`}
+                                aria-label={`Go to slide ${index + 1}`}
+                            />
+                        ))}
                     </div>
                 </div>
 
+
                 {/* Stats Section */}
-                <motion.div
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: 0.3 }}
-                    className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 pt-16 border-t border-slate-800"
-                >
-                    {[
-                        { label: "Happy Clients", value: "500+" },
-                        { label: "Projects Completed", value: "1,200+" },
-                        { label: "Success Rate", value: "98%" },
-                        { label: "Years Experience", value: "15+" }
-                    ].map((stat, index) => (
-                        <motion.div
-                            key={stat.label}
-                            initial={{ opacity: 0, scale: 0.8 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.5, delay: index * 0.1 }}
-                            className="text-center"
-                        >
-                            <div className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-400 mb-2">
-                                {stat.value}
-                            </div>
-                            <div className="text-gray-400 text-sm uppercase tracking-wider">
-                                {stat.label}
-                            </div>
-                        </motion.div>
-                    ))}
-                </motion.div>
+                <div className="max-w-4xl mx-auto">
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: 0.3 }}
+                        className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20 pt-12 border-t border-slate-800"
+                    >
+                        {[
+                            { label: "Happy Clients", value: "500+", Icon: Users },
+                            { label: "Projects Completed", value: "1,200+", Icon: CheckCircle },
+                            { label: "Success Rate", value: "98%", Icon: TrendingUp },
+                            { label: "Years Experience", value: "15+", Icon: Award }
+                        ].map((stat, index) => (
+                            <motion.div
+                                key={stat.label}
+                                initial={{ opacity: 0, scale: 0.8 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ duration: 0.5, delay: index * 0.1 }}
+                                className="text-center"
+                            >
+                                <div className="mb-2 flex items-center justify-center">
+                                    <stat.Icon className="w-8 h-8 text-blue-400" />
+                                </div>
+                                <div className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-900 mb-1">
+                                    {stat.value}
+                                </div>
+                                <div className="text-gray-400 text-xs uppercase tracking-wider">
+                                    {stat.label}
+                                </div>
+                            </motion.div>
+                        ))}
+                    </motion.div>
+                </div>
             </div>
         </section>
     );
