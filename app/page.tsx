@@ -1,17 +1,5 @@
-import { Navbar, Hero, About, Process, Services, Testimonials, CTA, Footer, ContactWidget } from "@/components";
+import { redirect } from 'next/navigation';
 
-export default function Home() {
-  return (
-    <main className="relative min-h-screen">
-      <Navbar />
-      <Hero />
-      <About />
-      <Process />
-      <Services />
-      <Testimonials />
-      <CTA />
-      <Footer />
-      <ContactWidget />
-    </main>
-  );
+export default function RootPage() {
+  redirect('/en');
 }

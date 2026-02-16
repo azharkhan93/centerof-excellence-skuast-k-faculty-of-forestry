@@ -266,3 +266,39 @@ export const CONTACT_WIDGET_MESSAGES = {
         submitting: "Submitting..."
     }
 };
+
+// CTA Section Constants
+export const CTA_CONTENT = {
+    heading: "A Better Way to Build Digital Solutions",
+    description: "Turn your ideas into a real website quickly. Select from thousands of free and premium website templates and customize them as you like.",
+    buttons: {
+        getStarted: "Get Started",
+        getPremium: "Get Premium"
+    }
+};
+
+// Services Section Constants
+export const SERVICES_SECTION = {
+    badge: "Our Services",
+    heading: "What We Offer",
+    description: "Comprehensive technology solutions tailored to your business needs",
+    viewAllButton: "View All Services"
+};
+
+// Testimonials Section Constants
+export const TESTIMONIALS_SECTION = {
+    badge: "Testimonials",
+    heading: "What Our Clients Say",
+    description: "Don't just take our word for it. Here's what our clients have to say about working with us.",
+    stats: {
+        happyClients: "Happy Clients",
+        projectsCompleted: "Projects Completed",
+        successRate: "Success Rate",
+        yearsExperience: "Years Experience"
+    }
+};
+
+// Hero Section Constants
+export const HERO_CONTENT = {
+    exploreButton: "Explore"
+};

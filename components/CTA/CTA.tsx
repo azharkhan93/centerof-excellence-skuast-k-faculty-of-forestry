@@ -3,6 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Code2, Smartphone, Cloud, Database, Cpu, Lock, Zap, Globe } from "lucide-react";
+import { useTranslations } from 'next-intl';
 import { Button } from "../Button/Button";
 
 const TECH_ICONS = [Code2, Smartphone, Cloud, Database, Cpu, Lock, Zap, Globe, Code2, Smartphone, Cloud, Database];
@@ -31,9 +32,11 @@ const IconRow = ({ icons, direction }: { icons: typeof TECH_ICONS; direction: "l
 );
 
 export const CTA: React.FC = () => {
+    const t = useTranslations('cta');
+
     return (
         <section className="relative py-16 bg-slate-950 overflow-hidden">
-            
+
             <div className="absolute inset-0 opacity-10">
                 <div className="absolute inset-0" style={{
                     backgroundImage: 'linear-gradient(rgba(59, 130, 246, 0.3) 1px, transparent 1px), linear-gradient(90deg, rgba(59, 130, 246, 0.3) 1px, transparent 1px)',
@@ -43,7 +46,7 @@ export const CTA: React.FC = () => {
 
             <div className="container mx-auto px-4 relative z-10">
                 <div className="flex flex-col lg:flex-row items-center justify-between gap-12">
-                   
+
                     <div className="flex-1 text-left max-w-xl">
                         <motion.h2
                             initial={{ opacity: 0, y: 20 }}
@@ -52,7 +55,7 @@ export const CTA: React.FC = () => {
                             transition={{ duration: 0.6 }}
                             className="text-4xl font-bold text-white mb-4"
                         >
-                            A Better Way to Build Digital Solutions
+                            {t('heading')}
                         </motion.h2>
 
                         <motion.p
@@ -62,7 +65,7 @@ export const CTA: React.FC = () => {
                             transition={{ duration: 0.6, delay: 0.2 }}
                             className="text-gray-400 text-lg mb-8"
                         >
-                            Turn your ideas into a real website quickly. Select from thousands of free and premium website templates and customize them as you like.
+                            {t('description')}
                         </motion.p>
 
                         <motion.div
@@ -72,14 +75,14 @@ export const CTA: React.FC = () => {
                             transition={{ duration: 0.6, delay: 0.4 }}
                             className="flex flex-wrap items-center gap-4"
                         >
-                            <Button size="lg" variant="primary">Get Started</Button>
-                            <Button size="lg" variant="outline">Get Premium</Button>
+                            <Button size="lg" variant="primary">{t('getStarted')}</Button>
+                            <Button size="lg" variant="outline">{t('getPremium')}</Button>
                         </motion.div>
                     </div>
 
-                 
+
                     <div className="flex-shrink-0 relative w-full lg:w-[400px] h-[300px] flex items-center justify-center">
-                      
+
                         <motion.div
                             initial={{ opacity: 0, scale: 0 }}
                             whileInView={{ opacity: 1, scale: 1 }}

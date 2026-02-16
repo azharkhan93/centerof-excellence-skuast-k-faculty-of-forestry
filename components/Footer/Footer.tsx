@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useMemo } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { motion } from "framer-motion";
@@ -14,13 +14,8 @@ import {
     MapPin,
     ArrowUpRight
 } from "lucide-react";
-
-import {
-    FOOTER_SECTIONS,
-    SOCIAL_LINKS,
-    CONTACT_INFO,
-    COMPANY_INFO
-} from "@/constants";
+import { useTranslations } from 'next-intl';
+import { FOOTER_SECTIONS, SOCIAL_LINKS, CONTACT_INFO, COMPANY_INFO } from "@/constants";
 
 const socialIconMap = {
     github: Github,
@@ -30,11 +25,12 @@ const socialIconMap = {
 };
 
 export const Footer: React.FC = () => {
+    const t = useTranslations('footer');
     const currentYear = new Date().getFullYear();
 
     return (
         <footer className="relative bg-slate-950 text-gray-300 overflow-hidden">
-           
+
             <div className="absolute inset-0 opacity-5">
                 <div
                     className="absolute inset-0"
@@ -45,7 +41,7 @@ export const Footer: React.FC = () => {
                 />
             </div>
 
-          
+
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-950/50 to-slate-950" />
 
             <div className="container mx-auto px-4 py-16 relative z-10">
@@ -77,7 +73,7 @@ export const Footer: React.FC = () => {
 
                             {/* Tagline */}
                             <p className="text-blue-400 font-medium mb-3">
-                                {COMPANY_INFO.tagline}
+                                {t('tagline')}
                             </p>
 
                             {/* Description */}
@@ -203,30 +199,11 @@ export const Footer: React.FC = () => {
                     transition={{ duration: 0.5, delay: 0.5 }}
                     className="border-t border-slate-800 pt-8"
                 >
-                    <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+                    <div className="flex  items-center justify-center gap-4">
                         <p className="text-gray-500 text-sm text-center md:text-left">
-                            © {currentYear} {COMPANY_INFO.name}. All rights reserved.
+                            © {currentYear} {COMPANY_INFO.name}. {t('copyright')}
                         </p>
-                        <div className="flex items-center gap-6 text-sm">
-                            <Link
-                                href="#privacy"
-                                className="text-gray-500 hover:text-blue-400 transition-colors"
-                            >
-                                Privacy Policy
-                            </Link>
-                            <Link
-                                href="#terms"
-                                className="text-gray-500 hover:text-blue-400 transition-colors"
-                            >
-                                Terms of Service
-                            </Link>
-                            <Link
-                                href="#cookies"
-                                className="text-gray-500 hover:text-blue-400 transition-colors"
-                            >
-                                Cookie Policy
-                            </Link>
-                        </div>
+                       
                     </div>
                 </motion.div>
             </div>

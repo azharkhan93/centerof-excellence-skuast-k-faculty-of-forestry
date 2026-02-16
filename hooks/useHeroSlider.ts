@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback, useRef } from "react";
-import { SERVICES } from "@/constants";
+import type { Service } from "@/constants";
 
-export const useHeroSlider = (delay = 6000, pause = 10000) => {
+export const useHeroSlider = (services: Service[], delay = 6000, pause = 10000) => {
     const [state, setState] = useState({ 
         index: 0, 
         direction: 0, 
@@ -16,10 +16,10 @@ export const useHeroSlider = (delay = 6000, pause = 10000) => {
             return { 
                 ...s, 
                 direction: next > s.index ? 1 : -1, 
-                index: (next + SERVICES.length) % SERVICES.length 
+                index: (next + services.length) % services.length 
             };
         });
-    }, []);
+    }, [services.length]);
 
     const trigger = useCallback((action: () => void) => {
         if (pauseTimer.current) clearTimeout(pauseTimer.current);
@@ -34,7 +34,7 @@ export const useHeroSlider = (delay = 6000, pause = 10000) => {
         return () => clearInterval(id);
     }, [state.index, state.autoplay, state.isAnimating, move, delay]);
 
-    const getSvc = (offset: number) => SERVICES[(state.index + offset + SERVICES.length) % SERVICES.length];
+    const getSvc = (offset: number) => services[(state.index + offset + services.length) % services.length];
 
     return {
         ...state,
@@ -43,8 +43,8 @@ export const useHeroSlider = (delay = 6000, pause = 10000) => {
         nextSlide: () => trigger(() => move(state.index + 1)),
         prevSlide: () => trigger(() => move(state.index - 1)),
         handleThumbnailClick: (idx: number) => trigger(() => move(idx)),
-        currentService: SERVICES[state.index],
+        currentService: services[state.index],
         nextServices: [getSvc(1), getSvc(2)],
-        totalSteps: SERVICES.length
+        totalSteps: services.length
     };
 };

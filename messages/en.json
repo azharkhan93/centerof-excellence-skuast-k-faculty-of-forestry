@@ -1,0 +1,163 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "process": "Process",
+    "testimonials": "Testimonials",
+    "contact": "Contact",
+    "language": "Language"
+  },
+  "hero": {
+    "explore": "Explore"
+  },
+  "about": {
+    "badge": "ABOUT ISHRAFF TECH",
+    "title": "We Can Help Clients With The",
+    "subtitle": "Perfect Tech Solution",
+    "description": "Providing innovative tech solutions to enhance your business productivity and drive growth worldwide. We specialize in transforming complex challenges into seamless digital experiences.",
+    "stats": {
+      "clients": "Branding and Design Identity",
+      "projects": "Web Site Marketing Solutions",
+      "experience": "Unlimited Digital Data Support"
+    },
+    "exploreMore": "Explore More"
+  },
+  "services": {
+    "badge": "Our Services",
+    "title": "What We Offer",
+    "description": "Comprehensive technology solutions tailored to your business needs",
+    "viewAll": "View All Services",
+    "items": [
+      {
+        "title": "Mobile App",
+        "subtitle": "Development",
+        "description": "Custom mobile solutions built with cutting-edge technologies. We transform complex ideas into intuitive, high-performance applications.",
+        "location": "iOS & Android Solutions"
+      },
+      {
+        "title": "Cyber Secruity",
+        "subtitle": "SECURITY",
+        "description": "Advanced threat protection and infrastructure monitoring. We secure your digital assets with enterprise-grade security protocols.",
+        "location": "Threat Detection & Defense"
+      },
+      {
+        "title": "Cloud Infrastructure",
+        "subtitle": "CLOUD",
+        "description": "Scalable cloud solutions designed for performance and reliability. Build, deploy, and manage applications with enterprise-grade infrastructure.",
+        "location": "AWS, Azure & GCP"
+      },
+      {
+        "title": "AI & Machine Learning",
+        "subtitle": "ARTIFICIAL INTELLIGENCE",
+        "description": "Intelligent automation and predictive analytics powered by cutting-edge AI. Transform data into actionable insights.",
+        "location": "ML Models & Automation"
+      },
+      {
+        "title": "Web Development",
+        "subtitle": "WEB",
+        "description": "Modern, responsive web applications built with the latest frameworks. Fast, secure, and user-friendly digital experiences.",
+        "location": "React, Next.js & More"
+      },
+      {
+        "title": "DevOps Solutions",
+        "subtitle": "OPERATIONS",
+        "description": "Streamline your development pipeline with automated CI/CD workflows. Deploy faster with confidence and reliability.",
+        "location": "CI/CD & Automation"
+      }
+    ]
+  },
+  "testimonials": {
+    "badge": "Testimonials",
+    "title": "What Our Clients Say",
+    "description": "Don't just take our word for it. Here's what our clients have to say about working with us.",
+    "stats": {
+      "clients": "Happy Clients",
+      "projects": "Projects Completed",
+      "successRate": "Success Rate",
+      "experience": "Years Experience"
+    }
+  },
+  "cta": {
+    "heading": "A Better Way to Build Digital Solutions",
+    "description": "Turn your ideas into a real website quickly. Select from thousands of free and premium website templates and customize them as you like.",
+    "getStarted": "Get Started",
+    "getPremium": "Get Premium"
+  },
+  "footer": {
+    "tagline": "Your trusted partner for innovative IT solutions",
+    "company": {
+      "title": "Company",
+      "about": "About Us",
+      "services": "Services",
+      "careers": "Careers",
+      "contact": "Contact"
+    },
+    "services": {
+      "title": "Services",
+      "webDev": "Web Development",
+      "mobileDev": "Mobile Development",
+      "cloud": "Cloud Solutions",
+      "security": "Cybersecurity"
+    },
+    "support": {
+      "title": "Support",
+      "help": "Help Center",
+      "docs": "Documentation",
+      "faq": "FAQ",
+      "contact": "Contact Us"
+    },
+    "legal": {
+      "title": "Legal",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "cookies": "Cookie Policy"
+    },
+    "copyright": "All rights reserved.",
+    "social": {
+      "facebook": "Facebook",
+      "twitter": "Twitter",
+      "linkedin": "LinkedIn",
+      "github": "GitHub"
+    }
+  },
+  "contact": {
+    "header": {
+      "title": "Get in Touch",
+      "subtitle": "We're here to help you"
+    },
+    "tabs": {
+      "contact": "Quick Contact",
+      "callback": "Callback"
+    },
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone Number",
+      "message": "Message",
+      "preferredTime": "Preferred Time",
+      "placeholders": {
+        "name": "Your name",
+        "email": "your@email.com",
+        "phone": "+1 (555) 000-0000",
+        "message": "How can we help you?"
+      },
+      "timeSlots": {
+        "select": "Select a time",
+        "morning": "Morning (9 AM - 12 PM)",
+        "afternoon": "Afternoon (12 PM - 5 PM)",
+        "evening": "Evening (5 PM - 8 PM)"
+      },
+      "buttons": {
+        "send": "Send Message",
+        "callback": "Request Callback",
+        "sending": "Sending...",
+        "submitting": "Submitting..."
+      },
+      "success": {
+        "contact": "Message sent successfully! We'll get back to you soon.",
+        "callback": "Callback request received! We'll call you soon."
+      }
+    }
+  }
+}

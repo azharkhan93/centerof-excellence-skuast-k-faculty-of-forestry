@@ -83,16 +83,23 @@ export const buttonVariants: Variants = {
 };
 
 export const thumbnailVariants: Variants = {
-    enter: { opacity: 0, x: 200, scale: 0.8 },
+    enter: (idx: number) => ({ 
+        opacity: 0, 
+        x: typeof window !== 'undefined' && window.innerWidth < 768 ? 0 : 200, 
+        y: typeof window !== 'undefined' && window.innerWidth < 768 ? 50 : 0,
+        scale: 0.8 
+    }),
     center: (idx: number) => ({ 
         opacity: 1, 
         x: 0, 
+        y: 0,
         scale: 1,
         transition: { delay: idx * 0.1, duration: 0.8, ease: [0.76, 0, 0.24, 1] }
     }),
     exit: { 
         opacity: 0, 
-        x: -200, 
+        x: typeof window !== 'undefined' && window.innerWidth < 768 ? 0 : -200, 
+        y: typeof window !== 'undefined' && window.innerWidth < 768 ? -50 : 0,
         scale: 0.8,
         transition: { duration: 0.6 }
     }

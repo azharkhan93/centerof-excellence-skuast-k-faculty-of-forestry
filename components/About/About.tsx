@@ -3,9 +3,12 @@
 import React from "react";
 import Image from "next/image";
 import { Check, Phone, Play, ArrowRight } from "lucide-react";
+import { useTranslations } from 'next-intl';
 import { Button } from "../Button/Button";
 
 export const About: React.FC = () => {
+    const t = useTranslations('about');
+
     return (
         <section className="py-24 bg-white overflow-hidden">
             <div className="container mx-auto px-4 max-w-7xl">
@@ -27,33 +30,33 @@ export const About: React.FC = () => {
                                 />
                             </div>
 
-                        
+
                             {/* Floating Accent */}
                             <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-blue-600/10 rounded-full blur-3xl z-0" />
                         </div>
                     </div>
 
-                  
+
                     <div className="flex flex-col space-y-8">
                         <div>
                             <span className="text-blue-600 font-bold tracking-wider uppercase text-sm block mb-3">
-                                ABOUT ISHRAFF TECH
+                                {t('badge')}
                             </span>
                             <h2 className="text-4xl md:text-5xl font-bold text-slate-800 leading-tight mb-6">
-                                We Can Help Clients With The <br />
-                                <span className="text-blue-600">Perfect Tech Solution</span>
+                                {t('title')} <br />
+                                <span className="text-blue-600">{t('subtitle')}</span>
                             </h2>
                             <p className="text-gray-600 text-lg leading-relaxed">
-                                Providing innovative tech solutions to enhance your business productivity and drive growth worldwide. We specialize in transforming complex challenges into seamless digital experiences.
+                                {t('description')}
                             </p>
                         </div>
 
                         {/* Checklist */}
                         <div className="space-y-4">
                             {[
-                                "Branding and Design Identity",
-                                "Web Site Marketing Solutions",
-                                "Unlimited Digital Data Support"
+                                t('stats.clients'),
+                                t('stats.projects'),
+                                t('stats.experience')
                             ].map((item, idx) => (
                                 <div key={idx} className="flex items-center space-x-3 group">
                                     <div className="w-6 h-6 rounded-full bg-blue-50 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
@@ -82,17 +85,17 @@ export const About: React.FC = () => {
                                 </div>
                                 <div>
                                     <div className="text-3xl font-bold text-slate-800">2+</div>
-                                    <div className="text-sm text-gray-500 font-medium">Satisfied Clients</div>
+                                    <div className="text-sm text-gray-500 font-medium">{t('stats.clients')}</div>
                                 </div>
                             </div>
 
-                            
+
                             <div className="flex items-center space-x-6">
                                 <Button size="md" >
-                                    Explore More 
+                                    {t('exploreMore')}
                                 </Button>
 
-                               
+
                             </div>
                         </div>
                     </div>
