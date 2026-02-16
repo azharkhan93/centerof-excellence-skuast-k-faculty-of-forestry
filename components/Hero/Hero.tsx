@@ -31,7 +31,7 @@ export const Hero: React.FC = () => {
     } = useHeroSlider();
 
     return (
-        <section className="relative h-screen w-full overflow-hidden bg-black text-white">
+        <section className="relative h-screen w-full overflow-hidden bg-black text-white ">
             {/* Background Image with Reveal Animation */}
             <AnimatePresence initial={false} custom={direction} onExitComplete={() => setIsAnimating(false)}>
                 <motion.div

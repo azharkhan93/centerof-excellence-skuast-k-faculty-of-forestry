@@ -7,3 +7,4 @@ export * from "./Services";
 export * from "./CTA";
 export * from "./Testimonials";
 export * from "./Footer";
+export * from "./ContactWidget";

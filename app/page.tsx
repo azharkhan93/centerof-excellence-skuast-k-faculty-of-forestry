@@ -1,4 +1,4 @@
-import { Navbar, Hero, About, Process, Services, Testimonials, CTA, Footer } from "@/components";
+import { Navbar, Hero, About, Process, Services, Testimonials, CTA, Footer, ContactWidget } from "@/components";
 
 export default function Home() {
   return (
@@ -11,6 +11,7 @@ export default function Home() {
       <Testimonials />
       <CTA />
       <Footer />
+      <ContactWidget />
     </main>
   );
 }
