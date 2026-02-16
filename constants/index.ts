@@ -23,6 +23,38 @@ export const SERVICES: Service[] = [
         description: "Advanced threat protection and infrastructure monitoring. We secure your digital assets with enterprise-grade security protocols.",
         image: "/images/hero/cybersecurity_advanced_premium_slate_1771190420641.png",
         location: "Threat Detection & Defense"
+    },
+    {
+        id: 3,
+        title: "Cloud Infrastructure",
+        subtitle: "CLOUD",
+        description: "Scalable cloud solutions designed for performance and reliability. Build, deploy, and manage applications with enterprise-grade infrastructure.",
+        image: "/images/hero/cloud.png",
+        location: "AWS, Azure & GCP"
+    },
+    {
+        id: 4,
+        title: "AI & Machine Learning",
+        subtitle: "ARTIFICIAL INTELLIGENCE",
+        description: "Intelligent automation and predictive analytics powered by cutting-edge AI. Transform data into actionable insights.",
+        image: "/images/hero/ai.png",
+        location: "ML Models & Automation"
+    },
+    {
+        id: 5,
+        title: "Web Development",
+        subtitle: "WEB",
+        description: "Modern, responsive web applications built with the latest frameworks. Fast, secure, and user-friendly digital experiences.",
+        image: "/images/hero/web.png",
+        location: "React, Next.js & More"
+    },
+    {
+        id: 6,
+        title: "DevOps Solutions",
+        subtitle: "OPERATIONS",
+        description: "Streamline your development pipeline with automated CI/CD workflows. Deploy faster with confidence and reliability.",
+        image: "/images/hero/devops.png",
+        location: "CI/CD & Automation"
     }
 ];
 
