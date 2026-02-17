@@ -72,14 +72,22 @@ export const ProductHighlight = () => {
                                 </div>
                             ))}
                         </div>
-
-                        <Button
-                            variant="primary"
-                            size="lg"
-                            className="bg-slate-900 hover:bg-slate-800 text-white rounded-lg shadow-lg shadow-slate-900/20 group/btn"
-                        >
-                            More Informations
-                        </Button>
+                        <div className="flex gap-5 md:gap-11 flex-row  items-center">
+                            <Button
+                                variant="primary"
+                                size="md"
+                                
+                            >
+                                More Informations
+                            </Button>
+                            <Button
+                                variant="primary"
+                                size="md"
+                               
+                            >
+                                Book A Demo
+                            </Button>
+                        </div>
                     </div>
 
                 </div>

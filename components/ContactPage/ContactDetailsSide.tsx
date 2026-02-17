@@ -12,7 +12,7 @@ export const ContactDetailsSide = () => {
             viewport={{ once: true }}
             className="flex flex-col gap-6"
         >
-            {/* Strategic Consultation Card */}
+            
             <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 flex-1">
                 <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 text-blue-600">
                     <MessageCircle className="w-7 h-7" />
@@ -35,7 +35,7 @@ export const ContactDetailsSide = () => {
                 </div>
             </div>
 
-            {/* Social Media & Presence */}
+          
             <div className="bg-slate-900 p-8 rounded-3xl shadow-xl shadow-slate-900/10 text-white">
                 <div className="flex items-center gap-4 mb-6">
                     <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-blue-400">

@@ -4,6 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Send } from "lucide-react";
 import { CONTACT_WIDGET_MESSAGES } from "@/constants";
+import { FormInput } from "../index";
 
 interface FormData {
     name: string;
@@ -13,7 +14,7 @@ interface FormData {
 
 interface ContactFormProps {
     formData: FormData;
-    onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => void;
+    onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => void;
     onSubmit: (e: React.FormEvent) => void;
     isSubmitting: boolean;
     submitStatus: "idle" | "success" | "error";
@@ -37,50 +38,35 @@ export const ContactForm: React.FC<ContactFormProps> = ({
             onSubmit={onSubmit}
             className="space-y-4"
         >
-            <div>
-                <label className="block text-sm font-medium text-slate-300 mb-2">
-                    Name
-                </label>
-                <input
-                    type="text"
-                    name="name"
-                    value={formData.name}
-                    onChange={onChange}
-                    required
-                    className="w-full px-4 py-2.5 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-                    placeholder={placeholders.name}
-                />
-            </div>
+            <FormInput
+                label="Name"
+                name="name"
+                value={formData.name}
+                onChange={onChange}
+                required
+                placeholder={placeholders.name}
+            />
 
-            <div>
-                <label className="block text-sm font-medium text-slate-300 mb-2">
-                    Email
-                </label>
-                <input
-                    type="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={onChange}
-                    required
-                    className="w-full px-4 py-2.5 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-                    placeholder={placeholders.email}
-                />
-            </div>
+            <FormInput
+                label="Email"
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={onChange}
+                required
+                placeholder={placeholders.email}
+            />
 
-            <div>
-                <label className="block text-sm font-medium text-slate-300 mb-2">
-                    Message
-                </label>
-                <textarea
-                    name="message"
-                    value={formData.message}
-                    onChange={onChange}
-                    required
-                    rows={4}
-                    className="w-full px-4 py-2.5 bg-slate-800/50 border border-slate-700 rounded-lg text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none"
-                    placeholder={placeholders.message}
-                />
-            </div>
+            <FormInput
+                label="Message"
+                type="textarea"
+                name="message"
+                value={formData.message}
+                onChange={onChange}
+                required
+                rows={4}
+                placeholder={placeholders.message}
+            />
 
             {submitStatus === "success" && (
                 <motion.div
