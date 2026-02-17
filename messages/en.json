@@ -159,5 +159,64 @@
         "callback": "Callback request received! We'll call you soon."
       }
     }
+  },
+  "about_page": {
+    "mission": {
+      "badge": "Who We Are",
+      "intro": "Ishraff Tech is a global technology powerhouse dedicated to engineering future-ready digital solutions.",
+      "title": "Our Mission",
+      "text": "To pioneer transformative digital experiences that bridge the gap between complex technology and human-centric design, driving sustainable growth for businesses everywhere."
+    },
+    "vision": {
+      "title": "Our Vision",
+      "text": "To be the global benchmark for innovation in software engineering, recognized for our commitment to excellence, integrity, and the empowerment of our partners."
+    },
+    "values": {
+      "badge": "Core Values",
+      "title": "What Drives Us",
+      "innovation": {
+        "title": "Innovation",
+        "desc": "We constantly push boundaries to find smarter, faster, and more efficient ways to solve problems."
+      },
+      "quality": {
+        "title": "Quality",
+        "desc": "Excellence is not an act, but a habit. We deliver nothing less than gold-standard engineering."
+      },
+      "collaboration": {
+        "title": "Collaboration",
+        "desc": "We believe the best solutions come from diverse perspectives and working as one with our clients."
+      },
+      "excellence": {
+        "title": "Excellence",
+        "desc": "We strive for perfection in every line of code and every pixel, ensuring top-tier results."
+      }
+    },
+    "journey": {
+      "badge": "Our Journey",
+      "title": "A Legacy of Innovation",
+      "foundation": {
+        "title": "Company Foundation",
+        "desc": "Ishraff Tech was born with a vision to redefine digital solutions."
+      },
+      "growth": {
+        "title": "Rapid Expansion",
+        "desc": "Expanded our team to 50+ experts and launched our cloud services."
+      },
+      "innovation_hub": {
+        "title": "Innovation Lab",
+        "desc": "Established our dedicated AI research and development center."
+      },
+      "global_reach": {
+        "title": "Global Presence",
+        "desc": "Serving clients across five continents with local expertise."
+      }
+    },
+    "stats": {
+      "clients": "Active Clients",
+      "projects": "Projects Completed",
+      "experience": "Years of Excellence",
+      "satisfaction": "Client Satisfaction"
+    }
   }
 }
+

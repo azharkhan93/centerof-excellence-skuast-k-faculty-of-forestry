@@ -22,7 +22,6 @@ export const Hero: React.FC = () => {
     const t = useTranslations('hero');
     const tServices = useTranslations('services');
 
-    // Get translated services from message files
     const translatedServices = useMemo(() => {
         return SERVICES.map((service, index) => ({
             ...service,

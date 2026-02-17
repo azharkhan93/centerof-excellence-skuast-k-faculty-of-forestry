@@ -3,6 +3,7 @@ import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { locales } from '@/i18n';
 import { TranslatedConstantsProvider } from '@/hooks/useTranslatedConstants';
+import { Navbar, Footer, ContactWidget } from '@/components';
 
 export function generateStaticParams() {
     return locales.map((locale) => ({ locale }));
@@ -10,12 +11,11 @@ export function generateStaticParams() {
 
 export default async function LocaleLayout({
     children,
-    params
+    params,
 }: {
     children: React.ReactNode;
     params: Promise<{ locale: string }>;
 }) {
-    // Await params in Next.js 16
     const { locale } = await params;
 
     // Validate locale
@@ -23,14 +23,21 @@ export default async function LocaleLayout({
         notFound();
     }
 
-    // Providing all messages to the client side
     const messages = await getMessages();
 
     return (
         <NextIntlClientProvider messages={messages}>
             <TranslatedConstantsProvider>
-                {children}
+                <div className="relative min-h-screen flex flex-col">
+                    <Navbar />
+                    <main className="flex-grow">
+                        {children}
+                    </main>
+                    <ContactWidget />
+                    <Footer />
+                </div>
             </TranslatedConstantsProvider>
         </NextIntlClientProvider>
     );
+
 }

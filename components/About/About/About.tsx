@@ -4,7 +4,8 @@ import React from "react";
 import Image from "next/image";
 import { Check, Phone, Play, ArrowRight } from "lucide-react";
 import { useTranslations } from 'next-intl';
-import { Button } from "../Button/Button";
+import { Button } from "@/components/Button";
+
 
 export const About: React.FC = () => {
     const t = useTranslations('about');

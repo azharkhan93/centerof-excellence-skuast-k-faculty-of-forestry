@@ -41,7 +41,7 @@ export const ServiceItem: React.FC<ServiceItemProps> = ({ service, index }) => {
                             </div>
                             <Sparkles className="absolute -top-1 -right-1 w-3 h-3 text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity" />
                         </motion.div>
-                        <span className="px-3 py-1 bg-slate-800/50 border border-slate-700/50 rounded-full text-xs text-black  uppercase tracking-wider">
+                        <span className="px-3 py-1 bg-slate-600 border border-slate-700/50 rounded-full text-xs text-black  uppercase tracking-wider">
                             {service.subtitle}
                         </span>
                     </div>
@@ -69,7 +69,7 @@ export const ServiceItem: React.FC<ServiceItemProps> = ({ service, index }) => {
                     whileTap={{ scale: 0.95 }}
                     className="flex-shrink-0 w-14 h-14 rounded-full bg-slate-800/50 backdrop-blur-sm border border-slate-700 flex items-center justify-center group-hover:bg-gradient-to-br group-hover:from-blue-500 group-hover:to-blue-600 group-hover:border-blue-500 transition-all duration-300 cursor-pointer shadow-lg group-hover:shadow-blue-500/50"
                 >
-                    <ArrowRight className="w-6 h-6 text-gray-400 group-hover:text-white transition-colors" />
+                    <ArrowRight className="w-6 h-6 text-gray-950 group-hover:text-white transition-colors" />
                 </motion.div>
             </div>
         </motion.li>

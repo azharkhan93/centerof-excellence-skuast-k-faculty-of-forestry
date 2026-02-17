@@ -56,20 +56,19 @@ export const Footer: React.FC = () => {
                             transition={{ duration: 0.5 }}
                         >
                             {/* Logo */}
-                            <div className="flex items-center gap-2 mb-4">
-                                <div className="w-10 h-10 bg-orange-400 rounded-full flex items-center justify-center overflow-hidden">
+                            <Link href="/" className="flex items-center gap-3 mb-6 group cursor-pointer inline-flex">
+                                <div className="relative w-10 h-10 flex items-center justify-center">
                                     <Image
-                                        src="/next.svg"
+                                        src={COMPANY_INFO.logo}
                                         alt={COMPANY_INFO.name}
-                                        width={24}
-                                        height={24}
-                                        className="invert"
+                                        fill
+                                        className="object-contain"
                                     />
                                 </div>
-                                <span className="text-2xl font-bold tracking-tight text-white">
+                                <span className="text-2xl font-bold tracking-tight text-white group-hover:text-blue-400 transition-colors">
                                     {COMPANY_INFO.name}
                                 </span>
-                            </div>
+                            </Link>
 
                             {/* Tagline */}
                             <p className="text-blue-400 font-medium mb-3">
@@ -203,7 +202,7 @@ export const Footer: React.FC = () => {
                         <p className="text-gray-500 text-sm text-center md:text-left">
                             © {currentYear} {COMPANY_INFO.name}. {t('copyright')}
                         </p>
-                       
+
                     </div>
                 </motion.div>
             </div>

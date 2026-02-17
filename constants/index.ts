@@ -144,13 +144,14 @@ export const CONTACT_INFO: ContactInfo = {
     city: "San Francisco",
     state: "CA",
     zip: "94102",
-    country: "United States",
-    email: "contact@foxico.com",
-    phone: "+1 (555) 123-4567"
+    country: "United Arab Emirates",
+    email: "dummytest@gmail.com",
+    phone: "+971 50 123 4567"
 };
 
 export const COMPANY_INFO = {
-    name: "Foxico",
+    name: "TheTechKey",
+    logo: "/images/logo.png",
     tagline: "Building Tomorrow's Digital Solutions",
     description: "We are a leading technology company specializing in cutting-edge digital solutions, from mobile applications to enterprise security systems."
 };
@@ -176,7 +177,7 @@ export const TESTIMONIALS: Testimonial[] = [
         company: "TechVision Inc.",
         image: "/images/testimonials/avatar1.jpg",
         rating: 5,
-        testimonial: "Foxico transformed our mobile app vision into reality. Their expertise in cutting-edge technologies and attention to detail resulted in a product that exceeded our expectations. The team's professionalism and commitment to excellence are unmatched.",
+        testimonial: "Ishraff Tech transformed our mobile app vision into reality. Their expertise in cutting-edge technologies and attention to detail resulted in a product that exceeded our expectations. The team's professionalism and commitment to excellence are unmatched.",
         projectType: "Mobile Development"
     },
     {
@@ -186,7 +187,7 @@ export const TESTIMONIALS: Testimonial[] = [
         company: "SecureNet Solutions",
         image: "/images/testimonials/avatar2.jpg",
         rating: 5,
-        testimonial: "Working with Foxico on our cybersecurity infrastructure was a game-changer. They implemented enterprise-grade security protocols that gave us peace of mind. Their proactive approach to threat detection is exceptional.",
+        testimonial: "Working with Ishraff Tech on our cybersecurity infrastructure was a game-changer. They implemented enterprise-grade security protocols that gave us peace of mind. Their proactive approach to threat detection is exceptional.",
         projectType: "Cyber Security"
     },
     {
@@ -196,7 +197,7 @@ export const TESTIMONIALS: Testimonial[] = [
         company: "CloudScale Systems",
         image: "/images/testimonials/avatar3.jpg",
         rating: 5,
-        testimonial: "The cloud infrastructure solution Foxico delivered was seamless and scalable. Their team understood our complex requirements and delivered a robust system that handles our growing demands effortlessly.",
+        testimonial: "The cloud infrastructure solution Ishraff Tech delivered was seamless and scalable. Their team understood our complex requirements and delivered a robust system that handles our growing demands effortlessly.",
         projectType: "Cloud Solutions"
     },
     {
@@ -206,7 +207,7 @@ export const TESTIMONIALS: Testimonial[] = [
         company: "AI Innovations Lab",
         image: "/images/testimonials/avatar4.jpg",
         rating: 5,
-        testimonial: "Foxico's AI integration expertise helped us stay ahead of the competition. They delivered intelligent solutions that transformed our business processes and improved efficiency by 40%. Truly innovative work!",
+        testimonial: "Ishraff Tech's AI integration expertise helped us stay ahead of the competition. They delivered intelligent solutions that transformed our business processes and improved efficiency by 40%. Truly innovative work!",
         projectType: "AI Integration"
     },
     {
@@ -216,7 +217,7 @@ export const TESTIMONIALS: Testimonial[] = [
         company: "DataFlow Technologies",
         image: "/images/testimonials/avatar5.jpg",
         rating: 5,
-        testimonial: "Outstanding work from start to finish. Foxico's development team is highly skilled, responsive, and dedicated to delivering quality. They turned our complex requirements into an elegant, user-friendly solution.",
+        testimonial: "Outstanding work from start to finish. Ishraff Tech's development team is highly skilled, responsive, and dedicated to delivering quality. They turned our complex requirements into an elegant, user-friendly solution.",
         projectType: "Custom Development"
     },
     {
@@ -226,7 +227,7 @@ export const TESTIMONIALS: Testimonial[] = [
         company: "Enterprise Solutions Group",
         image: "/images/testimonials/avatar6.jpg",
         rating: 5,
-        testimonial: "Foxico's comprehensive approach to our digital transformation was impressive. From planning to execution, they demonstrated deep technical knowledge and excellent project management skills.",
+        testimonial: "Ishraff Tech's comprehensive approach to our digital transformation was impressive. From planning to execution, they demonstrated deep technical knowledge and excellent project management skills.",
         projectType: "Digital Transformation"
     }
 ];
@@ -267,38 +268,34 @@ export const CONTACT_WIDGET_MESSAGES = {
     }
 };
 
-// CTA Section Constants
-export const CTA_CONTENT = {
-    heading: "A Better Way to Build Digital Solutions",
-    description: "Turn your ideas into a real website quickly. Select from thousands of free and premium website templates and customize them as you like.",
-    buttons: {
-        getStarted: "Get Started",
-        getPremium: "Get Premium"
-    }
+// Navigation Links
+export const NAV_LINKS = [
+    { href: "/", labelKey: "home" },
+    { href: "/services", labelKey: "services" },
+    { href: "/about", labelKey: "about" },
+   
+    { href: "/contact", labelKey: "contact" }
+] as const;
+
+
+// About Page Constants
+export const ABOUT_MISSION = {
+    id: "mission",
+    image: "/images/about/mission.jpg"
 };
 
-// Services Section Constants
-export const SERVICES_SECTION = {
-    badge: "Our Services",
-    heading: "What We Offer",
-    description: "Comprehensive technology solutions tailored to your business needs",
-    viewAllButton: "View All Services"
-};
+export const CORE_VALUES = [
+    { id: 1, icon: "Lightbulb", key: "innovation" },
+    { id: 2, icon: "Shield", key: "quality" },
+    { id: 3, icon: "Users", key: "collaboration" },
+    { id: 4, icon: "Trophy", key: "excellence" }
+];
 
-// Testimonials Section Constants
-export const TESTIMONIALS_SECTION = {
-    badge: "Testimonials",
-    heading: "What Our Clients Say",
-    description: "Don't just take our word for it. Here's what our clients have to say about working with us.",
-    stats: {
-        happyClients: "Happy Clients",
-        projectsCompleted: "Projects Completed",
-        successRate: "Success Rate",
-        yearsExperience: "Years Experience"
-    }
-};
+export const COMPANY_JOURNEY = [
+    { id: 1, year: "2018", key: "foundation" },
+    { id: 2, year: "2020", key: "growth" },
+    { id: 3, year: "2022", key: "innovation_hub" },
+    { id: 4, year: "2024", key: "global_reach" }
+];
 
-// Hero Section Constants
-export const HERO_CONTENT = {
-    exploreButton: "Explore"
-};
+

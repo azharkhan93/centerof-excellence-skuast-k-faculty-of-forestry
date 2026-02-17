@@ -14,8 +14,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Foxico - IT Solutions",
-  description: "Transform your business with cutting-edge IT solutions",
+  title: "TheTechKey - Advanced Digital Solutions",
+  description: "Empowering businesses with cutting-edge software engineering, cybersecurity, and AI solutions.",
 };
 
 export default function RootLayout({
