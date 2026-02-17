@@ -146,7 +146,7 @@ export const Hero: React.FC = () => {
                 </AnimatePresence>
             </div>
 
-            {/* Navigation Controls */}
+          
             <div className="absolute bottom-6 md:bottom-16 left-6 md:left-1/2 md:-translate-x-1/2 z-40 flex items-center gap-4 md:gap-6">
                 <button
                     onClick={prevSlide}
@@ -177,7 +177,6 @@ export const Hero: React.FC = () => {
                 <span className="opacity-50 font-mono">0{totalSteps}</span>
             </div>
 
-            {/* Vertical Indicator - Desktop Only */}
             <div className="hidden md:flex absolute left-12 top-1/2 -translate-y-1/2 z-30 flex-col gap-12 items-center">
                 <div className="w-[1px] h-24 bg-white/10 relative">
                     <div className="absolute top-0 left-1/2 -translate-x-1/2 w-3 h-3 rounded-full border border-white/20 bg-white/10" />
