@@ -294,14 +294,30 @@ export const CONTACT_WIDGET_MESSAGES = {
     }
 };
 
-// Navigation Links
-export const NAV_LINKS = [
+
+export interface NavLink {
+    href: string;
+    labelKey: string;
+    subLinks?: {
+        href: string;
+        labelKey: string;
+        icon?: string;
+    }[];
+}
+
+export const NAV_LINKS: NavLink[] = [
     { href: "/", labelKey: "home" },
+    { 
+        href: "/products", 
+        labelKey: "products",
+        subLinks: [
+            { href: "/products/ishraff", labelKey: "ishraff", icon: "Boxes" }
+        ]
+    },
     { href: "/services", labelKey: "services" },
     { href: "/about", labelKey: "about" },
-   
     { href: "/contact", labelKey: "contact" }
-] as const;
+];
 
 
 // About Page Constants
