@@ -141,8 +141,8 @@ export const SOCIAL_LINKS: SocialLink[] = [
 
 export const CONTACT_INFO: ContactInfo = {
     address: "123 Tech Boulevard",
-    city: "San Francisco",
-    state: "CA",
+    city: "Dubai",
+    state: "Dubai",
     zip: "94102",
     country: "United Arab Emirates",
     email: "dummytest@gmail.com",

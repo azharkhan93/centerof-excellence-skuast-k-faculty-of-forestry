@@ -65,12 +65,12 @@ export const Navbar: React.FC = () => {
                         className="object-contain transition-transform duration-300 group-hover:scale-110"
                     />
                 </div>
-                <span className="text-xl md:text-2xl font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-white group-hover:from-orange-400 group-hover:to-orange-500 transition-all duration-300">
+                <span className="text-xl  font-bold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-white to-white group-hover:from-orange-400 group-hover:to-orange-500 transition-all duration-300">
                     {COMPANY_INFO.name}
                 </span>
             </Link>
 
-            {/* Desktop Navigation Links */}
+           
             <div className="hidden lg:flex items-center gap-12 text-sm font-medium">
                 {NAV_LINKS.map((link) => (
                     <Link
