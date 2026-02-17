@@ -9,4 +9,7 @@ export * from "./Testimonials";
 export * from "./Footer";
 export * from "./ContactWidget";
 export * from "./LanguageSwitcher";
-export * from "./PageHeader"
+export * from "./PageHeader";
+export * from "./ProductHighlight";
+export * from "./ServicesPage";
+export * from "./ContactPage";

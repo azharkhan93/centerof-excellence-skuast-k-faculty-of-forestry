@@ -156,6 +156,32 @@ export const COMPANY_INFO = {
     description: "We are a leading technology company specializing in cutting-edge digital solutions, from mobile applications to enterprise security systems."
 };
 
+// Product Types
+export interface Product {
+    id: number;
+    title: string;
+    description: string;
+    image: string;
+    features: string[];
+    link: string;
+}
+
+// Product Data
+export const PRODUCTS: Product[] = [
+    {
+        id: 1,
+        title: "Be In Control",
+        description: "Enhance your achievements in record time and with less effort, all within your budget and timeline. ISHRAFF offers a variety of project management options that make it easy to communicate with your team, assign tasks, and track expenses.",
+        image: "/images/img34.webp",
+        features: [
+            "Communicate with your team",
+            "Assign tasks", 
+            "Track expenses"
+        ],
+        link: "/products/ishraff"
+    }
+];
+
 // Testimonial Types
 export interface Testimonial {
     id: number;
@@ -299,3 +325,67 @@ export const COMPANY_JOURNEY = [
 ];
 
 
+
+export const SERVICES_PAGE_DATA = {
+    hero: {
+        title: "Services",
+        subtitle: "The Technology Key (TTK)",
+        description: "At The Technology Key (TTK), we specialize in delivering tailored technology services designed to meet the unique needs of your business. Our services are crafted to empower your organization and unlock its full potential. Explore our services and discover how we can help transform your business."
+    },
+    services: [
+        {
+            id: "ui-ux",
+            title: "UI & UX Design",
+            description: "The Technology Key provides UI (User Interface) and UX (User Experience) design services, helping businesses create visually appealing, user-friendly, and intuitive applications, websites, and digital products. The company provides a range of services, from user research and wireframing to prototyping, usability testing, and interaction design.",
+            image: "/images/hero/web.png" 
+        },
+        {
+            id: "app-dev",
+            title: "Application Development",
+            description: "One of main service that The Technology Key provide it is application development services, covering everything from mobile apps to custom web applications and enterprise software solutions. The company provides end-to-end services, including planning, design, development, testing, and ongoing support.",
+            image: "/images/hero/zenix_product_showcase_advanced_slate_1771189952426.png"
+        },
+        {
+            id: "tech-support",
+            title: "Technical Support",
+            description: "To help businesses and individuals troubleshoot and resolve various technical issues The Technology Key offer a range of support options, including help desk services, remote assistance, IT consulting, and managed services",
+            image: "/images/hero/devops.png"
+        },
+        {
+            id: "cyber-security",
+            title: "Cyber Security",
+            description: "We are very proud that our products designed to prioritize security, particularly when dealing with sensitive data such as financial information, personal details, or communication by using encryption, multi-factor authentication (MFA), and other security measures to protect our valuable clients from cyber threats.",
+            image: "/images/hero/cybersecurity_advanced_premium_slate_1771190420641.png"
+        }
+    ],
+    whatYouGet: {
+        title: "What You Get",
+        subtitle: "At The technology key (TTK), we believe that our success is what makes us successful. For this reason, we give important to",
+        values: [
+            {
+                id: "commitment",
+                title: "Commitment",
+                description: "We prioritize dedication and reliability, ensuring that promises are met with unwavering focus and consistency.",
+                icon: "Handshake"
+            },
+            {
+                id: "quality",
+                title: "Quality",
+                description: "We are committed to delivering top-tier technology solutions tailored to your needs.",
+                icon: "Award"
+            },
+            {
+                id: "innovation",
+                title: "Innovation",
+                description: "We embrace creativity and forward-thinking, consistently developing new ideas and solutions to meet evolving needs.",
+                icon: "Lightbulb"
+            },
+            {
+                id: "support",
+                title: "Support",
+                description: "Your journey doesn’t end at implementation. We’re here to guide and support you every step of the way.",
+                icon: "Headphones"
+            }
+        ]
+    }
+};
