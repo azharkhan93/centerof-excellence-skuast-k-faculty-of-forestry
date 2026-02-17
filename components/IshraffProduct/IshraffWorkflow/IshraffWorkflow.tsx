@@ -84,7 +84,7 @@ export const IshraffWorkflow: React.FC = () => {
                     </motion.div>
                 </div>
 
-                <div className="flex flex-col lg:flex-row gap-12 lg:gap-0 items-start justify-between">
+                <div className="flex flex-col md:flex-row gap-12 md:gap-0 md:items-start items-center justify-between">
                     {workflow.steps.map((step, idx) => (
                         <WorkflowStep
                             key={step.id}
