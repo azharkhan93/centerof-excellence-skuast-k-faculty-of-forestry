@@ -2,6 +2,8 @@
 
 import { PRODUCTS } from "@/constants";
 import { CheckCircle } from "lucide-react";
+import Link from "next/link";
+import { useLocale } from "next-intl";
 import Image from "next/image";
 import { Button } from "@/components/Button";
 import { motion } from "framer-motion";
@@ -10,6 +12,7 @@ import { Modal } from "@/components/Modal";
 import { DemoRequestForm } from "./DemoRequestForm";
 
 export const ProductHighlight = () => {
+    const locale = useLocale();
     const product = PRODUCTS[0];
     const [isDemoModalOpen, setIsDemoModalOpen] = useState(false);
 
@@ -77,13 +80,15 @@ export const ProductHighlight = () => {
                             ))}
                         </div>
                         <div className="flex gap-5 md:gap-11 flex-row  items-center">
-                            <Button
-                                variant="primary"
-                                size="md"
+                            <Link href={`/${locale}/products/ishraff`}>
+                                <Button
+                                    variant="primary"
+                                    size="md"
 
-                            >
-                                More Informations
-                            </Button>
+                                >
+                                    Know More
+                                </Button>
+                            </Link>
                             <Button
                                 variant="primary"
                                 size="md"
