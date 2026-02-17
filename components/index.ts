@@ -13,4 +13,5 @@ export * from "./PageHeader";
 export * from "./ProductHighlight";
 export * from "./ServicesPage";
 export * from "./ContactPage";
-export * from "./FormInput"
+export * from "./FormInput";
+export * from "./Modal";

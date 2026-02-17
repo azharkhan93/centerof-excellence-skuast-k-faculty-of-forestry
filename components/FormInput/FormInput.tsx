@@ -10,11 +10,11 @@ interface FormInputProps {
     onChange: (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => void;
     required?: boolean;
     placeholder?: string;
-    className?: string; // Additional classes for the input itself
-    containerClassName?: string; // Container classes (like grid spans)
+    className?: string;
+    containerClassName?: string; 
     variant?: "dark" | "light";
-    rows?: number; // for textarea
-    options?: { label: string; value: string }[]; // for select
+    rows?: number; 
+    options?: { label: string; value: string }[]; 
 }
 
 export const FormInput: React.FC<FormInputProps> = ({

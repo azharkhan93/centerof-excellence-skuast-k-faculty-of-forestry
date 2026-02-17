@@ -1,1 +1,2 @@
-export *  from './ProductHighlight';
+export * from './ProductHighlight';
+export * from './DemoRequestForm';

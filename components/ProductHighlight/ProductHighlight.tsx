@@ -5,9 +5,13 @@ import { CheckCircle } from "lucide-react";
 import Image from "next/image";
 import { Button } from "@/components/Button";
 import { motion } from "framer-motion";
+import { useState } from "react";
+import { Modal } from "@/components/Modal";
+import { DemoRequestForm } from "./DemoRequestForm";
 
 export const ProductHighlight = () => {
     const product = PRODUCTS[0];
+    const [isDemoModalOpen, setIsDemoModalOpen] = useState(false);
 
     if (!product) return null;
 
@@ -76,14 +80,14 @@ export const ProductHighlight = () => {
                             <Button
                                 variant="primary"
                                 size="md"
-                                
+
                             >
                                 More Informations
                             </Button>
                             <Button
                                 variant="primary"
                                 size="md"
-                               
+                                onClick={() => setIsDemoModalOpen(true)}
                             >
                                 Book A Demo
                             </Button>
@@ -92,6 +96,15 @@ export const ProductHighlight = () => {
 
                 </div>
             </div>
+
+            <Modal
+                isOpen={isDemoModalOpen}
+                onClose={() => setIsDemoModalOpen(false)}
+                title="Book a Demo"
+                width="max-w-xl"
+            >
+                <DemoRequestForm onSuccess={() => setIsDemoModalOpen(false)} />
+            </Modal>
         </section>
     );
 };
