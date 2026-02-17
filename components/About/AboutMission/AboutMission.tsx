@@ -80,7 +80,7 @@ export const AboutMission: React.FC = () => {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.8, delay: 0.1 }}
-                                className="text-4xl md:text-2xl text-black font-bold  mb-8 leading-[1.1]"
+                                className="text-xl md:text-2xl text-black font-bold  mb-8 leading-[1.1]"
                             >
                                 {t('mission.intro')}
                             </motion.h2>
