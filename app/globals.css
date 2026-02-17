@@ -1,6 +1,6 @@
 @import "tailwindcss";
 
-/* Kinn Font Family Support */
+
 @font-face {
   font-family: 'Kinn';
   src: url('/fonts/kinn/Kinn-Book.woff2') format('woff2'),
@@ -133,7 +133,7 @@ p {
   animation: shimmer 1.8s infinite ease-in-out;
 }
 
-=
+
 .testimonial-card-advanced {
   position: relative;
   z-index: 1;
