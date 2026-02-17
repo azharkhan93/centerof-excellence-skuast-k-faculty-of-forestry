@@ -405,3 +405,149 @@ export const SERVICES_PAGE_DATA = {
         ]
     }
 };
+
+export const ISHRAFF_CONTENT = {
+    hero: {
+        title: "ISHRAFF",
+        subtitle: "SAS platform for remote project and team monitoring",
+        description: "Built for organizations that prioritize transparency and structured execution in distributed, multi-stakeholder environments. Simplicity and functionality at its core.",
+        image: "/images/img34.webp"
+    },
+    features: [
+        {
+            id: "simplicity",
+            title: "Simplicity and Functionality",
+            description: "Our solutions are designed for simplicity, ensuring effortless use for all skill levels.",
+            items: [
+                "Effortless use for all skill levels",
+                "Seamless collaboration and team connection",
+                "Real-time sharing of ideas",
+                "Intuitive tools for efficient goals achieved"
+            ],
+            image: "/images/ihraff1.webp" 
+        },
+        {
+            id: "reliability",
+            title: "Data Credibility and Reliability",
+            description: "Our solutions are designed for effortless usability, ensuring accessibility for users of all skill levels.",
+            items: [
+                "Effortless usability and accessibility",
+                "Connecting teams for seamless collaboration",
+                "Real-time idea sharing",
+                "Accurate and efficient results every time"
+            ],
+            image: "/images/ishraff2.webp"
+        },
+        {
+            id: "design",
+            title: "Design (Visual and Technical)",
+            description: "Our smart dashboard provides instant access to critical data, keeping you informed at a glance.",
+            items: [
+                "Instant access to critical data",
+                "Consolidated key metrics in an intuitive interface",
+                "Real-time updates for staying ahead",
+                "Effortless decision-making insights"
+            ],
+            image: "/images/ishraff3.webp"
+        }
+    ],
+    dashboard: {
+        title: "Smart Dashboard",
+        description: "Instant access to critical data, keeping you informed at a glance. Consolidates key metrics into an intuitive interface, making insights easy to understand.",
+        image: "/images/hero/zenix_product_showcase_advanced_slate_1771189952426.png"
+    },
+    operational: {
+        header: "WHAT SETS ISHRAF APART",
+        title: "Advanced Project Intelligence",
+        subtitle: "Powerful tools that give you complete control — from planning to execution and field monitoring.",
+        divider: "OPERATIONAL CONTROL",
+        feature: {
+            title: "Full Timeline Control with Gantt View",
+            description: "Visualize task dependencies, adjust schedules dynamically, and manage project timelines with clarity.",
+            image: "/images/ishraff/gantt_final.png"
+        }
+    },
+    strategic: {
+        divider: "STRATEGIC OVERSIGHT",
+        sCurve: {
+            title: "Planned vs Actual Performance (S-Curve)",
+            description: "Compare planned performance against actual execution with an interactive S-Curve that highlights variances instantly.",
+            image: "/images/ishraff/scurve.png"
+        },
+        portfolio: {
+            title: "Portfolio-Level Project Oversight",
+            description: "Monitor all your projects in one dashboard with risk indicators and completion rates for each.",
+            image: "/images/ishraff/portfolio.png"
+        }
+    },
+    workflow: {
+        title: "Streamline Your Workflow",
+        steps: [
+            {
+                id: 1,
+                title: "Create a workspace",
+                step: "step 1",
+                icon: "LayoutGrid",
+                description: "Set up your central hub for project and team management."
+            },
+            {
+                id: 2,
+                title: "Invite members",
+                step: "step 2",
+                icon: "UserPlus",
+                description: "Bring your team together in a secure environment."
+            },
+            {
+                id: 3,
+                title: "Create project",
+                step: "step 3",
+                icon: "PlusSquare",
+                description: "Start your specific initiatives with structured goals."
+            },
+            {
+                id: 4,
+                title: "Form the team",
+                step: "step 4",
+                icon: "Users",
+                description: "Assign roles and responsibilities to project members."
+            },
+            {
+                id: 5,
+                title: "Create tasks & assign",
+                step: "step 5",
+                icon: "CheckSquare",
+                description: "Break down execution into clear, trackable actions."
+            }
+        ]
+    },
+    modules: {
+        title: "Advanced System Modules",
+        subtitle: "Powering your enterprise with specialized tools designed for high-stakes environments.",
+        items: [
+            {
+                id: "risk",
+                title: "Risk Management",
+                description: "Advanced risk assessment, mitigation strategies, and real-time threat monitoring for your projects.",
+                tags: ["assessment", "mitigation", "monitoring"],
+                status: "coming soon",
+                icon: "ShieldAlert"
+            },
+            {
+                id: "timesheet",
+                title: "Time Sheet",
+                description: "Intelligent time tracking, automated timesheets, and productivity analytics for your team.",
+                tags: ["tracking", "analytics", "reports"],
+                status: "coming soon",
+                icon: "Clock"
+            },
+            {
+                id: "ai",
+                title: "AI Configuration",
+                description: "Custom AI model training, intelligent automation, and predictive insights for your workflows.",
+                tags: ["machine learning", "automation"],
+                status: "coming soon",
+                icon: "Cpu"
+            }
+        ]
+    }
+};
