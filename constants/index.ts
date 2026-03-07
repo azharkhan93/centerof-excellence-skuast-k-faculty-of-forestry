@@ -4,7 +4,7 @@ export interface Service {
     subtitle: string;
     description: string;
     image: string;
-    location: string; 
+    location: string;
 }
 
 export const SERVICES: Service[] = [
@@ -94,40 +94,28 @@ export const FOOTER_SECTIONS: FooterSection[] = [
         id: 1,
         title: "Services",
         links: [
-            { id: 1, label: "Mobile Development", href: "#mobile" },
-            { id: 2, label: "Cyber Security", href: "#security" },
-            { id: 3, label: "Cloud Solutions", href: "#cloud" },
-            { id: 4, label: "AI Integration", href: "#ai" }
+            { id: 1, label: "Mobile Development", href: "/services" },
+            { id: 2, label: "Cyber Security", href: "/services" },
+            { id: 3, label: "Cloud Solutions", href: "/services" },
+            { id: 4, label: "AI Integration", href: "/services" }
         ]
     },
     {
         id: 2,
         title: "Company",
         links: [
-            { id: 1, label: "About Us", href: "#about" },
-            { id: 2, label: "Careers", href: "#careers" },
-            { id: 3, label: "Blog", href: "#blog" },
-            { id: 4, label: "Contact", href: "#contact" }
+            { id: 1, label: "About Us", href: "/about" },
+            { id: 2, label: "Contact", href: "/contact" },
+            { id: 3, label: "Products", href: "/products" }
         ]
     },
     {
         id: 3,
-        title: "Resources",
-        links: [
-            { id: 1, label: "Documentation", href: "#docs" },
-            { id: 2, label: "Case Studies", href: "#cases" },
-            { id: 3, label: "Support", href: "#support" },
-            { id: 4, label: "Community", href: "#community" }
-        ]
-    },
-    {
-        id: 4,
         title: "Legal",
         links: [
             { id: 1, label: "Privacy Policy", href: "#privacy" },
             { id: 2, label: "Terms of Service", href: "#terms" },
-            { id: 3, label: "Cookie Policy", href: "#cookies" },
-            { id: 4, label: "Compliance", href: "#compliance" }
+            { id: 3, label: "Cookie Policy", href: "#cookies" }
         ]
     }
 ];
@@ -140,13 +128,17 @@ export const SOCIAL_LINKS: SocialLink[] = [
 ];
 
 export const CONTACT_INFO: ContactInfo = {
-    address: "123 Tech Boulevard",
-    city: "Dubai",
-    state: "Dubai",
-    zip: "94102",
-    country: "United Arab Emirates",
-    email: "dummytest@gmail.com",
-    phone: "+971 50 123 4567"
+    address: "Knowledge Oasis Muscat, KOM / Al Seeb / Muscat Governorate, Head Quarters P.O.Box : 34",
+    // city: "Al Seeb",
+    // state: "Muscat Governorate",
+    // zip: "P.O. Box 34",
+    // country: "Sultanate of Oman",
+    email: "support@ishraff.com​",
+    phone: "+968 99449403",
+    city: "",
+    state: "",
+    zip: "",
+    country: ""
 };
 
 export const COMPANY_INFO = {
@@ -175,7 +167,7 @@ export const PRODUCTS: Product[] = [
         image: "/images/img34.webp",
         features: [
             "Communicate with your team",
-            "Assign tasks", 
+            "Assign tasks",
             "Track expenses"
         ],
         link: "/products/ishraff"
@@ -198,7 +190,7 @@ export interface Testimonial {
 export const TESTIMONIALS: Testimonial[] = [
     {
         id: 1,
-        name: "Sarah Johnson",
+        name: "Mr Wakeel Sheikh",
         role: "CTO",
         company: "TechVision Inc.",
         image: "/images/testimonials/avatar1.jpg",
@@ -208,7 +200,7 @@ export const TESTIMONIALS: Testimonial[] = [
     },
     {
         id: 2,
-        name: "Michael Chen",
+        name: "Mr Wajid Naeem",
         role: "CEO",
         company: "SecureNet Solutions",
         image: "/images/testimonials/avatar2.jpg",
@@ -218,7 +210,7 @@ export const TESTIMONIALS: Testimonial[] = [
     },
     {
         id: 3,
-        name: "Emily Rodriguez",
+        name: "Ms Ayesha",
         role: "Product Manager",
         company: "CloudScale Systems",
         image: "/images/testimonials/avatar3.jpg",
@@ -228,7 +220,7 @@ export const TESTIMONIALS: Testimonial[] = [
     },
     {
         id: 4,
-        name: "David Thompson",
+        name: "Mr Junaid",
         role: "Founder",
         company: "AI Innovations Lab",
         image: "/images/testimonials/avatar4.jpg",
@@ -238,8 +230,8 @@ export const TESTIMONIALS: Testimonial[] = [
     },
     {
         id: 5,
-        name: "Lisa Anderson",
-        role: "VP of Engineering",
+        name: "Mr Faizan",
+        role: "Regular Client",
         company: "DataFlow Technologies",
         image: "/images/testimonials/avatar5.jpg",
         rating: 5,
@@ -248,8 +240,8 @@ export const TESTIMONIALS: Testimonial[] = [
     },
     {
         id: 6,
-        name: "James Wilson",
-        role: "Director of IT",
+        name: "Mr Rakib",
+        role: "Regular Client",
         company: "Enterprise Solutions Group",
         image: "/images/testimonials/avatar6.jpg",
         rating: 5,
@@ -307,8 +299,8 @@ export interface NavLink {
 
 export const NAV_LINKS: NavLink[] = [
     { href: "/", labelKey: "home" },
-    { 
-        href: "/products", 
+    {
+        href: "/products",
         labelKey: "products",
         subLinks: [
             { href: "/products/ishraff", labelKey: "ishraff", icon: "Boxes" }
@@ -353,7 +345,7 @@ export const SERVICES_PAGE_DATA = {
             id: "ui-ux",
             title: "UI & UX Design",
             description: "The Technology Key provides UI (User Interface) and UX (User Experience) design services, helping businesses create visually appealing, user-friendly, and intuitive applications, websites, and digital products. The company provides a range of services, from user research and wireframing to prototyping, usability testing, and interaction design.",
-            image: "/images/hero/web.png" 
+            image: "/images/hero/web.png"
         },
         {
             id: "app-dev",
@@ -424,7 +416,7 @@ export const ISHRAFF_CONTENT = {
                 "Real-time sharing of ideas",
                 "Intuitive tools for efficient goals achieved"
             ],
-            image: "/images/ihraff1.webp" 
+            image: "/images/ihraff1.webp"
         },
         {
             id: "reliability",

@@ -143,10 +143,10 @@ export const Testimonials: React.FC = () => {
                         className="grid grid-cols-2 md:grid-cols-4 gap-6 pt-12 border-t border-slate-800"
                     >
                         {[
-                            { label: t('stats.clients'), value: "500+", Icon: Users },
-                            { label: t('stats.projects'), value: "1,200+", Icon: CheckCircle },
-                            { label: t('stats.successRate'), value: "98%", Icon: TrendingUp },
-                            { label: t('stats.experience'), value: "15+", Icon: Award }
+                            { label: t('stats.clients'), value: "30+", Icon: Users },
+                            { label: t('stats.projects'), value: "20+", Icon: CheckCircle },
+                            { label: t('stats.successRate'), value: "100%", Icon: TrendingUp },
+                            { label: t('stats.experience'), value: "5+", Icon: Award }
                         ].map((stat, index) => (
                             <motion.div
                                 key={stat.label}

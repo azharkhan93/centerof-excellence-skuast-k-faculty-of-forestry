@@ -1,22 +1,22 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import type { Service } from "@/constants";
 
-export const useHeroSlider = (services: Service[], delay = 6000, pause = 10000) => {
-    const [state, setState] = useState({ 
-        index: 0, 
-        direction: 0, 
-        isAnimating: false, 
-        autoplay: true 
+export const useHeroSlider = (services: Service[], delay = 4000, pause = 10000) => {
+    const [state, setState] = useState({
+        index: 0,
+        direction: 0,
+        isAnimating: false,
+        autoplay: true
     });
     const pauseTimer = useRef<any>(null);
 
     const move = useCallback((next: number) => {
         setState(s => {
             if (s.isAnimating || next === s.index) return s;
-            return { 
-                ...s, 
-                direction: next > s.index ? 1 : -1, 
-                index: (next + services.length) % services.length 
+            return {
+                ...s,
+                direction: next > s.index ? 1 : -1,
+                index: (next + services.length) % services.length
             };
         });
     }, [services.length]);

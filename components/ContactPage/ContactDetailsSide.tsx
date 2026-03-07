@@ -52,7 +52,7 @@ export const ContactDetailsSide = () => {
                         <span className="text-sm font-medium">LinkedIn</span>
                     </div>
                     <div className="bg-white/5 hover:bg-white/10 p-3 rounded-xl border border-white/5 transition-colors cursor-pointer flex items-center justify-center gap-2">
-                        <span className="text-sm font-medium">Twitter</span>
+                        <span className="text-sm font-medium">Instagram</span>
                     </div>
                 </div>
             </div>

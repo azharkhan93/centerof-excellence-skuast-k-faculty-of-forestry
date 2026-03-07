@@ -146,7 +146,7 @@ export const Hero: React.FC = () => {
                 </AnimatePresence>
             </div>
 
-          
+
             <div className="absolute bottom-6 md:bottom-16 left-6 md:left-1/2 md:-translate-x-1/2 z-40 flex items-center gap-4 md:gap-6">
                 <button
                     onClick={prevSlide}
@@ -170,7 +170,7 @@ export const Hero: React.FC = () => {
                         initial={{ scaleX: 0 }}
                         animate={{ scaleX: 1 }}
                         key={currentIndex}
-                        transition={{ duration: 6, ease: "linear" }}
+                        transition={{ duration: 4, ease: "linear" }}
                         className="absolute top-0 left-0 h-full bg-white w-full origin-left"
                     />
                 </div>

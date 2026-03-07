@@ -14,7 +14,7 @@ import {
     MapPin,
     ArrowUpRight
 } from "lucide-react";
-import { useTranslations } from 'next-intl';
+import { useTranslations, useLocale } from 'next-intl';
 import { FOOTER_SECTIONS, SOCIAL_LINKS, CONTACT_INFO, COMPANY_INFO } from "@/constants";
 
 const socialIconMap = {
@@ -26,7 +26,11 @@ const socialIconMap = {
 
 export const Footer: React.FC = () => {
     const t = useTranslations('footer');
+    const locale = useLocale();
     const currentYear = new Date().getFullYear();
+
+    const localizedHref = (href: string) =>
+        href.startsWith('#') ? href : `/${locale}${href}`;
 
     return (
         <footer className="relative bg-slate-950 text-gray-300 overflow-hidden">
@@ -46,7 +50,7 @@ export const Footer: React.FC = () => {
 
             <div className="container mx-auto px-4 py-16 relative z-10">
                 {/* Main Footer Content */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-12 mb-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
                     {/* Company Info Section */}
                     <div className="lg:col-span-2">
                         <motion.div
@@ -119,7 +123,7 @@ export const Footer: React.FC = () => {
                                 {section.links.map((link) => (
                                     <li key={link.id}>
                                         <Link
-                                            href={link.href}
+                                            href={localizedHref(link.href)}
                                             className="text-gray-400 hover:text-blue-400 transition-colors text-sm flex items-center gap-1 group"
                                         >
                                             {link.label}
@@ -140,18 +144,18 @@ export const Footer: React.FC = () => {
                     transition={{ duration: 0.5, delay: 0.4 }}
                     className="border-t border-slate-800 pt-8 mb-8"
                 >
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div className="flex flex-col md:flex-row justify-between items-start gap-8 md:gap-4">
                         {/* Address */}
-                        <div className="flex items-start gap-3">
+                        <div className="flex items-start gap-3 md:max-w-xs lg:max-w-sm">
                             <div className="w-10 h-10 bg-slate-800/50 backdrop-blur-sm rounded-lg flex items-center justify-center border border-slate-700 flex-shrink-0">
                                 <MapPin className="w-5 h-5 text-blue-400" />
                             </div>
                             <div>
                                 <h4 className="text-white font-semibold text-sm mb-1">Address</h4>
-                                <p className="text-gray-400 text-sm">
-                                    {CONTACT_INFO.address}<br />
-                                    {CONTACT_INFO.city}, {CONTACT_INFO.state} {CONTACT_INFO.zip}<br />
-                                    {CONTACT_INFO.country}
+                                <p className="text-gray-400 text-sm leading-relaxed">
+                                    {CONTACT_INFO.address}
+                                    {CONTACT_INFO.city && <><br />{CONTACT_INFO.city}, {CONTACT_INFO.state} {CONTACT_INFO.zip}</>}
+                                    {CONTACT_INFO.country && <><br />{CONTACT_INFO.country}</>}
                                 </p>
                             </div>
                         </div>
