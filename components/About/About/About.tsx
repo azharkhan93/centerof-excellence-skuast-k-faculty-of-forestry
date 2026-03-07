@@ -86,7 +86,7 @@ export const About: React.FC = () => {
                                 </div>
                                 <div>
                                     <div className="text-3xl font-bold text-slate-800">2+</div>
-                                    <div className="text-sm text-gray-500 font-medium">{t('stats.clients')}</div>
+                                    <div className="text-sm text-gray-500 font-medium">{t('stats.experience')}</div>
                                 </div>
                             </div>
 

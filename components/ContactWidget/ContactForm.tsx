@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Send } from "lucide-react";
-import { CONTACT_WIDGET_MESSAGES } from "@/constants";
+import { useTranslations } from "next-intl";
 import { FormInput } from "../index";
 
 interface FormData {
@@ -27,7 +27,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
     isSubmitting,
     submitStatus
 }) => {
-    const { placeholders, buttons, success } = CONTACT_WIDGET_MESSAGES;
+    const t = useTranslations('contact');
 
     return (
         <motion.form
@@ -39,33 +39,33 @@ export const ContactForm: React.FC<ContactFormProps> = ({
             className="space-y-4"
         >
             <FormInput
-                label="Name"
+                label={t('form.name')}
                 name="name"
                 value={formData.name}
                 onChange={onChange}
                 required
-                placeholder={placeholders.name}
+                placeholder={t('form.placeholders.name')}
             />
 
             <FormInput
-                label="Email"
+                label={t('form.email')}
                 type="email"
                 name="email"
                 value={formData.email}
                 onChange={onChange}
                 required
-                placeholder={placeholders.email}
+                placeholder={t('form.placeholders.email')}
             />
 
             <FormInput
-                label="Message"
+                label={t('form.message')}
                 type="textarea"
                 name="message"
                 value={formData.message}
                 onChange={onChange}
                 required
                 rows={4}
-                placeholder={placeholders.message}
+                placeholder={t('form.placeholders.message')}
             />
 
             {submitStatus === "success" && (
@@ -74,7 +74,7 @@ export const ContactForm: React.FC<ContactFormProps> = ({
                     animate={{ opacity: 1, y: 0 }}
                     className="p-3 bg-green-500/20 border border-green-500/50 rounded-lg text-green-400 text-sm"
                 >
-                    {success.contact}
+                    {t('form.success.contact')}
                 </motion.div>
             )}
 
@@ -86,12 +86,12 @@ export const ContactForm: React.FC<ContactFormProps> = ({
                 {isSubmitting ? (
                     <>
                         <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                        {buttons.sending}
+                        {t('form.buttons.sending')}
                     </>
                 ) : (
                     <>
                         <Send className="w-4 h-4" />
-                        {buttons.sendMessage}
+                        {t('form.buttons.send')}
                     </>
                 )}
             </button>

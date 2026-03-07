@@ -1,9 +1,8 @@
 "use client";
 
-import { PRODUCTS } from "@/constants";
 import { CheckCircle } from "lucide-react";
 import Link from "next/link";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import Image from "next/image";
 import { Button } from "@/components/Button";
 import { motion } from "framer-motion";
@@ -13,10 +12,15 @@ import { DemoRequestForm } from "./DemoRequestForm";
 
 export const ProductHighlight = () => {
     const locale = useLocale();
-    const product = PRODUCTS[0];
+    const t = useTranslations('productHighlight');
     const [isDemoModalOpen, setIsDemoModalOpen] = useState(false);
 
-    if (!product) return null;
+    // Number of features defined in translations
+    const features = [
+        t('features.0'),
+        t('features.1'),
+        t('features.2')
+    ];
 
     return (
         <section className="py-10 bg-white overflow-hidden">
@@ -43,8 +47,8 @@ export const ProductHighlight = () => {
                                 whileHover={{ scale: 1.03 }}
                             >
                                 <Image
-                                    src={product.image}
-                                    alt={product.title}
+                                    src="/images/img34.webp"
+                                    alt={t('title')}
                                     width={600}
                                     height={400}
                                     className="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-110"
@@ -57,19 +61,19 @@ export const ProductHighlight = () => {
 
                     <div className="w-full lg:w-1/2">
                         <div className="bg-slate-50 p-1.5 inline-block rounded-lg mb-3">
-                            <span className="text-slate-800 font-semibold px-2 text-sm">ISHRAFF</span>
+                            <span className="text-slate-800 font-semibold px-2 text-sm">{t('badge')}</span>
                         </div>
 
                         <h2 className="text-2xl lg:text-3xl font-bold text-slate-900 mb-3 leading-tight">
-                            {product.title}
+                            {t('title')}
                         </h2>
 
                         <p className="text-base text-slate-600 mb-6 leading-relaxed">
-                            {product.description}
+                            {t('description')}
                         </p>
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
-                            {product.features.map((feature, index) => (
+                            {features.map((feature, index) => (
                                 <div
                                     key={index}
                                     className="flex items-center gap-2"
@@ -86,7 +90,7 @@ export const ProductHighlight = () => {
                                     size="md"
 
                                 >
-                                    Know More
+                                    {t('knowMore')}
                                 </Button>
                             </Link>
                             <Button
@@ -94,7 +98,7 @@ export const ProductHighlight = () => {
                                 size="md"
                                 onClick={() => setIsDemoModalOpen(true)}
                             >
-                                Book A Demo
+                                {t('bookDemo')}
                             </Button>
                         </div>
                     </div>
@@ -105,7 +109,7 @@ export const ProductHighlight = () => {
             <Modal
                 isOpen={isDemoModalOpen}
                 onClose={() => setIsDemoModalOpen(false)}
-                title="Book a Demo"
+                title={t('modalTitle')}
                 width="max-w-xl"
             >
                 <DemoRequestForm onSuccess={() => setIsDemoModalOpen(false)} />

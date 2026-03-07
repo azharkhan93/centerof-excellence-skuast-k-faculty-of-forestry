@@ -15,7 +15,7 @@ import {
     ArrowUpRight
 } from "lucide-react";
 import { useTranslations, useLocale } from 'next-intl';
-import { FOOTER_SECTIONS, SOCIAL_LINKS, CONTACT_INFO, COMPANY_INFO } from "@/constants";
+import { SOCIAL_LINKS, CONTACT_INFO, COMPANY_INFO } from "@/constants";
 
 const socialIconMap = {
     github: Github,
@@ -31,6 +31,37 @@ export const Footer: React.FC = () => {
 
     const localizedHref = (href: string) =>
         href.startsWith('#') ? href : `/${locale}${href}`;
+
+    const footerSections = useMemo(() => [
+        {
+            id: 1,
+            title: t('services.title'),
+            links: [
+                { id: 1, label: t('services.mobileDev'), href: "/services" },
+                { id: 2, label: t('services.security'), href: "/services" },
+                { id: 3, label: t('services.cloud'), href: "/services" },
+                { id: 4, label: t('services.webDev'), href: "/services" }
+            ]
+        },
+        {
+            id: 2,
+            title: t('company.title'),
+            links: [
+                { id: 1, label: t('company.about'), href: "/about" },
+                { id: 2, label: t('company.products'), href: "/products" },
+                { id: 3, label: t('company.contact'), href: "/contact" }
+            ]
+        },
+        {
+            id: 3,
+            title: t('legal.title'),
+            links: [
+                { id: 1, label: t('legal.privacy'), href: "#privacy" },
+                { id: 2, label: t('legal.terms'), href: "#terms" },
+                { id: 3, label: t('legal.cookies'), href: "#cookies" }
+            ]
+        }
+    ], [t]);
 
     return (
         <footer className="relative bg-slate-950 text-gray-300 overflow-hidden">
@@ -81,7 +112,7 @@ export const Footer: React.FC = () => {
 
                             {/* Description */}
                             <p className="text-gray-400 text-sm leading-relaxed mb-6">
-                                {COMPANY_INFO.description}
+                                {t('description')}
                             </p>
 
                             {/* Social Links */}
@@ -108,7 +139,7 @@ export const Footer: React.FC = () => {
                     </div>
 
                     {/* Navigation Sections */}
-                    {FOOTER_SECTIONS.map((section, sectionIndex) => (
+                    {footerSections.map((section, sectionIndex) => (
                         <motion.div
                             key={section.id}
                             initial={{ opacity: 0, y: 20 }}
@@ -144,14 +175,14 @@ export const Footer: React.FC = () => {
                     transition={{ duration: 0.5, delay: 0.4 }}
                     className="border-t border-slate-800 pt-8 mb-8"
                 >
-                    <div className="flex flex-col md:flex-row justify-between items-start gap-8 md:gap-4">
+                    <div className="flex flex-col md:flex-row justify-between items-start w-full gap-8 md:gap-4">
                         {/* Address */}
                         <div className="flex items-start gap-3 md:max-w-xs lg:max-w-sm">
                             <div className="w-10 h-10 bg-slate-800/50 backdrop-blur-sm rounded-lg flex items-center justify-center border border-slate-700 flex-shrink-0">
                                 <MapPin className="w-5 h-5 text-blue-400" />
                             </div>
                             <div>
-                                <h4 className="text-white font-semibold text-sm mb-1">Address</h4>
+                                <h4 className="text-white font-semibold text-sm mb-1">{t('contactInfo.address')}</h4>
                                 <p className="text-gray-400 text-sm leading-relaxed">
                                     {CONTACT_INFO.address}
                                     {CONTACT_INFO.city && <><br />{CONTACT_INFO.city}, {CONTACT_INFO.state} {CONTACT_INFO.zip}</>}
@@ -166,7 +197,7 @@ export const Footer: React.FC = () => {
                                 <Mail className="w-5 h-5 text-blue-400" />
                             </div>
                             <div>
-                                <h4 className="text-white font-semibold text-sm mb-1">Email</h4>
+                                <h4 className="text-white font-semibold text-sm mb-1">{t('contactInfo.email')}</h4>
                                 <a
                                     href={`mailto:${CONTACT_INFO.email}`}
                                     className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
@@ -182,7 +213,7 @@ export const Footer: React.FC = () => {
                                 <Phone className="w-5 h-5 text-blue-400" />
                             </div>
                             <div>
-                                <h4 className="text-white font-semibold text-sm mb-1">Phone</h4>
+                                <h4 className="text-white font-semibold text-sm mb-1">{t('contactInfo.phone')}</h4>
                                 <a
                                     href={`tel:${CONTACT_INFO.phone}`}
                                     className="text-gray-400 hover:text-blue-400 transition-colors text-sm"

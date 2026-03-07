@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import type { Service } from "@/constants";
 
-export const useHeroSlider = (services: Service[], delay = 4000, pause = 10000) => {
+export const useHeroSlider = (services: Service[], delay = 3000, pause = 10000) => {
     const [state, setState] = useState({
         index: 0,
         direction: 0,

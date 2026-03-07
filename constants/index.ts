@@ -250,41 +250,7 @@ export const TESTIMONIALS: Testimonial[] = [
     }
 ];
 
-// Contact Widget Constants
-export const CONTACT_WIDGET_TABS = [
-    { id: "contact" as const, label: "Quick Contact", icon: "Mail" },
-    { id: "callback" as const, label: "Callback", icon: "Phone" }
-];
 
-export const CALLBACK_TIME_SLOTS = [
-    { value: "", label: "Select a time" },
-    { value: "morning", label: "Morning (9 AM - 12 PM)" },
-    { value: "afternoon", label: "Afternoon (12 PM - 5 PM)" },
-    { value: "evening", label: "Evening (5 PM - 8 PM)" }
-];
-
-export const CONTACT_WIDGET_MESSAGES = {
-    header: {
-        title: "Get in Touch",
-        subtitle: "We're here to help you"
-    },
-    success: {
-        contact: "Message sent successfully! We'll get back to you soon.",
-        callback: "Callback request received! We'll call you soon."
-    },
-    placeholders: {
-        name: "Your name",
-        email: "your@email.com",
-        phone: "+1 (555) 000-0000",
-        message: "How can we help you?"
-    },
-    buttons: {
-        sendMessage: "Send Message",
-        requestCallback: "Request Callback",
-        sending: "Sending...",
-        submitting: "Submitting..."
-    }
-};
 
 
 export interface NavLink {

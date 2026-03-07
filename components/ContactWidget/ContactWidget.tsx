@@ -6,7 +6,7 @@ import { FloatingButton } from "./FloatingButton";
 import { TabNavigation } from "./TabNavigation";
 import { ContactForm } from "./ContactForm";
 import { CallbackForm } from "./CallbackForm";
-import { CONTACT_WIDGET_TABS, CONTACT_WIDGET_MESSAGES } from "@/constants";
+import { useTranslations } from "next-intl";
 
 type TabType = "contact" | "callback";
 
@@ -30,6 +30,7 @@ export const ContactWidget: React.FC = () => {
     });
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
+    const t = useTranslations('contact');
 
     // Close on Escape key
     useEffect(() => {
@@ -81,7 +82,10 @@ export const ContactWidget: React.FC = () => {
         }, 3000);
     };
 
-    const { header } = CONTACT_WIDGET_MESSAGES;
+    const tabs = [
+        { id: "contact" as const, label: t('tabs.contact'), icon: "Mail" },
+        { id: "callback" as const, label: t('tabs.callback'), icon: "Phone" }
+    ];
 
     return (
         <>
@@ -111,13 +115,13 @@ export const ContactWidget: React.FC = () => {
                         >
                             {/* Header */}
                             <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border-b border-slate-700/50 p-4">
-                                <h3 className="text-lg font-bold text-white">{header.title}</h3>
-                                <p className="text-sm text-slate-400">{header.subtitle}</p>
+                                <h3 className="text-lg font-bold text-white">{t('header.title')}</h3>
+                                <p className="text-sm text-slate-400">{t('header.subtitle')}</p>
                             </div>
 
                             {/* Tabs */}
                             <TabNavigation
-                                tabs={CONTACT_WIDGET_TABS}
+                                tabs={tabs}
                                 activeTab={activeTab}
                                 onTabChange={setActiveTab}
                             />

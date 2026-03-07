@@ -170,7 +170,7 @@ export const Hero: React.FC = () => {
                         initial={{ scaleX: 0 }}
                         animate={{ scaleX: 1 }}
                         key={currentIndex}
-                        transition={{ duration: 4, ease: "linear" }}
+                        transition={{ duration: 3, ease: "linear" }}
                         className="absolute top-0 left-0 h-full bg-white w-full origin-left"
                     />
                 </div>

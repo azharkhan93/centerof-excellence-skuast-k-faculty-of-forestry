@@ -3,7 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { Phone } from "lucide-react";
-import { CONTACT_WIDGET_MESSAGES, CALLBACK_TIME_SLOTS } from "@/constants";
+import { useTranslations } from "next-intl";
 import { FormInput } from "../index";
 
 interface FormData {
@@ -27,7 +27,14 @@ export const CallbackForm: React.FC<CallbackFormProps> = ({
     isSubmitting,
     submitStatus
 }) => {
-    const { placeholders, buttons, success } = CONTACT_WIDGET_MESSAGES;
+    const t = useTranslations('contact');
+
+    const timeSlots = [
+        { value: "", label: t('form.timeSlots.select') },
+        { value: "morning", label: t('form.timeSlots.morning') },
+        { value: "afternoon", label: t('form.timeSlots.afternoon') },
+        { value: "evening", label: t('form.timeSlots.evening') }
+    ];
 
     return (
         <motion.form
@@ -39,32 +46,32 @@ export const CallbackForm: React.FC<CallbackFormProps> = ({
             className="space-y-4"
         >
             <FormInput
-                label="Name"
+                label={t('form.name')}
                 name="name"
                 value={formData.name}
                 onChange={onChange}
                 required
-                placeholder={placeholders.name}
+                placeholder={t('form.placeholders.name')}
             />
 
             <FormInput
-                label="Phone Number"
+                label={t('form.phone')}
                 type="tel"
                 name="phone"
                 value={formData.phone}
                 onChange={onChange}
                 required
-                placeholder={placeholders.phone}
+                placeholder={t('form.placeholders.phone')}
             />
 
             <FormInput
-                label="Preferred Time"
+                label={t('form.preferredTime')}
                 type="select"
                 name="preferredTime"
                 value={formData.preferredTime}
                 onChange={onChange}
                 required
-                options={CALLBACK_TIME_SLOTS}
+                options={timeSlots}
             />
 
             {submitStatus === "success" && (
@@ -73,7 +80,7 @@ export const CallbackForm: React.FC<CallbackFormProps> = ({
                     animate={{ opacity: 1, y: 0 }}
                     className="p-3 bg-green-500/20 border border-green-500/50 rounded-lg text-green-400 text-sm"
                 >
-                    {success.callback}
+                    {t('form.success.callback')}
                 </motion.div>
             )}
 
@@ -85,12 +92,12 @@ export const CallbackForm: React.FC<CallbackFormProps> = ({
                 {isSubmitting ? (
                     <>
                         <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                        {buttons.submitting}
+                        {t('form.buttons.submitting')}
                     </>
                 ) : (
                     <>
                         <Phone className="w-4 h-4" />
-                        {buttons.requestCallback}
+                        {t('form.buttons.callback')}
                     </>
                 )}
             </button>
