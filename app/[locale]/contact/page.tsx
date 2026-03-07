@@ -6,12 +6,13 @@ import { useTranslations } from "next-intl";
 
 export default function ContactPage() {
     const t = useTranslations('nav');
+    const tContact = useTranslations('contactPage');
 
     return (
         <main className="min-h-screen ">
             <PageHeader
                 title={t('contact')}
-                description="Have a question or looking to start a project? We'd love to hear from you. Get in touch with our team today."
+                description={tContact('header.description')}
                 bgColor="bg-slate-950"
                 accentColor="from-blue-600 to-indigo-600"
             />

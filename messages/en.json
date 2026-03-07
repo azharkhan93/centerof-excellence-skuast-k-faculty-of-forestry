@@ -305,5 +305,55 @@
       "experience": "Years of Excellence",
       "satisfaction": "Client Satisfaction"
     }
+  },
+  "contactPage": {
+    "header": {
+      "description": "Have a question or looking to start a project? We'd love to hear from you. Get in touch with our team today."
+    },
+    "info": {
+      "visitUs": {
+        "title": "Visit Us"
+      },
+      "emailUs": {
+        "title": "Email Us",
+        "subtitle": "General Enquiries"
+      },
+      "callUs": {
+        "title": "Call Us",
+        "subtitle": "Mon-Fri from 8am to 5pm"
+      },
+      "businessHours": {
+        "title": "Business Hours",
+        "days": "Monday - Friday",
+        "time": "09:00 AM - 06:00 PM"
+      }
+    },
+    "side": {
+      "consultation": {
+        "title": "Strategic Consultation",
+        "description": "Schedule a 30-minute discovery call to discuss your project requirements and how we can help you achieve your goals.",
+        "callTitle": "30 min Discovery",
+        "callSubtitle": "Free call via Google Meet"
+      },
+      "connect": {
+        "title": "Connect With Us",
+        "subtitle": "Stay updated with our latest news",
+        "linkedin": "LinkedIn",
+        "instagram": "Instagram"
+      }
+    },
+    "form": {
+      "title": "Send us a message",
+      "nameLabel": "Name",
+      "namePlaceholder": "John Doe",
+      "emailLabel": "Email",
+      "emailPlaceholder": "john@example.com",
+      "subjectLabel": "Subject",
+      "subjectPlaceholder": "Project Inquiry",
+      "messageLabel": "Message",
+      "messagePlaceholder": "Tell us about your project...",
+      "sendButton": "Send Message",
+      "sendingButton": "Sending..."
+    }
   }
 }

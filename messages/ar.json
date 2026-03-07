@@ -247,5 +247,55 @@
         "callback": "تم استلام طلب معاودة الاتصال! سنتصل بك قريباً."
       }
     }
+  },
+  "contactPage": {
+    "header": {
+      "description": "هل لديك سؤال أو تتطلع إلى بدء مشروع؟ نود أن نسمع منك. تواصل مع فريقنا اليوم."
+    },
+    "info": {
+      "visitUs": {
+        "title": "زرنا"
+      },
+      "emailUs": {
+        "title": "راسلنا",
+        "subtitle": "استفسارات عامة"
+      },
+      "callUs": {
+        "title": "اتصل بنا",
+        "subtitle": "الاثنين - الجمعة من 8 ص إلى 5 م"
+      },
+      "businessHours": {
+        "title": "ساعات العمل",
+        "days": "الاثنين - الجمعة",
+        "time": "09:00 صباحاً - 06:00 مساءً"
+      }
+    },
+    "side": {
+      "consultation": {
+        "title": "استشارة استراتيجية",
+        "description": "حدد موعداً لمكالمة اكتشاف مدتها 30 دقيقة لمناقشة متطلبات مشروعك وكيف يمكننا مساعدتك في تحقيق أهدافك.",
+        "callTitle": "اكتشاف لمدة 30 دقيقة",
+        "callSubtitle": "مكالمة مجانية عبر Google Meet"
+      },
+      "connect": {
+        "title": "تواصل معنا",
+        "subtitle": "ابق على اطلاع بآخر أخبارنا",
+        "linkedin": "لينكد إن",
+        "instagram": "إنستغرام"
+      }
+    },
+    "form": {
+      "title": "أرسل لنا رسالة",
+      "nameLabel": "الاسم",
+      "namePlaceholder": "فلان الفلاني",
+      "emailLabel": "البريد الإلكتروني",
+      "emailPlaceholder": "john@example.com",
+      "subjectLabel": "الموضوع",
+      "subjectPlaceholder": "استفسار عن مشروع",
+      "messageLabel": "الرسالة",
+      "messagePlaceholder": "أخبرنا عن مشروعك...",
+      "sendButton": "إرسال الرسالة",
+      "sendingButton": "جاري الإرسال..."
+    }
   }
 }

@@ -3,8 +3,11 @@
 import { motion } from "framer-motion";
 import { MessageCircle, Share2, HelpCircle, ExternalLink, Clock } from "lucide-react";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 export const ContactDetailsSide = () => {
+    const t = useTranslations('contactPage.side');
+
     return (
         <motion.div
             initial={{ opacity: 0, x: 20 }}
@@ -12,14 +15,14 @@ export const ContactDetailsSide = () => {
             viewport={{ once: true }}
             className="flex flex-col gap-6"
         >
-            
+
             <div className="bg-white p-8 rounded-3xl shadow-sm border border-slate-100 flex-1">
                 <div className="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-6 text-blue-600">
                     <MessageCircle className="w-7 h-7" />
                 </div>
-                <h3 className="text-2xl font-bold text-slate-900 mb-4">Strategic Consultation</h3>
+                <h3 className="text-2xl font-bold text-slate-900 mb-4">{t('consultation.title')}</h3>
                 <p className="text-slate-600 mb-8 leading-relaxed text-lg">
-                    Schedule a 30-minute discovery call to discuss your project requirements and how we can help you achieve your goals.
+                    {t('consultation.description')}
                 </p>
 
                 <div className="space-y-4">
@@ -28,31 +31,31 @@ export const ContactDetailsSide = () => {
                             <Clock className="w-5 h-5" />
                         </div>
                         <div>
-                            <p className="text-sm font-bold text-slate-900">30 min Discovery</p>
-                            <p className="text-xs text-slate-500">Free call via Google Meet</p>
+                            <p className="text-sm font-bold text-slate-900">{t('consultation.callTitle')}</p>
+                            <p className="text-xs text-slate-500">{t('consultation.callSubtitle')}</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-          
+
             <div className="bg-slate-900 p-8 rounded-3xl shadow-xl shadow-slate-900/10 text-white">
                 <div className="flex items-center gap-4 mb-6">
                     <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-blue-400">
                         <Share2 className="w-6 h-6" />
                     </div>
                     <div>
-                        <h4 className="font-bold text-xl">Connect With Us</h4>
-                        <p className="text-slate-400 text-sm">Stay updated with our latest news</p>
+                        <h4 className="font-bold text-xl">{t('connect.title')}</h4>
+                        <p className="text-slate-400 text-sm">{t('connect.subtitle')}</p>
                     </div>
                 </div>
 
                 <div className="grid grid-cols-2 gap-3">
                     <div className="bg-white/5 hover:bg-white/10 p-3 rounded-xl border border-white/5 transition-colors cursor-pointer flex items-center justify-center gap-2">
-                        <span className="text-sm font-medium">LinkedIn</span>
+                        <span className="text-sm font-medium">{t('connect.linkedin')}</span>
                     </div>
                     <div className="bg-white/5 hover:bg-white/10 p-3 rounded-xl border border-white/5 transition-colors cursor-pointer flex items-center justify-center gap-2">
-                        <span className="text-sm font-medium">Instagram</span>
+                        <span className="text-sm font-medium">{t('connect.instagram')}</span>
                     </div>
                 </div>
             </div>

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Button, FormInput } from "@/components";
 import { Send } from "lucide-react";
 import { motion } from "framer-motion";
+import { useTranslations } from "next-intl";
 
 interface FormData {
     name: string;
@@ -13,6 +14,8 @@ interface FormData {
 }
 
 export const ContactPageForm = () => {
+    const t = useTranslations('contactPage.form');
+
     const [formData, setFormData] = useState<FormData>({
         name: "",
         email: "",
@@ -52,49 +55,49 @@ export const ContactPageForm = () => {
             viewport={{ once: true }}
             className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100"
         >
-            <h3 className="text-2xl font-bold text-slate-900 mb-6">Send us a message</h3>
+            <h3 className="text-2xl font-bold text-slate-900 mb-6">{t('title')}</h3>
             <form className="space-y-6" onSubmit={handleSubmit}>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <FormInput
-                        label="Name"
+                        label={t('nameLabel')}
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
                         variant="light"
-                        placeholder="John Doe"
+                        placeholder={t('namePlaceholder')}
                         required
                     />
                     <FormInput
-                        label="Email"
+                        label={t('emailLabel')}
                         type="email"
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
                         variant="light"
-                        placeholder="john@example.com"
+                        placeholder={t('emailPlaceholder')}
                         required
                     />
                 </div>
 
                 <FormInput
-                    label="Subject"
+                    label={t('subjectLabel')}
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
                     variant="light"
-                    placeholder="Project Inquiry"
+                    placeholder={t('subjectPlaceholder')}
                     required
                 />
 
                 <FormInput
-                    label="Message"
+                    label={t('messageLabel')}
                     type="textarea"
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
                     variant="light"
                     rows={5}
-                    placeholder="Tell us about your project..."
+                    placeholder={t('messagePlaceholder')}
                     required
                 />
 
@@ -105,7 +108,7 @@ export const ContactPageForm = () => {
                     disabled={isSubmitting}
                     className="w-full bg-slate-900 hover:bg-slate-800 text-white shadow-xl shadow-slate-900/10 disabled:opacity-50"
                 >
-                    {isSubmitting ? "Sending..." : "Send Message"}
+                    {isSubmitting ? t('sendingButton') : t('sendButton')}
                     <Send className="w-4 h-4 ml-2" />
                 </Button>
             </form>
