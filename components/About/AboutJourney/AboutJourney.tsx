@@ -21,7 +21,7 @@ export const AboutJourney: React.FC = () => {
 
             <div className="container mx-auto px-6 md:px-16 max-w-5xl">
                 <div className="relative">
-                    {/* Center line for desktop */}
+                   
                     <div className="absolute left-1/2 transform -translate-x-1/2 w-0.5 bg-slate-100 h-full hidden lg:block" />
 
                     <div className="space-y-12 lg:space-y-0">
