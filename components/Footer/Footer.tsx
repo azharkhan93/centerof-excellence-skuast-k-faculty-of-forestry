@@ -80,9 +80,9 @@ export const Footer: React.FC = () => {
             <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-950/50 to-slate-950" />
 
             <div className="container mx-auto px-4 py-16 relative z-10">
-                {/* Main Footer Content */}
+                
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
-                    {/* Company Info Section */}
+                   
                     <div className="lg:col-span-2">
                         <motion.div
                             initial={{ opacity: 0, y: 20 }}
@@ -90,7 +90,7 @@ export const Footer: React.FC = () => {
                             viewport={{ once: true }}
                             transition={{ duration: 0.5 }}
                         >
-                            {/* Logo */}
+                            
                             <Link href="/" className="flex items-center gap-3 mb-6 group cursor-pointer inline-flex">
                                 <div className="relative w-10 h-10 flex items-center justify-center">
                                     <Image
@@ -138,7 +138,7 @@ export const Footer: React.FC = () => {
                         </motion.div>
                     </div>
 
-                    {/* Navigation Sections */}
+                   
                     {footerSections.map((section, sectionIndex) => (
                         <motion.div
                             key={section.id}
@@ -167,7 +167,7 @@ export const Footer: React.FC = () => {
                     ))}
                 </div>
 
-                {/* Contact Information Section */}
+                
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -176,7 +176,7 @@ export const Footer: React.FC = () => {
                     className="border-t border-slate-800 pt-8 mb-8"
                 >
                     <div className="flex flex-col md:flex-row justify-between items-start w-full gap-8 md:gap-4">
-                        {/* Address */}
+                       
                         <div className="flex items-start gap-3 md:max-w-xs lg:max-w-sm">
                             <div className="w-10 h-10 bg-slate-800/50 backdrop-blur-sm rounded-lg flex items-center justify-center border border-slate-700 flex-shrink-0">
                                 <MapPin className="w-5 h-5 text-blue-400" />
@@ -191,7 +191,7 @@ export const Footer: React.FC = () => {
                             </div>
                         </div>
 
-                        {/* Email */}
+                       
                         <div className="flex items-start gap-3">
                             <div className="w-10 h-10 bg-slate-800/50 backdrop-blur-sm rounded-lg flex items-center justify-center border border-slate-700 flex-shrink-0">
                                 <Mail className="w-5 h-5 text-blue-400" />
@@ -207,7 +207,7 @@ export const Footer: React.FC = () => {
                             </div>
                         </div>
 
-                        {/* Phone */}
+                       
                         <div className="flex items-start gap-3">
                             <div className="w-10 h-10 bg-slate-800/50 backdrop-blur-sm rounded-lg flex items-center justify-center border border-slate-700 flex-shrink-0">
                                 <Phone className="w-5 h-5 text-blue-400" />
@@ -225,7 +225,7 @@ export const Footer: React.FC = () => {
                     </div>
                 </motion.div>
 
-                {/* Copyright Section */}
+               
                 <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1 }}
