@@ -32,7 +32,7 @@ export const ContactWidget: React.FC = () => {
     const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">("idle");
     const t = useTranslations('contact');
 
-    // Close on Escape key
+   
     useEffect(() => {
         const handleEscape = (e: KeyboardEvent) => {
             if (e.key === "Escape" && isOpen) {
@@ -89,14 +89,14 @@ export const ContactWidget: React.FC = () => {
 
     return (
         <>
-            {/* Floating Button */}
+            
             <FloatingButton isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />
 
-            {/* Widget Panel */}
+           
             <AnimatePresence>
-                {isOpen && (
+                {isOpen ? (
                     <>
-                        {/* Backdrop */}
+                        
                         <motion.div
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
@@ -105,7 +105,7 @@ export const ContactWidget: React.FC = () => {
                             className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40 md:hidden"
                         />
 
-                        {/* Panel */}
+                      
                         <motion.div
                             initial={{ opacity: 0, y: 100, scale: 0.9 }}
                             animate={{ opacity: 1, y: 0, scale: 1 }}
@@ -113,23 +113,23 @@ export const ContactWidget: React.FC = () => {
                             transition={{ type: "spring", damping: 25, stiffness: 300 }}
                             className="fixed bottom-24 right-6 z-50 w-[calc(100vw-3rem)] md:w-[400px] max-h-[600px] bg-slate-900/95 backdrop-blur-xl border border-slate-700/50 rounded-2xl shadow-2xl overflow-hidden"
                         >
-                            {/* Header */}
+                           
                             <div className="bg-gradient-to-r from-blue-500/10 to-purple-500/10 border-b border-slate-700/50 p-4">
                                 <h3 className="text-lg font-bold text-white">{t('header.title')}</h3>
                                 <p className="text-sm text-slate-400">{t('header.subtitle')}</p>
                             </div>
 
-                            {/* Tabs */}
+                          
                             <TabNavigation
                                 tabs={tabs}
                                 activeTab={activeTab}
                                 onTabChange={setActiveTab}
                             />
 
-                            {/* Content */}
+                           
                             <div className="p-4 overflow-y-auto max-h-[450px]">
                                 <AnimatePresence mode="wait">
-                                    {activeTab === "contact" && (
+                                    {activeTab === "contact" ? (
                                         <ContactForm
                                             formData={formData}
                                             onChange={handleInputChange}
@@ -137,9 +137,9 @@ export const ContactWidget: React.FC = () => {
                                             isSubmitting={isSubmitting}
                                             submitStatus={submitStatus}
                                         />
-                                    )}
+                                    ) : null}
 
-                                    {activeTab === "callback" && (
+                                    {activeTab === "callback" ? (
                                         <CallbackForm
                                             formData={formData}
                                             onChange={handleInputChange}
@@ -147,12 +147,12 @@ export const ContactWidget: React.FC = () => {
                                             isSubmitting={isSubmitting}
                                             submitStatus={submitStatus}
                                         />
-                                    )}
+                                    ): null}
                                 </AnimatePresence>
                             </div>
                         </motion.div>
                     </>
-                )}
+                ): null}
             </AnimatePresence>
         </>
     );
