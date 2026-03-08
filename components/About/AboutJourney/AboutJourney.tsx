@@ -27,7 +27,7 @@ export const AboutJourney: React.FC = () => {
                     <div className="space-y-12 lg:space-y-0">
                         {COMPANY_JOURNEY.map((item, index) => (
                             <div key={item.id} className={`lg:flex items-center justify-between ${index % 2 === 0 ? 'lg:flex-row-reverse' : ''}`}>
-                                {/* Timeline content */}
+                              
                                 <motion.div
                                     initial={{ opacity: 0, x: index % 2 === 0 ? 50 : -50 }}
                                     whileInView={{ opacity: 1, x: 0 }}

@@ -15,10 +15,10 @@ export const About: React.FC = () => {
             <div className="container mx-auto px-4 max-w-7xl">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-                    {/* Left Side: Image with Organic Shape */}
+                    
                     <div className="relative">
                         <div className="relative w-full aspect-[4/3] lg:aspect-square">
-                            {/* Organic Blob Background/Mask Container */}
+                           
                             <div className="absolute inset-0 z-0 bg-blue-50/50 rounded-[40%_60%_70%_30%_/_40%_50%_60%_50%] transform -rotate-6 animate-pulse" />
 
                             <div className="relative z-10 w-full h-full overflow-hidden rounded-[30%_70%_70%_30%_/_30%_30%_70%_70%] border-8 border-white shadow-2xl">
@@ -32,7 +32,7 @@ export const About: React.FC = () => {
                             </div>
 
 
-                            {/* Floating Accent */}
+                           
                             <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-blue-600/10 rounded-full blur-3xl z-0" />
                         </div>
                     </div>
@@ -52,7 +52,7 @@ export const About: React.FC = () => {
                             </p>
                         </div>
 
-                        {/* Checklist */}
+                      
                         <div className="space-y-4">
                             {[
                                 t('stats.clients'),
@@ -68,11 +68,11 @@ export const About: React.FC = () => {
                             ))}
                         </div>
 
-                        {/* Divider Line */}
+                      
                         <div className="w-full h-px bg-gray-100" />
 
                         <div className="flex flex-wrap items-center gap-8">
-                            {/* Stats Card */}
+                          
                             <div className="bg-white p-6 shadow-xl shadow-blue-500/5 border-l-4 border-blue-600 flex items-center space-x-5 min-w-[240px]">
                                 <div className="p-3 bg-blue-50 rounded-lg">
                                     <div className="relative w-10 h-10 flex items-center justify-center">
