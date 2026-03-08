@@ -36,7 +36,7 @@ export const ContactPageForm = () => {
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
         setIsSubmitting(true);
-        // Simulate API call
+       
         await new Promise(resolve => setTimeout(resolve, 1500));
         console.log("Form submitted:", formData);
         setIsSubmitting(false);

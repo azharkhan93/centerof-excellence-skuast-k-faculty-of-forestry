@@ -10,7 +10,7 @@ export const ContactInfo = () => {
 
     return (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
-            {/* Address */}
+          
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
@@ -45,7 +45,7 @@ export const ContactInfo = () => {
                 </a>
             </motion.div>
 
-            {/* Phone */}
+           
             <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
