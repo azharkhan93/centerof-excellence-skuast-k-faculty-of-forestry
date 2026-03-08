@@ -46,7 +46,7 @@ export const FloatingButton: React.FC<FloatingButtonProps> = ({ isOpen, onClick 
                 )}
             </AnimatePresence>
 
-            {/* Pulse Animation */}
+          
             {!isOpen && (
                 <span className="absolute inset-0 rounded-full bg-blue-500 animate-ping opacity-20" />
             )}

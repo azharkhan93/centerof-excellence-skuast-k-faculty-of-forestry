@@ -70,7 +70,7 @@ export const ContactWidget: React.FC = () => {
         e.preventDefault();
         setIsSubmitting(true);
 
-        // Simulate API call
+        
         await new Promise(resolve => setTimeout(resolve, 1500));
 
         setIsSubmitting(false);

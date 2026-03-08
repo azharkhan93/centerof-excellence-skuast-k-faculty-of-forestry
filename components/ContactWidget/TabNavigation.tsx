@@ -41,13 +41,13 @@ export const TabNavigation: React.FC<TabNavigationProps> = ({ tabs, activeTab, o
                             <Icon className="w-4 h-4" />
                             <span className="hidden sm:inline">{tab.label}</span>
                         </div>
-                        {activeTab === tab.id && (
+                        {activeTab === tab.id ? (
                             <motion.div
                                 layoutId="activeTab"
                                 className="absolute bottom-0 left-0 right-0 h-0.5 bg-blue-500"
                                 transition={{ type: "spring", damping: 30, stiffness: 300 }}
                             />
-                        )}
+                        ): null}
                     </button>
                 );
             })}
