@@ -6,7 +6,7 @@ import { Mail, Phone } from "lucide-react";
 
 type TabType = "contact" | "callback";
 
-interface Tab {
+type Tab = {
     id: TabType;
     label: string;
     icon: string;
