@@ -50,7 +50,7 @@ export const IshraffFeatures: React.FC = () => {
             <div className="container mx-auto px-6">
                 <div className="flex flex-col gap-8 md:grid md:grid-cols-12 md:grid-rows-6 md:h-[1200px] lg:h-[900px]">
 
-                    {/* Feature 1: Main Visionary Block */}
+                   
                     <motion.div {...anim.fadeScale} className="md:col-span-7 md:row-span-4 relative group rounded-[3rem] overflow-hidden bg-slate-900 border border-white/5 shadow-2xl">
                         <div className="absolute inset-0">
                             <Image src={f1.image} alt={f1.title} fill className="object-cover opacity-40 group-hover:scale-105 transition-transform duration-700" />
@@ -68,7 +68,7 @@ export const IshraffFeatures: React.FC = () => {
                         </div>
                     </motion.div>
 
-                    {/* Feature 2: Organic Floating Block */}
+                   
                     <motion.div {...anim.fadeUp} transition={{ delay: 0.2 }} className="md:col-span-5 md:row-span-3 bg-white rounded-[3rem] p-10 flex flex-col shadow-2xl relative overflow-hidden">
                         <h3 className="text-2xl font-bold text-slate-900 mb-6">{f2.title}</h3>
                         <p className="text-slate-500 text-sm mb-8">{f2.description}</p>
