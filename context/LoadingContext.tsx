@@ -15,8 +15,13 @@ const LoadingContext = createContext<LoadingContextType>({
 export const LoadingProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
     const [isLoaded, setIsLoaded] = useState(false);
 
+    const value = React.useMemo(() => ({
+        isLoaded,
+        setIsLoaded
+    }), [isLoaded]);
+
     return (
-        <LoadingContext.Provider value={{ isLoaded, setIsLoaded }}>
+        <LoadingContext.Provider value={value}>
             {children}
         </LoadingContext.Provider>
     );

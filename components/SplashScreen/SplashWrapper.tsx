@@ -14,10 +14,13 @@ export const SplashWrapper: React.FC<SplashWrapperProps> = ({ children }) => {
     const { setIsLoaded } = useLoading();
 
     useEffect(() => {
-        // Disable scrolling while splash is active
-        if (isSplashActive) {
-            document.body.style.overflow = "hidden";
+        if (!isSplashActive) {
+            document.body.style.overflow = "unset";
+            return;
         }
+
+        // Disable scrolling while splash is active
+        document.body.style.overflow = "hidden";
 
         const timer = setTimeout(() => {
             setIsSplashActive(false);

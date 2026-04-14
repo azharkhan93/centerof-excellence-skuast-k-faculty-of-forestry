@@ -321,6 +321,8 @@ export const NAV_LINKS: NavLink[] = [
     // },
     // { href: "/services", labelKey: "services" },
     { href: "/about", labelKey: "about" },
+    { href: "/team", labelKey: "team" },
+    { href: "/gallery", labelKey: "gallery" },
     { href: "/book-test", labelKey: "bookTest" },
     { href: "/contact", labelKey: "contact" }
 ];

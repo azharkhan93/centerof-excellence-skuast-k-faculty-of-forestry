@@ -50,7 +50,7 @@ export const Hero: React.FC = () => {
 
     return (
         <section className="relative h-screen w-full overflow-hidden bg-black text-white ">
-            {/* Background Image with Reveal Animation */}
+            
             <AnimatePresence initial={true} custom={direction} onExitComplete={() => setIsAnimating(false)}>
                 <motion.div
                     key={currentIndex}
@@ -136,10 +136,11 @@ export const Hero: React.FC = () => {
                                     src={service.image} 
                                     alt={service.title} 
                                     fill 
-                                    className={`object-cover transition-all duration-700 ${isActive ? 'scale-105' : 'group-hover:scale-110'}`}
+                                    className={`object-cover transition-all duration-700 ${isActive ? 'scale-110 brightness-110' : 'group-hover:scale-110'}`}
                                     sizes="(max-width: 768px) 160px, 256px"
+                                    priority={isActive}
                                 />
-                                <div className={`absolute inset-0 bg-gradient-to-t from-black/95 ${isActive ? 'via-brand/5' : 'via-black/30'} to-transparent`} />
+                                <div className={`absolute inset-0 bg-gradient-to-t from-black/70 ${isActive ? 'via-brand/10' : 'via-black/40'} to-transparent`} />
 
                                 <div className="absolute top-3 right-3 md:top-5 md:right-5 z-30">
                                     <button className={`w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center transition-all 
