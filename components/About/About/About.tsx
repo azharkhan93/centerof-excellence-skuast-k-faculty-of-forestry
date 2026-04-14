@@ -11,12 +11,12 @@ export const About: React.FC = () => {
     const t = useTranslations('about');
 
     return (
-        <section className="py-24 bg-white overflow-hidden">
+        <section className=" py-11 md:py-24 bg-white overflow-hidden">
             <div className="container mx-auto px-4 max-w-7xl">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div className="flex flex-col-reverse md:grid md:grid-cols-2 gap-16 items-center">
 
 
-                    <div className="relative">
+                    <div className="relative w-full">
                         <div className="relative w-full aspect-[4/3] lg:aspect-square">
 
                             <div className="absolute inset-0 z-0 bg-blue-50/50 rounded-[40%_60%_70%_30%_/_40%_50%_60%_50%] transform -rotate-6 animate-pulse" />

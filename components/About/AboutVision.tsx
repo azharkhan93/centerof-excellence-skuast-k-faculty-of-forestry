@@ -22,7 +22,7 @@ export const AboutVision: React.FC = () => {
             </motion.div>
 
             <motion.div
-                className="lg:col-span-6"
+                className="md:col-span-6"
             >
                 <div className="flex items-center gap-3 mb-6">
                     <div className="w-8 h-px bg-brand" />
@@ -31,7 +31,7 @@ export const AboutVision: React.FC = () => {
                     </span>
                 </div>
                 
-                <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-8 leading-tight tracking-tight">
+                <h2 className="text-4xl font-bold text-slate-900 mb-8 leading-tight tracking-tight">
                     Bridging tradition with <br />
                     <span className="text-brand">high-precision science.</span>
                 </h2>

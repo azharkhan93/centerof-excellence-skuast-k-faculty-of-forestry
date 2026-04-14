@@ -71,7 +71,7 @@ const StatCard = ({ item, index }: { item: typeof STATS_DATA[0], index: number }
 
 export const Stats: React.FC = () => {
     return (
-        <section className="relative py-12 z-10 -mt-12 md:-mt-16">
+        <section className="relative py-12 z-10 -mt-6 md:-mt-16">
             <div className="container mx-auto px-4 md:px-6">
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6">
                     {STATS_DATA.map((item, index) => (
