@@ -5,8 +5,8 @@ export default function Home() {
         <main>
             <Hero />
             <Stats />
-            <AboutMission />
-            {/* <About /> */}
+            {/* <AboutMission /> */}
+             <About /> 
             <CoreObjectives />
             <InnovationPillars />
             <Process />

@@ -270,20 +270,20 @@
       "badge": "Our Journey",
       "title": "A Legacy of Innovation",
       "foundation": {
-        "title": "Company Foundation",
-        "desc": "Ishraff Tech was born with a vision to redefine digital solutions."
+        "title": "Centre Foundation",
+        "desc": "Established the Faculty of Forestry research unit with a vision for Himalayan herbal excellence."
       },
-      "growth": {
-        "title": "Rapid Expansion",
-        "desc": "Expanded our team to 50+ experts and launched our cloud services."
+      "analytical": {
+        "title": "Analytical Upgrade",
+        "desc": "Integrated advanced chromatography and LC-MS/MS systems for high-precision phytochemical mapping."
       },
       "innovation_hub": {
-        "title": "Innovation Lab",
-        "desc": "Established our dedicated AI research and development center."
+        "title": "Innovation Hub",
+        "desc": "Launched dedicated industry collaboration wings for standardized herbal product development."
       },
       "global_reach": {
-        "title": "Global Presence",
-        "desc": "Serving clients across five continents with local expertise."
+        "title": "Global Certification",
+        "desc": "Achieved international standards for analytical reporting, serving clients across the herbal sector."
       }
     },
     "stats": {

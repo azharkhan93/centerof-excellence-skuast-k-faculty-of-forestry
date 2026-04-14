@@ -386,8 +386,8 @@ export const CORE_VALUES = [
 
 export const COMPANY_JOURNEY = [
     { id: 1, year: "2018", key: "foundation" },
-    { id: 2, year: "2020", key: "growth" },
-    { id: 3, year: "2022", key: "innovation_hub" },
+    { id: 2, year: "2021", key: "analytical" },
+    { id: 3, year: "2023", key: "innovation_hub" },
     { id: 4, year: "2024", key: "global_reach" }
 ];
 

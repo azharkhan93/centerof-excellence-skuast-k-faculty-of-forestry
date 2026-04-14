@@ -23,7 +23,7 @@ export const About: React.FC = () => {
 
                             <div className="relative z-10 w-full h-full overflow-hidden rounded-[30%_70%_70%_30%_/_30%_30%_70%_70%] border-8 border-white shadow-2xl">
                                 <Image
-                                    src="/images/about/team.png"
+                                    src="/images/hero2.webp"
                                     alt="Expert Team"
                                     fill
                                     className="object-cover"
@@ -40,12 +40,12 @@ export const About: React.FC = () => {
 
                     <div className="flex flex-col space-y-8">
                         <div>
-                            <span className="text-blue-600 font-bold tracking-wider uppercase text-sm block mb-3">
+                            <span className="text-brand font-bold tracking-wider uppercase text-sm block mb-3">
                                 {t('badge')}
                             </span>
                             <h2 className="text-4xl md:text-5xl font-bold text-slate-800 leading-tight mb-6">
                                 {t('title')} <br />
-                                <span className="text-blue-600">{t('subtitle')}</span>
+                                <span className="text-brand">{t('subtitle')}</span>
                             </h2>
                             <p className="text-gray-600 text-lg leading-relaxed">
                                 {t('description')}
@@ -76,7 +76,7 @@ export const About: React.FC = () => {
                             <div className="bg-white p-6 shadow-xl shadow-blue-500/5 border-l-4 border-blue-600 flex items-center space-x-5 min-w-[240px]">
                                 <div className="p-3 bg-blue-50 rounded-lg">
                                     <div className="relative w-10 h-10 flex items-center justify-center">
-                                        <svg viewBox="0 0 24 24" className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" strokeWidth="1.5">
+                                        <svg viewBox="0 0 24 24" className="w-8 h-8 text-brand" fill="none" stroke="currentColor" strokeWidth="1.5">
                                             <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
                                             <circle cx="9" cy="7" r="4" />
                                             <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
