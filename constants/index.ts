@@ -674,3 +674,65 @@ export const TEAM_MEMBERS = [
         image: "/images/hero2.webp"
     }
 ];
+
+// Gallery Data
+export const GALLERY_CATEGORIES = ["All", "Laboratory", "Research", "Flora", "Facility"];
+
+export const GALLERY_DATA = [
+    {
+        id: 1,
+        title: "LC-MS/MS Analytical Hall",
+        category: "Laboratory",
+        image: "/images/facilities/lcmsms.png",
+        description: "High-precision tandem mass spectrometry for metabolic profiling."
+    },
+    {
+        id: 2,
+        title: "Himalayan Medicinal Flora",
+        category: "Flora",
+        image: "/images/forestry.jpg",
+        description: "Documenting biodiversity in the Benhama highlands."
+    },
+    {
+        id: 3,
+        title: "Principal Isolation Lab",
+        category: "Laboratory",
+        image: "/images/facilities/chromatography.png",
+        description: "Automated isolation of principal floral ingredients."
+    },
+    {
+        id: 4,
+        title: "Field Instrumentation",
+        category: "Research",
+        image: "/images/hero3.jpg",
+        description: "State-of-the-art monitoring in extreme Himalayan environments."
+    },
+    {
+        id: 5,
+        title: "Extraction Pilot Unit",
+        category: "Facility",
+        image: "/images/facilities/extraction.png",
+        description: "Scale-up facility for herbal industrial formulation."
+    },
+    {
+        id: 6,
+        title: "Phytochemical Screening",
+        category: "Research",
+        image: "/images/hero2.webp",
+        description: "Quantitative estimation of bioactive compounds."
+    },
+    {
+        id: 7,
+        title: "Triple Quadrupole Unit",
+        category: "Laboratory",
+        image: "/images/facilities/lcmsmsq3.png",
+        description: "Sensitive quantitation hall for herbal standards."
+    },
+    {
+        id: 8,
+        title: "Botanical Observation",
+        category: "Research",
+        image: "/images/img34.webp",
+        description: "In-situ studies of medicinal plant morphology."
+    }
+];

@@ -22,5 +22,6 @@ export * from "./SplashScreen/SplashWrapper";
 export * from "./Facilities/Facilities";
 export * from "./LabTour/LabTour";
 export * from "./Team";
+export * from "./Gallery";
 
 
