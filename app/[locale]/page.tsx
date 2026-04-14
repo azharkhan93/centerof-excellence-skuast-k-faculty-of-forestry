@@ -1,11 +1,12 @@
-import { Hero, Stats, About, CoreObjectives, InnovationPillars, Process, Services, Testimonials, Facilities, LabTour, CTA, ContactWidget, ProductHighlight } from "@/components";
+import { Hero, Stats, About, CoreObjectives, InnovationPillars, Process, Services, Testimonials, Facilities, LabTour, CTA, ContactWidget, ProductHighlight, AboutMission } from "@/components";
 
 export default function Home() {
     return (
         <main>
             <Hero />
             <Stats />
-            <About />
+            <AboutMission />
+            {/* <About /> */}
             <CoreObjectives />
             <InnovationPillars />
             <Process />

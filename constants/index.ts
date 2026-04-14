@@ -111,7 +111,7 @@ export const CONTACT_INFO: ContactInfo = {
     // zip: "P.O. Box 34",
     // country: "Sultanate of Oman",
     email: "coehtfof@skuastkashmir.ac.in",
-    phone: "+91 123456789",
+    phone: "+91-99067 26920",
     city: "",
     state: "",
     zip: "",

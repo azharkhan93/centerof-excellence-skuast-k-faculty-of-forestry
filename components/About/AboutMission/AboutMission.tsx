@@ -10,13 +10,13 @@ export const AboutMission: React.FC = () => {
 
     return (
         <section className="py-32 bg-white relative overflow-hidden">
-            {/* background decorative element */}
+           
             <div className="absolute top-0 right-0 w-1/2 h-full bg-slate-50/50 -skew-x-12 transform translate-x-20 z-0 pointer-events-none" />
 
             <div className="container mx-auto px-6 md:px-16 relative z-10">
                 <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
 
-                    {/* Visual Side - Overlapping Images */}
+                   
                     <div className="lg:w-1/2 relative">
                         <motion.div
                             initial={{ opacity: 0, scale: 0.9 }}
@@ -27,7 +27,7 @@ export const AboutMission: React.FC = () => {
                         >
                             <div className="relative aspect-[4/5] w-full max-w-md mx-auto lg:mx-0 rounded-[3rem] overflow-hidden shadow-[0_32px_64px_-16px_rgba(0,0,0,0.2)] border-8 border-white">
                                 <Image
-                                    src="/images/about/mission.jpg"
+                                    src="/images/hero2.webp"
                                     alt="Our Mission"
                                     fill
                                     className="object-cover"
@@ -64,7 +64,7 @@ export const AboutMission: React.FC = () => {
                     </div>
 
                     {/* Content Side */}
-                    <div className="lg:w-1/2 space-y-12">
+                    <div className="md:w-1/2 space-y-12">
                         <div className="max-w-xl">
                             <motion.span
                                 initial={{ opacity: 0, y: 10 }}
