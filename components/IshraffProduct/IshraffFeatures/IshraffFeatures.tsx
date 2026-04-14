@@ -23,7 +23,7 @@ const StatusItems = ({ items }: { items: string[] }) => (
     <ul className="grid grid-cols-1 gap-3">
         {items?.map((item, i) => (
             <li key={i} className="flex items-center gap-3 text-white/80 text-xs md:text-sm">
-                <CheckCircle2 className="w-4 h-4 text-blue-500" />
+                <CheckCircle2 className="w-4 h-4 text-brand" />
                 {item}
             </li>
         ))}
@@ -32,7 +32,7 @@ const StatusItems = ({ items }: { items: string[] }) => (
 
 const StatItem = ({ label, val }: { label: string; val: string }) => (
     <div className="text-center">
-        <p className="text-blue-400 text-3xl font-bold mb-1">{val}</p>
+        <p className="text-brand text-3xl font-bold mb-1">{val}</p>
         <p className="text-slate-500 text-xs uppercase tracking-widest font-semibold">{label}</p>
     </div>
 );
@@ -44,7 +44,7 @@ export const IshraffFeatures: React.FC = () => {
     return (
         <section className="py-32 overflow-hidden relative">
            
-            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-600/5 rounded-full blur-[150px] -z-10" />
+            <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-brand/5 rounded-full blur-[150px] -z-10" />
             <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-orange-500/5 rounded-full blur-[150px] -z-10" />
 
             <div className="container mx-auto px-6">
@@ -57,8 +57,8 @@ export const IshraffFeatures: React.FC = () => {
                             <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/60 to-transparent" />
                         </div>
                         <div className="relative z-10 p-10 h-full flex flex-col justify-end">
-                            <div className="flex items-center gap-4 mb-6 text-blue-400 font-bold tracking-widest text-xs uppercase">
-                                <span className="w-12 h-[1px] bg-blue-500" /> Visionary Control
+                            <div className="flex items-center gap-4 mb-6 text-brand font-bold tracking-widest text-xs uppercase">
+                                <span className="w-12 h-[1px] bg-brand" /> Visionary Control
                             </div>
                             <h3 className="text-3xl md:text-5xl font-bold text-white mb-6 leading-tight max-w-xl">{f1.title}</h3>
                             <div className="flex flex-col md:flex-row gap-10">
@@ -75,7 +75,7 @@ export const IshraffFeatures: React.FC = () => {
                         <ul className="space-y-4">
                             {f2.items?.slice(0, 3).map((item, i) => (
                                 <li key={i} className="flex items-center gap-3 text-slate-800 font-medium text-sm">
-                                    <div className="w-1.5 h-1.5 rounded-full bg-blue-600" /> {item}
+                                    <div className="w-1.5 h-1.5 rounded-full bg-brand" /> {item}
                                 </li>
                             ))}
                         </ul>
@@ -87,7 +87,7 @@ export const IshraffFeatures: React.FC = () => {
                    
                     <motion.div
                         initial={{ opacity: 0, x: 40 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true }} transition={{ delay: 0.4 }}
-                        className="md:col-span-5 md:row-span-3 bg-blue-600 rounded-[3rem] p-10 text-white flex flex-col justify-between group overflow-hidden relative"
+                        className="md:col-span-5 md:row-span-3 bg-brand rounded-[3rem] p-10 text-white flex flex-col justify-between group overflow-hidden relative"
                     >
                         <div className="relative z-10">
                             <div className="flex justify-between items-start mb-6">

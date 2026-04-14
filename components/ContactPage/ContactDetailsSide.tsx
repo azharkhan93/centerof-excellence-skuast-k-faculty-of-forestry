@@ -27,7 +27,7 @@ export const ContactDetailsSide = () => {
 
                 <div className="space-y-4">
                     <div className="flex items-center gap-4 p-4 rounded-2xl bg-slate-50 border border-slate-100 group hover:border-blue-200 transition-colors cursor-pointer">
-                        <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center shadow-sm text-blue-600">
+                        <div className="w-10 h-10 rounded-xl bg-white flex items-center justify-center shadow-sm text-brand">
                             <Clock className="w-5 h-5" />
                         </div>
                         <div>
@@ -41,7 +41,7 @@ export const ContactDetailsSide = () => {
 
             <div className="bg-slate-900 p-8 rounded-3xl shadow-xl shadow-slate-900/10 text-white">
                 <div className="flex items-center gap-4 mb-6">
-                    <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-blue-400">
+                    <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center text-brand">
                         <Share2 className="w-6 h-6" />
                     </div>
                     <div>

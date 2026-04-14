@@ -3,7 +3,8 @@ import { getMessages } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { locales } from '@/i18n';
 import { TranslatedConstantsProvider } from '@/hooks/useTranslatedConstants';
-import { Navbar, Footer, ContactWidget } from '@/components';
+import { Navbar, Footer, ContactWidget, SplashWrapper } from '@/components';
+import { LoadingProvider } from '@/context/LoadingContext';
 
 export function generateStaticParams() {
     return locales.map((locale) => ({ locale }));
@@ -27,17 +28,21 @@ export default async function LocaleLayout({
 
     return (
         <NextIntlClientProvider messages={messages}>
-            <TranslatedConstantsProvider>
-                <div className="relative min-h-screen flex flex-col">
-                    <Navbar />
-                    <main className="flex-grow">
-                        {children}
-                    </main>
-                    <ContactWidget />
-                    <Footer />
-                </div>
-            </TranslatedConstantsProvider>
+            <LoadingProvider>
+                <TranslatedConstantsProvider>
+                    <SplashWrapper>
+                        <div className="relative min-h-screen flex flex-col">
+                            <Navbar />
+                            <main className="flex-grow">
+                                {children}
+                            </main>
+                            <ContactWidget />
+                            <Footer />
+                        </div>
+                    </SplashWrapper>
+                </TranslatedConstantsProvider>
+            </LoadingProvider>
         </NextIntlClientProvider>
     );
-
 }
+

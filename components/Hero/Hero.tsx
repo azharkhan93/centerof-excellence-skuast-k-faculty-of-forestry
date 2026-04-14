@@ -18,9 +18,12 @@ import {
     buttonVariants
 } from "@/hooks";
 
+import { useLoading } from "@/context/LoadingContext";
+
 export const Hero: React.FC = () => {
     const t = useTranslations('hero');
     const tServices = useTranslations('services');
+    const { isLoaded } = useLoading();
 
     const translatedServices = useMemo(() => {
         return SERVICES.map((service, index) => ({
@@ -48,14 +51,14 @@ export const Hero: React.FC = () => {
     return (
         <section className="relative h-screen w-full overflow-hidden bg-black text-white ">
             {/* Background Image with Reveal Animation */}
-            <AnimatePresence initial={false} custom={direction} onExitComplete={() => setIsAnimating(false)}>
+            <AnimatePresence initial={true} custom={direction} onExitComplete={() => setIsAnimating(false)}>
                 <motion.div
                     key={currentIndex}
                     custom={direction}
                     onAnimationStart={() => setIsAnimating(true)}
                     variants={backgroundVariants}
                     initial="enter"
-                    animate="center"
+                    animate={isLoaded ? "center" : "enter"}
                     exit="exit"
                     className="absolute inset-0 z-0"
                 >
@@ -78,7 +81,7 @@ export const Hero: React.FC = () => {
                         className="pointer-events-auto"
                         variants={contentVariants}
                         initial="enter"
-                        animate="center"
+                        animate={isLoaded ? "center" : "enter"}
                         exit="exit"
                     >
                         <motion.h2
@@ -119,7 +122,7 @@ export const Hero: React.FC = () => {
                             custom={idx}
                             variants={thumbnailVariants}
                             initial="enter"
-                            animate="center"
+                            animate={isLoaded ? "center" : "enter"}
                             exit="exit"
                             className="relative w-40 h-56 md:w-64 md:h-[400px] rounded-[16px] md:rounded-[24px] overflow-hidden cursor-pointer group border border-white/10 shadow-3xl flex-shrink-0"
                             onClick={() => handleThumbnailClick((service.id - 1))}

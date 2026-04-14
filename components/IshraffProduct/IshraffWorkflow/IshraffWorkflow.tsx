@@ -31,14 +31,14 @@ const WorkflowStep = ({ step, index, isLast }: { step: any, index: number, isLas
                 className="flex flex-col items-center text-center px-4"
             >
                 {/* Step Indicator */}
-                <span className="text-[10px] font-bold text-blue-500 uppercase tracking-widest mb-4">
+                <span className="text-[10px] font-bold text-brand uppercase tracking-widest mb-4">
                     {step.step}
                 </span>
 
                 {/* Icon Container */}
-                <div className="w-24 h-24 rounded-[2rem] bg-white border border-slate-100 shadow-xl shadow-slate-200/50 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:shadow-2xl group-hover:shadow-blue-500/10 transition-all duration-300 relative">
+                <div className="w-24 h-24 rounded-[2rem] bg-white border border-slate-100 shadow-xl shadow-slate-200/50 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:shadow-2xl group-hover:shadow-brand/10 transition-all duration-300 relative">
                     {Icon && <Icon className="w-10 h-10 text-slate-800" />}
-                    <div className="absolute inset-0 rounded-[2rem] bg-blue-600/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+                    <div className="absolute inset-0 rounded-[2rem] bg-brand/5 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
 
                 {/* Content */}
@@ -79,7 +79,7 @@ export const IshraffWorkflow: React.FC = () => {
                             whileInView={{ x: "0%" }}
                             viewport={{ once: true }}
                             transition={{ duration: 1, delay: 0.5 }}
-                            className="absolute inset-0 bg-blue-600"
+                            className="absolute inset-0 bg-brand"
                         />
                     </motion.div>
                 </div>

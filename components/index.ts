@@ -11,7 +11,13 @@ export * from "./ContactWidget";
 export * from "./LanguageSwitcher";
 export * from "./PageHeader";
 export * from "./ProductHighlight";
+export * from "./CoreObjectives/CoreObjectives";
 export * from "./ServicesPage";
 export * from "./ContactPage";
 export * from "./FormInput";
 export * from "./Modal";
+export * from "./Stats"
+export * from "./InnovationPillars/InnovationPillars";
+export * from "./SplashScreen/SplashWrapper";
+
+

@@ -7,6 +7,7 @@ import { NavLogo } from "./NavLogo";
 import { DesktopNav } from "./DesktopNav";
 import { NavActions } from "./NavActions";
 import { MobileMenu } from "./MobileMenu";
+import { TopBar } from "./TopBar";
 
 export const Navbar: React.FC = () => {
     const t = useTranslations('nav');
@@ -25,29 +26,32 @@ export const Navbar: React.FC = () => {
     }, [isMenuOpen]);
 
     return (
-        <nav className="absolute top-0 left-0 w-full z-50 flex items-center justify-between px-6 md:px-16 py-6 md:py-8 text-white">
-            <NavLogo locale={locale} />
+        <header className="absolute top-0 left-0 w-full z-50">
+            <TopBar />
+            <nav className="flex items-center justify-between px-6 md:px-6 py-4 md:py-4 text-white">
+                <NavLogo locale={locale} />
 
-            <DesktopNav locale={locale} t={t} />
+                <DesktopNav locale={locale} t={t} />
 
-            <NavActions locale={locale} t={t} />
+                <NavActions locale={locale} t={t} />
 
-            {/* Mobile Menu Toggle */}
-            <button
-                className="lg:hidden z-[60] p-2 bg-slate-800/50 backdrop-blur-md rounded-lg border border-white/10"
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-                aria-label="Toggle Menu"
-            >
-                {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
+                {/* Mobile Menu Toggle */}
+                <button
+                    className="lg:hidden z-[60] p-2 bg-slate-800/50 backdrop-blur-md rounded-lg border border-white/10"
+                    onClick={() => setIsMenuOpen(!isMenuOpen)}
+                    aria-label="Toggle Menu"
+                >
+                    {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
+                </button>
 
-            <MobileMenu
-                isOpen={isMenuOpen}
-                onClose={() => setIsMenuOpen(false)}
-                locale={locale}
-                t={t}
-            />
-        </nav>
+                <MobileMenu
+                    isOpen={isMenuOpen}
+                    onClose={() => setIsMenuOpen(false)}
+                    locale={locale}
+                    t={t}
+                />
+            </nav>
+        </header>
     );
 };
 

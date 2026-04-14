@@ -16,6 +16,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "TheTechKey - Advanced Digital Solutions",
   description: "Empowering businesses with cutting-edge software engineering, cybersecurity, and AI solutions.",
+  icons: {
+    icon: "/images/holistics.jpg",
+  },
 };
 
 export default function RootLayout({

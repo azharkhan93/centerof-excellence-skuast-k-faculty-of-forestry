@@ -91,22 +91,31 @@ export const Footer: React.FC = () => {
                             transition={{ duration: 0.5 }}
                         >
                             
-                            <Link href="/" className="flex items-center gap-3 mb-6 group cursor-pointer inline-flex">
-                                <div className="relative w-10 h-10 flex items-center justify-center">
-                                    <Image
-                                        src={COMPANY_INFO.logo}
-                                        alt={COMPANY_INFO.name}
-                                        fill
-                                        className="object-contain"
-                                    />
+                            <Link href="/" className="flex items-center gap-4 mb-6 group cursor-pointer inline-flex">
+                                <div className="flex items-center gap-2">
+                                    {COMPANY_INFO.logos.map((logo, idx) => (
+                                        <div key={idx} className="relative w-10 h-10 flex items-center justify-center bg-white rounded-lg p-1 shadow-sm">
+                                            <Image
+                                                src={logo}
+                                                alt={`${COMPANY_INFO.name} logo ${idx + 1}`}
+                                                fill
+                                                className="object-contain p-0.5"
+                                            />
+                                        </div>
+                                    ))}
                                 </div>
-                                <span className="text-2xl font-bold tracking-tight text-white group-hover:text-blue-400 transition-colors">
-                                    {COMPANY_INFO.name}
-                                </span>
+                                <div className="flex flex-col justify-center leading-tight">
+                                    <span className="text-xs md:text-sm font-bold tracking-wider text-white uppercase group-hover:text-brand transition-colors">
+                                        CENTRE OF EXCELLENCE ON HERBAL TECHNOLOGY
+                                    </span>
+                                    <span className="text-[10px] font-medium tracking-wide text-gray-400 uppercase">
+                                        FACULTY OF FORESTRY, SKUAST-KASHMIR
+                                    </span>
+                                </div>
                             </Link>
 
                             {/* Tagline */}
-                            <p className="text-blue-400 font-medium mb-3">
+                            <p className="text-brand font-medium mb-3">
                                 {t('tagline')}
                             </p>
 
@@ -130,7 +139,7 @@ export const Footer: React.FC = () => {
                                             className="w-10 h-10 bg-slate-800/50 backdrop-blur-sm rounded-lg flex items-center justify-center border border-slate-700 hover:border-blue-500/50 hover:bg-slate-700/50 transition-all group"
                                             aria-label={social.name}
                                         >
-                                            <Icon className="w-5 h-5 text-gray-400 group-hover:text-blue-400 transition-colors" />
+                                            <Icon className="w-5 h-5 text-gray-400 group-hover:text-brand transition-colors" />
                                         </motion.a>
                                     );
                                 })}
@@ -155,7 +164,7 @@ export const Footer: React.FC = () => {
                                     <li key={link.id}>
                                         <Link
                                             href={localizedHref(link.href)}
-                                            className="text-gray-400 hover:text-blue-400 transition-colors text-sm flex items-center gap-1 group"
+                                            className="text-gray-400 hover:text-brand transition-colors text-sm flex items-center gap-1 group"
                                         >
                                             {link.label}
                                             <ArrowUpRight className="w-3 h-3 opacity-0 group-hover:opacity-100 transition-opacity" />
@@ -179,7 +188,7 @@ export const Footer: React.FC = () => {
                        
                         <div className="flex items-start gap-3 md:max-w-xs lg:max-w-sm">
                             <div className="w-10 h-10 bg-slate-800/50 backdrop-blur-sm rounded-lg flex items-center justify-center border border-slate-700 flex-shrink-0">
-                                <MapPin className="w-5 h-5 text-blue-400" />
+                                <MapPin className="w-5 h-5 text-brand" />
                             </div>
                             <div>
                                 <h4 className="text-white font-semibold text-sm mb-1">{t('contactInfo.address')}</h4>
@@ -194,13 +203,13 @@ export const Footer: React.FC = () => {
                        
                         <div className="flex items-start gap-3">
                             <div className="w-10 h-10 bg-slate-800/50 backdrop-blur-sm rounded-lg flex items-center justify-center border border-slate-700 flex-shrink-0">
-                                <Mail className="w-5 h-5 text-blue-400" />
+                                <Mail className="w-5 h-5 text-brand" />
                             </div>
                             <div>
                                 <h4 className="text-white font-semibold text-sm mb-1">{t('contactInfo.email')}</h4>
                                 <a
                                     href={`mailto:${CONTACT_INFO.email}`}
-                                    className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
+                                    className="text-gray-400 hover:text-brand transition-colors text-sm"
                                 >
                                     {CONTACT_INFO.email}
                                 </a>
@@ -210,13 +219,13 @@ export const Footer: React.FC = () => {
                        
                         <div className="flex items-start gap-3">
                             <div className="w-10 h-10 bg-slate-800/50 backdrop-blur-sm rounded-lg flex items-center justify-center border border-slate-700 flex-shrink-0">
-                                <Phone className="w-5 h-5 text-blue-400" />
+                                <Phone className="w-5 h-5 text-brand" />
                             </div>
                             <div>
                                 <h4 className="text-white font-semibold text-sm mb-1">{t('contactInfo.phone')}</h4>
                                 <a
                                     href={`tel:${CONTACT_INFO.phone}`}
-                                    className="text-gray-400 hover:text-blue-400 transition-colors text-sm"
+                                    className="text-gray-400 hover:text-brand transition-colors text-sm"
                                 >
                                     {CONTACT_INFO.phone}
                                 </a>

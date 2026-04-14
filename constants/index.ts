@@ -142,11 +142,43 @@ export const CONTACT_INFO: ContactInfo = {
 };
 
 export const COMPANY_INFO = {
-    name: "TheTechKey",
-    logo: "/images/logo.png",
-    tagline: "Building Tomorrow's Digital Solutions",
-    description: "We are a leading technology company specializing in cutting-edge digital solutions, from mobile applications to enterprise security systems."
+    name: "CENTRE OF EXCELLENCE ON HERBAL TECHNOLOGY FACULTY OF FORESTRY, SKUAST-KASHMIR",
+    logo: "/images/holistics-nobg.png",
+    logos: [
+        "/images/holistics-nobg.png",
+        "/images/skuast-logo.png"
+    ],
+    tagline: "Excellence in Research & Innovation",
+    description: "The Centre of Excellence on Herbal Technology at SKUAST-Kashmir is dedicated to advancing the science and technology of herbal products and forestry research."
 };
+
+export const STATS_DATA = [
+    { id: 1, label: "Species Conserved", value: "51", icon: "Flower2" },
+    { id: 2, label: "Germplasm Accessions", value: "44", icon: "Dna" },
+    { id: 3, label: "RET Species", value: "15", icon: "Leaf" },
+    { id: 4, label: "Tech Developed", value: "10+", icon: "Cpu" }
+];
+
+export const OBJECTIVES_DATA = [
+    {
+        id: 1,
+        title: "Sustainable Production",
+        description: "To identify elite germplasm of MAPs for sustainable production and efficient commercialization.",
+        iconName: "Sprout"
+    },
+    {
+        id: 2,
+        title: "Industrial Applications",
+        description: "To explore species for Active Principal Ingredients (APIs) and formulations for different industrial applications.",
+        iconName: "FlaskConical"
+    },
+    {
+        id: 3,
+        title: "Knowledge Sharing",
+        description: "To foster knowledge-sharing among communities, industries and researchers to drive herbal innovations.",
+        iconName: "Users"
+    }
+];
 
 // Product Types
 export interface Product {
@@ -509,3 +541,42 @@ export const ISHRAFF_CONTENT = {
         ]
     }
 };
+
+export const PILLARS_DATA = [
+    {
+        id: 1,
+        title: "Conservation & Assessment",
+        description: "Resource assessment, collection, characterization, and conservation of rare, endangered and threatened (RET) MAP species.",
+        icon: "Shield"
+    },
+    {
+        id: 2,
+        title: "Molecular Authentication",
+        description: "Molecular and chemotaxonomic studies for species authentication and quality assurance to ensure market credibility.",
+        icon: "Fingerprint"
+    },
+    {
+        id: 3,
+        title: "Green Extraction",
+        description: "Development of innovative, eco-friendly and sustainable extraction and processing techniques for herbal products.",
+        icon: "Leaf"
+    },
+    {
+        id: 4,
+        title: "Phytochemical Evaluation",
+        description: "Phytochemical evaluation of crude extracts for qualitative and quantitative estimations of bioactive compounds.",
+        icon: "Beaker"
+    },
+    {
+        id: 5,
+        title: "Efficacy & Safety",
+        description: "Evaluating efficacy and safety of novel therapeutic agents through in-vitro and in-vivo models.",
+        icon: "ShieldCheck"
+    },
+    {
+        id: 6,
+        title: "Contamination Screening",
+        description: "Development of comprehensive contamination screening and certification protocols to ensure safety.",
+        icon: "ScanSearch"
+    }
+];

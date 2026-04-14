@@ -60,7 +60,7 @@ export const Testimonials: React.FC = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.5 }}
                     >
-                        <span className="inline-block px-4 py-2 bg-blue-500/10 border border-blue-500/30 rounded-full text-blue-400 text-sm font-semibold uppercase tracking-wider mb-4">
+                        <span className="inline-block px-4 py-2 bg-brand/10 border border-brand/30 rounded-full text-brand text-sm font-semibold uppercase tracking-wider mb-4">
                             {t('badge')}
                         </span>
                         <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -101,14 +101,14 @@ export const Testimonials: React.FC = () => {
                     {/* Navigation */}
                     <button
                         onClick={() => { setDirection(-1); prevSlide(); }}
-                        className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 w-12 h-12 rounded-full bg-slate-800/80 backdrop-blur-sm border border-slate-700 flex items-center justify-center text-white hover:bg-blue-500 hover:border-blue-500 transition-all z-10 group"
+                        className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 md:-translate-x-12 w-12 h-12 rounded-full bg-slate-800/80 backdrop-blur-sm border border-slate-700 flex items-center justify-center text-white hover:bg-brand hover:border-brand transition-all z-10 group"
                         aria-label="Previous"
                     >
                         <ChevronLeft className="w-6 h-6 group-hover:scale-110 transition-transform" />
                     </button>
                     <button
                         onClick={() => { setDirection(1); nextSlide(); }}
-                        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 w-12 h-12 rounded-full bg-slate-800/80 backdrop-blur-sm border border-slate-700 flex items-center justify-center text-white hover:bg-blue-500 hover:border-blue-500 transition-all z-10 group"
+                        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 md:translate-x-12 w-12 h-12 rounded-full bg-slate-800/80 backdrop-blur-sm border border-slate-700 flex items-center justify-center text-white hover:bg-brand hover:border-brand transition-all z-10 group"
                         aria-label="Next"
                     >
                         <ChevronRight className="w-6 h-6 group-hover:scale-110 transition-transform" />
@@ -126,7 +126,7 @@ export const Testimonials: React.FC = () => {
                                 setDirection(index > currentIndex ? 1 : -1);
                                 goToSlide(index);
                             }}
-                            className={`transition-all ${currentIndex === index ? "w-8 h-2 bg-blue-500" : "w-2 h-2 bg-slate-700 hover:bg-slate-600"
+                            className={`transition-all ${currentIndex === index ? "w-8 h-2 bg-brand" : "w-2 h-2 bg-slate-700 hover:bg-slate-600"
                                 } rounded-full`}
                             aria-label={`Go to slide ${index + 1}`}
                         />
@@ -157,9 +157,9 @@ export const Testimonials: React.FC = () => {
                                 className="text-center"
                             >
                                 <div className="mb-2 flex items-center justify-center">
-                                    <stat.Icon className="w-8 h-8 text-blue-400" />
+                                    <stat.Icon className="w-8 h-8 text-brand" />
                                 </div>
-                                <div className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-600 mb-1">
+                                <div className="text-3xl md:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-brand-light to-brand-dark mb-1">
                                     {stat.value}
                                 </div>
                                 <div className="text-gray-400 text-xs uppercase tracking-wider">
