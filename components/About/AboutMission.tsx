@@ -23,7 +23,7 @@ export const AboutMission: React.FC = () => {
             </motion.div>
 
             <motion.div
-                className="lg:col-span-7 lg:order-1"
+                className="md:col-span-7 md:order-1"
             >
                 <div className="flex items-center gap-3 mb-6">
                     <div className="w-8 h-px bg-brand" />
@@ -32,7 +32,7 @@ export const AboutMission: React.FC = () => {
                     </span>
                 </div>
 
-                <h2 className="text-4xl md:text-5xl font-bold text-slate-900 mb-8 leading-tight tracking-tight">
+                <h2 className="text-4xl  font-bold text-slate-900 mb-8 leading-tight tracking-tight">
                     Transforming the herbal <br />
                     <span className="text-brand">industrial powerhouse.</span>
                 </h2>

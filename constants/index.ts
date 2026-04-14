@@ -189,7 +189,7 @@ export const ABOUT_VISION = {
     title: "Our Vision",
     badge: "Future Perspective",
     content: "To be a global vanguard in Himalayan herbal technology, bridging ancient wisdom with modern high-precision science for sustainable human welfare. We envision a future where traditional pharmacology and molecular science collaborate to unlock the full therapeutic potential of Himalayan biodiversity.",
-    image: "/images/about/vision.jpg"
+    image: "/images/hero2.webp"
 };
 
 export const ABOUT_MISSION = {
@@ -202,7 +202,7 @@ export const ABOUT_MISSION = {
         "Entrepreneurship Development",
         "Biodiversity Mapping & Conservation"
     ],
-    image: "/images/about/mission.png"
+    image: "/images/hero2.webp"
 };
 
 // Product Types
@@ -639,5 +639,38 @@ export const PILLARS_DATA = [
         title: "Contamination Screening",
         description: "Development of comprehensive contamination screening and certification protocols to ensure safety.",
         icon: "ScanSearch"
+    }
+];
+
+// Team & Leadership Data
+export const PI_DATA = {
+    name: "Dr. Parvaiz Ahmad",
+    role: "Principal Investigator / Professor",
+    bio: "Leading the Centre of Excellence on Herbal Technology at SKUAST-K with a focus on plant physiology and Himalayan medicinal biodiversity.",
+    image: "/images/hero2.webp",
+    badges: ["Researcher", "Phytochemist", "Professor"]
+};
+
+export const TEAM_MEMBERS = [
+    {
+        id: 1,
+        name: "Dr. Mehreen Gul",
+        role: "Associate Professor",
+        specialty: "Phytochemistry",
+        image: "/images/hero2.webp"
+    },
+    {
+        id: 2,
+        name: "Dr. Ishtiyaq Ahmad",
+        role: "Assistant Professor",
+        specialty: "Plant Taxonomy",
+        image: "/images/hero2.webp"
+    },
+    {
+        id: 3,
+        name: "Dr. Shaziya Hassan",
+        role: "Research Associate",
+        specialty: "Molecular Biology",
+        image: "/images/hero2.webp"
     }
 ];
