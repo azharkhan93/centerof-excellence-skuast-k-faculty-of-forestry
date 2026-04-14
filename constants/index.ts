@@ -157,6 +157,54 @@ export const OBJECTIVES_DATA = [
     }
 ];
 
+export const PROCESS_DATA = [
+    {
+        id: 1,
+        title: "Digital Test Booking",
+        description: "Access our seamless online portal to select required analytical services and schedule a virtual consultation.",
+        iconName: "Settings2"
+    },
+    {
+        id: 2,
+        title: "Sample Submission",
+        description: "Securely ship or drop off your medicinal plant samples following our standardized packaging protocols.",
+        iconName: "FileCheck"
+    },
+    {
+        id: 3,
+        title: "Phytochemical Evaluation",
+        description: "Rigorous laboratory testing using LC-MS/MS and chromatography to identify active principal ingredients.",
+        iconName: "Users"
+    },
+    {
+        id: 4,
+        title: "Certified Reporting",
+        description: "Receive comprehensive, industry-standard analytical reports and certificates of purity for your harvest.",
+        iconName: "Handshake"
+    }
+];
+
+// About Page Vision & Mission
+export const ABOUT_VISION = {
+    title: "Our Vision",
+    badge: "Future Perspective",
+    content: "To be a global vanguard in Himalayan herbal technology, bridging ancient wisdom with modern high-precision science for sustainable human welfare. We envision a future where traditional pharmacology and molecular science collaborate to unlock the full therapeutic potential of Himalayan biodiversity.",
+    image: "/images/about/vision.jpg"
+};
+
+export const ABOUT_MISSION = {
+    title: "Our Mission",
+    badge: "Core Purpose",
+    content: "To provide world-class technical support to researchers, farmers, and entrepreneurs through advanced phytochemical evaluation, innovation in extraction processes, and conservation of Himalayan medicinal biodiversity. We are committed to transforming the herbal sector into a high-value industrial powerhouse.",
+    points: [
+        "Advanced Phytochemical Characterization",
+        "Sustainable Agriculture & Quality Control",
+        "Entrepreneurship Development",
+        "Biodiversity Mapping & Conservation"
+    ],
+    image: "/images/about/mission.png"
+};
+
 // Product Types
 export interface Product {
     id: number;
@@ -328,11 +376,6 @@ export const NAV_LINKS: NavLink[] = [
 ];
 
 
-// About Page Constants
-export const ABOUT_MISSION = {
-    id: "mission",
-    image: "/images/about/mission.jpg"
-};
 
 export const CORE_VALUES = [
     { id: 1, icon: "Lightbulb", key: "innovation" },

@@ -1,4 +1,4 @@
-import { AboutMission, AboutValues, AboutJourney, PageHeader } from "@/components";
+import { About, AboutTabsSection, AboutValues, AboutJourney, PageHeader } from "@/components";
 import { useTranslations } from "next-intl";
 
 export default function AboutPage() {
@@ -7,11 +7,13 @@ export default function AboutPage() {
         <div className=" min-h-screen">
             <PageHeader
                 title={t('about')}
-                description="We are a team of dedicated professionals committed to delivering innovative technology solutions that empower businesses worldwide."
-                bgColor="bg-slate-950"
+                description="The Centre of Excellence on Herbal Technology is dedicated to bridging Himalayan biodiversity with world-class scientific evaluation."
+                bgColor="bg-slate-900"
+                accentColor="from-brand to-brand-dark"
             />
 
-            <AboutMission />
+            <About />
+            <AboutTabsSection />
             <AboutValues />
             <AboutJourney />
         </div>
