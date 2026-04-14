@@ -6,7 +6,7 @@ import { CONTACT_INFO, COMPANY_INFO } from "@/constants";
 
 export const TopBar: React.FC = () => {
     return (
-        <div className="w-full bg-slate-950/40 backdrop-blur-md border-b border-white/5 py-2 px-6 md:px-16 flex justify-between items-center text-[10px] md:text-xs font-medium tracking-widest uppercase text-white/60">
+        <div className="w-full bg-slate-950/40 backdrop-blur-md border-b border-white/5 py-2 px-6 md:px-16 flex justify-between items-center text-[10px] md:text-xs font-medium tracking-widest  text-white/60">
             <div className="flex items-center gap-6">
                 <a href={`mailto:${CONTACT_INFO.email}`} className="flex items-center gap-2 hover:text-brand transition-colors">
                     <Mail size={12} className="text-brand" />
