@@ -10,52 +10,29 @@ export interface Service {
 export const SERVICES: Service[] = [
     {
         id: 1,
-        title: "Mobile App",
-        subtitle: "Development",
-        description: "Custom mobile solutions built with cutting-edge technologies. We transform complex ideas into intuitive, high-performance applications.",
-        image: "/images/hero/zenix_product_showcase_advanced_slate_1771189952426.png",
-        location: "iOS & Android Solutions"
+        title: "Herbal Technology",
+        subtitle: "RESEARCH",
+        description: "High-end laboratory research focused on Himalayan medicinal herbal plants and phytochemical analysis for industrial and therapeutic applications.",
+        image: "/images/hero2.webp",
+        location: "Centre of Excellence"
     },
     {
         id: 2,
-        title: "Cyber Secruity",
-        subtitle: "SECURITY",
-        description: "Advanced threat protection and infrastructure monitoring. We secure your digital assets with enterprise-grade security protocols.",
-        image: "/images/hero/cybersecurity_advanced_premium_slate_1771190420641.png",
-        location: "Threat Detection & Defense"
+        title: "Phytochemical Evaluation",
+        subtitle: "EVALUATION",
+        description: "Advanced laboratory equipment and protocols for accurate extraction and characterization of medicinal plant principal active ingredients.",
+        image: "/images/forestry.jpg",
+        location: "Specialized Lab Unit"
     },
     {
         id: 3,
-        title: "Cloud Infrastructure",
-        subtitle: "CLOUD",
-        description: "Scalable cloud solutions designed for performance and reliability. Build, deploy, and manage applications with enterprise-grade infrastructure.",
-        image: "/images/hero/cloud.png",
-        location: "AWS, Azure & GCP"
+        title: "Digital Test Booking",
+        subtitle: "SYSTEM",
+        description: "A seamless, glassmorphic online booking system for laboratory testing, designed to streamline collaboration between researchers and industry.",
+        image: "/images/hero3.jpg",
+        location: "Scientific Portal"
     },
-    {
-        id: 4,
-        title: "AI & Machine Learning",
-        subtitle: "ARTIFICIAL INTELLIGENCE",
-        description: "Intelligent automation and predictive analytics powered by cutting-edge AI. Transform data into actionable insights.",
-        image: "/images/hero/ai.png",
-        location: "ML Models & Automation"
-    },
-    {
-        id: 5,
-        title: "Web Development",
-        subtitle: "WEB",
-        description: "Modern, responsive web applications built with the latest frameworks. Fast, secure, and user-friendly digital experiences.",
-        image: "/images/hero/web.png",
-        location: "React, Next.js & More"
-    },
-    {
-        id: 6,
-        title: "DevOps Solutions",
-        subtitle: "OPERATIONS",
-        description: "Streamline your development pipeline with automated CI/CD workflows. Deploy faster with confidence and reliability.",
-        image: "/images/hero/devops.png",
-        location: "CI/CD & Automation"
-    }
+   
 ];
 
 // Footer Types

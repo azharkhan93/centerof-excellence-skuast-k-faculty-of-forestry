@@ -74,7 +74,7 @@ export const Hero: React.FC = () => {
 
 
             {/* Content Section */}
-            <div className="absolute left-6 md:left-24 top-[40%] md:top-1/2 -translate-y-1/2 z-20 max-w-[calc(100%-3rem)] md:max-w-2xl pointer-events-none">
+            <div className="absolute left-6 md:left-24 top-[40%] md:top-1/2 -translate-y-1/2 z-20 max-w-[calc(100%-3rem)] md:max-w-xl pointer-events-none">
                 <AnimatePresence mode="wait">
                     <motion.div
                         key={currentIndex}
@@ -113,39 +113,58 @@ export const Hero: React.FC = () => {
             </div>
 
             {/* Thumbnails Section */}
-            <div className="absolute right-6 md:right-24 top-[70%] md:top-1/2 -translate-y-1/2 z-20 flex flex-col md:flex-row gap-4 md:gap-8 items-center md:items-start max-h-[40vh] md:max-h-none overflow-visible">
+            <div className="absolute right-6 md:right-24 top-[70%] md:top-1/2 -translate-y-1/2 z-20 flex flex-col md:flex-row gap-4 md:gap-6 items-center md:items-start max-h-[40vh] md:max-h-none overflow-visible">
                 <AnimatePresence mode="popLayout" initial={false}>
-                    {nextServices.map((service, idx) => (
-                        <motion.div
-                            key={service.id}
-                            layout
-                            custom={idx}
-                            variants={thumbnailVariants}
-                            initial="enter"
-                            animate={isLoaded ? "center" : "enter"}
-                            exit="exit"
-                            className="relative w-40 h-56 md:w-64 md:h-[400px] rounded-[16px] md:rounded-[24px] overflow-hidden cursor-pointer group border border-white/10 shadow-3xl flex-shrink-0"
-                            onClick={() => handleThumbnailClick((service.id - 1))}
-                        >
-                            <Image src={service.image} alt={service.title} fill className="object-cover group-hover:scale-110 transition-all duration-700" />
-                            <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/30 to-transparent" />
+                    {nextServices.map((service, idx) => {
+                        const targetIndex = SERVICES.findIndex(s => s.id === service.id);
+                        const isActive = idx === 0;
+                        
+                        return (
+                            <motion.div
+                                key={`thumbnail-${service.id}`}
+                                layout
+                                custom={idx}
+                                variants={thumbnailVariants}
+                                initial="enter"
+                                animate={isLoaded ? "center" : "enter"}
+                                exit="exit"
+                                className={`relative w-32 h-48 md:w-48 md:h-[300px] rounded-[16px] md:rounded-[20px] overflow-hidden cursor-pointer group border shadow-3xl flex-shrink-0 transition-all duration-500 
+                                    ${isActive ? 'border-brand/60 scale-105 z-30 shadow-brand/20' : 'border-white/10 opacity-60 hover:opacity-100'}`}
+                                onClick={() => handleThumbnailClick(targetIndex)}
+                            >
+                                <Image 
+                                    src={service.image} 
+                                    alt={service.title} 
+                                    fill 
+                                    className={`object-cover transition-all duration-700 ${isActive ? 'scale-105' : 'group-hover:scale-110'}`}
+                                    sizes="(max-width: 768px) 160px, 256px"
+                                />
+                                <div className={`absolute inset-0 bg-gradient-to-t from-black/95 ${isActive ? 'via-brand/5' : 'via-black/30'} to-transparent`} />
 
-                            <div className="absolute top-3 right-3 md:top-5 md:right-5 z-30">
-                                <button className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center text-white hover:bg-white hover:text-black transition-all">
-                                    <Bookmark className="w-4 h-4 md:w-5 md:h-5" />
-                                </button>
-                            </div>
-
-                            <div className="absolute bottom-4 left-4 right-4 md:bottom-6 md:left-6 md:right-6 z-30">
-                                <h3 className="text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase mb-1 drop-shadow-md text-white/90">{service.location}</h3>
-                                <div className="flex gap-1">
-                                    {[1, 2, 3, 4, 5].map((i) => (
-                                        <div key={i} className={`w-0.5 h-0.5 md:w-1 md:h-1 rounded-full ${i <= 4 ? "bg-white" : "bg-white/30"}`} />
-                                    ))}
+                                <div className="absolute top-3 right-3 md:top-5 md:right-5 z-30">
+                                    <button className={`w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center transition-all 
+                                        ${isActive ? 'bg-brand text-white' : 'bg-white/10 backdrop-blur-md text-white hover:bg-white hover:text-black'}`}>
+                                        <Bookmark className="w-4 h-4 md:w-5 md:h-5" />
+                                    </button>
                                 </div>
-                            </div>
-                        </motion.div>
-                    ))}
+
+                                <div className="absolute bottom-4 left-4 right-4 md:bottom-6 md:left-6 md:right-6 z-30">
+                                    <h3 className={`text-[10px] md:text-xs font-bold tracking-[0.2em] uppercase mb-1 drop-shadow-md transition-colors ${isActive ? 'text-white' : 'text-white/70'}`}>
+                                        {service.location}
+                                    </h3>
+                                    <div className="flex gap-1">
+                                        {[1, 2, 3].map((i) => (
+                                            <div key={i} className={`w-0.5 h-0.5 md:w-1 md:h-1 rounded-full ${i <= (targetIndex + 1) ? "bg-brand" : "bg-white/30"}`} />
+                                        ))}
+                                    </div>
+                                </div>
+
+                                {isActive && (
+                                    <div className="absolute top-0 left-0 w-full h-1 bg-brand/50" />
+                                )}
+                            </motion.div>
+                        );
+                    })}
                 </AnimatePresence>
             </div>
 

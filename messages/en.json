@@ -32,40 +32,22 @@
     "viewAll": "View All Services",
     "items": [
       {
-        "title": "Mobile App",
-        "subtitle": "Development",
-        "description": "Custom mobile solutions built with cutting-edge technologies. We transform complex ideas into intuitive, high-performance applications.",
-        "location": "iOS & Android Solutions"
+        "title": "Herbal Technology",
+        "subtitle": "RESEARCH",
+        "description": "High-end laboratory research focused on Himalayan medicinal herbal plants and phytochemical analysis for industrial and therapeutic applications.",
+        "location": "Centre of Excellence"
       },
       {
-        "title": "Cyber Secruity",
-        "subtitle": "SECURITY",
-        "description": "Advanced threat protection and infrastructure monitoring. We secure your digital assets with enterprise-grade security protocols.",
-        "location": "Threat Detection & Defense"
+        "title": "Phytochemical Evaluation",
+        "subtitle": "EVALUATION",
+        "description": "Advanced laboratory equipment and protocols for accurate extraction and characterization of medicinal plant principal active ingredients.",
+        "location": "Specialized Lab Unit"
       },
       {
-        "title": "Cloud Infrastructure",
-        "subtitle": "CLOUD",
-        "description": "Scalable cloud solutions designed for performance and reliability. Build, deploy, and manage applications with enterprise-grade infrastructure.",
-        "location": "AWS, Azure & GCP"
-      },
-      {
-        "title": "AI & Machine Learning",
-        "subtitle": "ARTIFICIAL INTELLIGENCE",
-        "description": "Intelligent automation and predictive analytics powered by cutting-edge AI. Transform data into actionable insights.",
-        "location": "ML Models & Automation"
-      },
-      {
-        "title": "Web Development",
-        "subtitle": "WEB",
-        "description": "Modern, responsive web applications built with the latest frameworks. Fast, secure, and user-friendly digital experiences.",
-        "location": "React, Next.js & More"
-      },
-      {
-        "title": "DevOps Solutions",
-        "subtitle": "OPERATIONS",
-        "description": "Streamline your development pipeline with automated CI/CD workflows. Deploy faster with confidence and reliability.",
-        "location": "CI/CD & Automation"
+        "title": "Digital Test Booking",
+        "subtitle": "SYSTEM",
+        "description": "A seamless, glassmorphic online booking system for laboratory testing, designed to streamline collaboration between researchers and industry.",
+        "location": "Scientific Portal"
       }
     ]
   },

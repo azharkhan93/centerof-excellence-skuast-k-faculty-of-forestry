@@ -12,11 +12,20 @@ export const useHeroSlider = (services: Service[], delay = 3000, pause = 5000) =
 
     const move = useCallback((next: number) => {
         setState(s => {
-            if (s.isAnimating || next === s.index) return s;
+            const nextMod = (next + services.length) % services.length;
+            if (s.isAnimating || nextMod === s.index) return s;
+
+            // Calculate smart direction for circular wrapping
+            let direction = nextMod > s.index ? 1 : -1;
+            
+            // Handle wrap-around cases
+            if (s.index === services.length - 1 && nextMod === 0) direction = 1;
+            if (s.index === 0 && nextMod === services.length - 1) direction = -1;
+
             return {
                 ...s,
-                direction: next > s.index ? 1 : -1,
-                index: (next + services.length) % services.length
+                direction,
+                index: nextMod
             };
         });
     }, [services.length]);
@@ -44,7 +53,7 @@ export const useHeroSlider = (services: Service[], delay = 3000, pause = 5000) =
         prevSlide: () => trigger(() => move(state.index - 1)),
         handleThumbnailClick: (idx: number) => trigger(() => move(idx)),
         currentService: services[state.index],
-        nextServices: [getSvc(1), getSvc(2)],
+        nextServices: [getSvc(0), getSvc(1), getSvc(2)],
         totalSteps: services.length
     };
 };
