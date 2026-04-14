@@ -19,5 +19,7 @@ export * from "./Modal";
 export * from "./Stats"
 export * from "./InnovationPillars/InnovationPillars";
 export * from "./SplashScreen/SplashWrapper";
+export * from "./Facilities/Facilities";
+export * from "./LabTour/LabTour";
 
 

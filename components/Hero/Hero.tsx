@@ -169,18 +169,21 @@ export const Hero: React.FC = () => {
             </div>
 
 
-            <div className="absolute bottom-6 md:bottom-16 left-6 md:left-1/2 md:-translate-x-1/2 z-40 flex items-center gap-4 md:gap-6">
+            {/* Navigation Buttons */}
+            <div className="absolute bottom-6 md:bottom-12 left-6 md:left-1/2 md:-translate-x-1/2 z-40 flex items-center gap-4 md:gap-6">
                 <button
                     onClick={prevSlide}
-                    className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-white/10 backdrop-blur-2xl border border-white/20 flex items-center justify-center hover:bg-white hover:text-black transition-all group active:scale-95"
+                    className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-brand backdrop-blur-2xl border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-black transition-all group active:scale-95 shadow-lg"
+                    aria-label="Previous slide"
                 >
-                    <ChevronLeft size={24} className="md:w-8 md:h-8" />
+                    <ChevronLeft className="w-5 h-5 md:w-6 md:h-6 group-hover:-translate-x-0.5 transition-transform" />
                 </button>
                 <button
                     onClick={nextSlide}
-                    className="w-12 h-12 md:w-16 md:h-16 rounded-full bg-white/10 backdrop-blur-2xl border border-white/20 flex items-center justify-center hover:bg-white hover:text-black transition-all group active:scale-95"
+                    className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-brand backdrop-blur-2xl border border-white/20 flex items-center justify-center text-white hover:bg-white hover:text-black transition-all group active:scale-95 shadow-lg"
+                    aria-label="Next slide"
                 >
-                    <ChevronRight size={24} className="md:w-8 md:h-8" />
+                    <ChevronRight className="w-5 h-5 md:w-6 md:h-6 group-hover:translate-x-0.5 transition-transform" />
                 </button>
             </div>
 

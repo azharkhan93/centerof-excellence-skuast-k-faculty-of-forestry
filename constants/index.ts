@@ -199,65 +199,103 @@ export interface Testimonial {
 export const TESTIMONIALS: Testimonial[] = [
     {
         id: 1,
-        name: "Mr Wakeel Sheikh",
-        role: "CTO",
-        company: "TechVision Inc.",
+        name: "Mr Bashir Ahmad",
+        role: "Farmer",
+        company: "Kashmir Herbal Growers",
         image: "/images/testimonials/avatar1.jpg",
         rating: 5,
-        testimonial: "Ishraff Tech transformed our mobile app vision into reality. Their expertise in cutting-edge technologies and attention to detail resulted in a product that exceeded our expectations. The team's professionalism and commitment to excellence are unmatched.",
-        projectType: "Mobile Development"
+        testimonial: "The extraction protocols provided by the Centre helped me verify the purity of my lavender oil harvest, which increased its market value by 40%.",
+        projectType: "Herbal Production"
     },
     {
         id: 2,
-        name: "Mr Wajid Naeem",
-        role: "CEO",
-        company: "SecureNet Solutions",
+        name: "Ms Zoya Khan",
+        role: "Entrepreneur",
+        company: "Nature's Essence Startups",
         image: "/images/testimonials/avatar2.jpg",
         rating: 5,
-        testimonial: "Working with Ishraff Tech on our cybersecurity infrastructure was a game-changer. They implemented enterprise-grade security protocols that gave us peace of mind. Their proactive approach to threat detection is exceptional.",
-        projectType: "Cyber Security"
+        testimonial: "Validating our herbal formulations at the Centre's laboratory gave our startup the scientific credibility needed to secure our first international export deal.",
+        projectType: "Industrial Formulation"
     },
     {
         id: 3,
-        name: "Ms Ayesha",
-        role: "Product Manager",
-        company: "CloudScale Systems",
+        name: "Mr Ishfaq Mir",
+        role: "Research Student",
+        company: "Faculty of Forestry",
         image: "/images/testimonials/avatar3.jpg",
         rating: 5,
-        testimonial: "The cloud infrastructure solution Ishraff Tech delivered was seamless and scalable. Their team understood our complex requirements and delivered a robust system that handles our growing demands effortlessly.",
-        projectType: "Cloud Solutions"
-    },
-    {
-        id: 4,
-        name: "Mr Junaid",
-        role: "Founder",
-        company: "AI Innovations Lab",
-        image: "/images/testimonials/avatar4.jpg",
-        rating: 5,
-        testimonial: "Ishraff Tech's AI integration expertise helped us stay ahead of the competition. They delivered intelligent solutions that transformed our business processes and improved efficiency by 40%. Truly innovative work!",
-        projectType: "AI Integration"
-    },
-    {
-        id: 5,
-        name: "Mr Faizan",
-        role: "Regular Client",
-        company: "DataFlow Technologies",
-        image: "/images/testimonials/avatar5.jpg",
-        rating: 5,
-        testimonial: "Outstanding work from start to finish. Ishraff Tech's development team is highly skilled, responsive, and dedicated to delivering quality. They turned our complex requirements into an elegant, user-friendly solution.",
-        projectType: "Custom Development"
-    },
-    {
-        id: 6,
-        name: "Mr Rakib",
-        role: "Regular Client",
-        company: "Enterprise Solutions Group",
-        image: "/images/testimonials/avatar6.jpg",
-        rating: 5,
-        testimonial: "Ishraff Tech's comprehensive approach to our digital transformation was impressive. From planning to execution, they demonstrated deep technical knowledge and excellent project management skills.",
-        projectType: "Digital Transformation"
+        testimonial: "The hands-on experience with phytochemical analysis here has been invaluable for my research on Himalayan medicinal plants and sustainable forestry conservation.",
+        projectType: "Research & Analysis"
     }
 ];
+
+export const FACILITIES_DATA = [
+    {
+        id: "lcmsmsq3",
+        title: "LC-MS/MS Q3",
+        description: "Triple Quadrupole Liquid Chromatography Mass Spectrometer for high-sensitivity quantitation.",
+        image: "/images/facilities/lcmsmsq3.png",
+        icon: "Microscope"
+    },
+    {
+        id: "lcmsms",
+        title: "LC-MS/MS",
+        description: "Advanced tandem mass spectrometry for comprehensive metabolic profiling.",
+        image: "/images/facilities/lcmsms.png",
+        icon: "Zap"
+    },
+    {
+        id: "chromatography",
+        title: "Pure Chromatography",
+        description: "High-performance liquid chromatography for automated principal ingredient isolation.",
+        image: "/images/facilities/chromatography.png",
+        icon: "Waves"
+    },
+    {
+        id: "extraction",
+        title: "Extraction Unit",
+        description: "Specialized pilot-scale unit for medicinal plant active ingredient extraction.",
+        image: "/images/facilities/extraction.png",
+        icon: "FlaskConical"
+    }
+];
+
+export const LAB_TOUR_DATA = {
+    title: "Experience Our Centre",
+    subtitle: "Laboratory Tour",
+    description: "Step inside the SKUAST-K Centre of Excellence on Herbal Technology. Explore our high-precision analytical halls, specialized extraction units, and collaborative research spaces.",
+    mainImage: "/images/tour/wide_view.png",
+    hotspots: [
+        {
+            id: 1,
+            title: "Analytical Hall",
+            description: "High-precision instrumentation for phytochemical profiling.",
+            top: "45%",
+            left: "25%"
+        },
+        {
+            id: 2,
+            title: "Botanical Archive",
+            description: "Curated collection of Himalayan medicinal plant germplasm.",
+            top: "35%",
+            left: "65%"
+        },
+        {
+            id: 3,
+            title: "Extraction Lobby",
+            description: "Process-scale active ingredient isolation facility.",
+            top: "65%",
+            left: "55%"
+        },
+        {
+            id: 4,
+            title: "Collaboration Wing",
+            description: "Joint research space for industrial and therapeutic analysis.",
+            top: "20%",
+            left: "40%"
+        }
+    ]
+};
 
 
 

@@ -14,10 +14,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "TheTechKey - Advanced Digital Solutions",
-  description: "Empowering businesses with cutting-edge software engineering, cybersecurity, and AI solutions.",
+  title: "Centre of Excellence on Herbal Technology | Faculty of Forestry",
+  description: "State-of-the-art laboratory facility for phytochemical evaluation and herbal technology research at SKUAST-K Kashmir.",
   icons: {
-    icon: "/images/holistics.jpg",
+    icon: "/images/holistics-nobg.png",
   },
 };
 

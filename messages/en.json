@@ -92,46 +92,48 @@
     "description": "Don't just take our word for it. Here's what our clients have to say about working with us.",
     "reviews": {
       "0": {
-        "name": "Mr Wakeel Sheikh",
-        "role": "CTO",
-        "company": "TechVision Inc.",
-        "testimonial": "Ishraff Tech transformed our mobile app vision into reality. Their expertise in cutting-edge technologies and attention to detail resulted in a product that exceeded our expectations. The team's professionalism and commitment to excellence are unmatched.",
-        "projectType": "Mobile Development"
+        "name": "Mr Bashir Ahmad",
+        "role": "Farmer",
+        "company": "Kashmir Herbal Growers",
+        "testimonial": "The extraction protocols provided by the Centre helped me verify the purity of my lavender oil harvest, which increased its market value by 40%.",
+        "projectType": "Herbal Production"
       },
       "1": {
-        "name": "Mr Wajid Naeem",
-        "role": "CEO",
-        "company": "SecureNet Solutions",
-        "testimonial": "Working with Ishraff Tech on our cybersecurity infrastructure was a game-changer. They implemented enterprise-grade security protocols that gave us peace of mind. Their proactive approach to threat detection is exceptional.",
-        "projectType": "Cyber Security"
+        "name": "Ms Zoya Khan",
+        "role": "Entrepreneur",
+        "company": "Nature's Essence Startups",
+        "testimonial": "Validating our herbal formulations at the Centre's laboratory gave our startup the scientific credibility needed to secure our first international export deal.",
+        "projectType": "Industrial Formulation"
       },
       "2": {
-        "name": "Ms Ayesha",
-        "role": "Product Manager",
-        "company": "CloudScale Systems",
-        "testimonial": "The cloud infrastructure solution Ishraff Tech delivered was seamless and scalable. Their team understood our complex requirements and delivered a robust system that handles our growing demands effortlessly.",
-        "projectType": "Cloud Solutions"
-      },
-      "3": {
-        "name": "Mr Junaid",
-        "role": "Founder",
-        "company": "AI Innovations Lab",
-        "testimonial": "Ishraff Tech's AI integration expertise helped us stay ahead of the competition. They delivered intelligent solutions that transformed our business processes and improved efficiency by 40%. Truly innovative work!",
-        "projectType": "AI Integration"
-      },
-      "4": {
-        "name": "Mr Faizan",
-        "role": "Regular Client",
-        "company": "DataFlow Technologies",
-        "testimonial": "Outstanding work from start to finish. Ishraff Tech's development team is highly skilled, responsive, and dedicated to delivering quality. They turned our complex requirements into an elegant, user-friendly solution.",
-        "projectType": "Custom Development"
-      },
-      "5": {
-        "name": "Mr Rakib",
-        "role": "Regular Client",
-        "company": "Enterprise Solutions Group",
-        "testimonial": "Ishraff Tech's comprehensive approach to our digital transformation was impressive. From planning to execution, they demonstrated deep technical knowledge and excellent project management skills.",
-        "projectType": "Digital Transformation"
+        "name": "Mr Ishfaq Mir",
+        "role": "Research Student",
+        "company": "Faculty of Forestry",
+        "testimonial": "The hands-on experience with phytochemical analysis here has been invaluable for my research on Himalayan medicinal plants and sustainable forestry conservation.",
+        "projectType": "Research & Analysis"
+      }
+    },
+    "facilities": {
+      "badge": "Infrastructure",
+      "title": "Precision Laboratory Facilities",
+      "description": "Equipped with state-of-the-art analytical instrumentation to support advanced phytochemical evaluation and medicinal plant research.",
+      "items": {
+        "lcmsmsq3": {
+          "title": "LC-MS/MS Q3",
+          "desc": "Triple Quadrupole Liquid Chromatography Mass Spectrometer."
+        },
+        "lcmsms": {
+          "title": "LC-MS/MS",
+          "desc": "Advanced Liquid Chromatography Mass Spectrometry system."
+        },
+        "chromatography": {
+          "title": "Pure Chromatography",
+          "desc": "High-purity liquid chromatography for principal ingredient isolation."
+        },
+        "extraction": {
+          "title": "Extraction Unit",
+          "desc": "Specialized unit for medicinal plant active ingredient extraction."
+        }
       }
     },
     "stats": {
