@@ -119,7 +119,7 @@ export const CONTACT_INFO: ContactInfo = {
 };
 
 export const COMPANY_INFO = {
-    name: "CENTRE OF EXCELLENCE ON HERBAL TECHNOLOGY FACULTY OF FORESTRY, SKUAST-KASHMIR",
+    name: "FACULTY OF FORESTRY, SKUAST-KASHMIR",
     logo: "/images/holistics-nobg.png",
     logos: [
         "/images/holistics-nobg.png",
@@ -312,15 +312,16 @@ export interface NavLink {
 
 export const NAV_LINKS: NavLink[] = [
     { href: "/", labelKey: "home" },
-    {
-        href: "/products",
-        labelKey: "products",
-        subLinks: [
-            { href: "/products/ishraff", labelKey: "ishraff", icon: "Boxes" }
-        ]
-    },
-    { href: "/services", labelKey: "services" },
+    // {
+    //     href: "/products",
+    //     labelKey: "products",
+    //     subLinks: [
+    //         { href: "/products/ishraff", labelKey: "ishraff", icon: "Boxes" }
+    //     ]
+    // },
+    // { href: "/services", labelKey: "services" },
     { href: "/about", labelKey: "about" },
+    { href: "/book-test", labelKey: "bookTest" },
     { href: "/contact", labelKey: "contact" }
 ];
 
