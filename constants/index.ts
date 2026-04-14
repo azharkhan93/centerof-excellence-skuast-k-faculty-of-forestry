@@ -32,7 +32,7 @@ export const SERVICES: Service[] = [
         image: "/images/hero3.jpg",
         location: "Scientific Portal"
     },
-   
+
 ];
 
 // Footer Types
@@ -105,13 +105,13 @@ export const SOCIAL_LINKS: SocialLink[] = [
 ];
 
 export const CONTACT_INFO: ContactInfo = {
-    address: "Knowledge Oasis Muscat, KOM / Al Seeb / Muscat Governorate, Head Quarters P.O.Box : 34",
+    address: "7QFM+JVH, Benhama, Jammu and Kashmir 191201",
     // city: "Al Seeb",
     // state: "Muscat Governorate",
     // zip: "P.O. Box 34",
     // country: "Sultanate of Oman",
-    email: "support@ishraff.com​",
-    phone: "+968 99449403",
+    email: "coehtfof@skuastkashmir.ac.in",
+    phone: "+91 123456789",
     city: "",
     state: "",
     zip: "",
