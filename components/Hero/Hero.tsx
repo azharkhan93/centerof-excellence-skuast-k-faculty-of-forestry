@@ -50,7 +50,7 @@ export const Hero: React.FC = () => {
 
     return (
         <section className="relative h-screen w-full overflow-hidden bg-black text-white ">
-            
+
             <AnimatePresence initial={true} custom={direction} onExitComplete={() => setIsAnimating(false)}>
                 <motion.div
                     key={currentIndex}
@@ -72,11 +72,11 @@ export const Hero: React.FC = () => {
                 </motion.div>
             </AnimatePresence>
 
-           
-<div className="absolute inset-0 z-10 bg-gradient-to-r from-black/30 via-black/20 to-black/10 md:from-black/70 md:via-black/40 md:to-transparent" />
+
+            <div className="absolute inset-0 z-10 bg-gradient-to-r from-black/30 via-black/20 to-black/10 md:from-black/70 md:via-black/40 md:to-transparent" />
 
 
-            {/* Content Section */}
+
             <div className="absolute left-6 md:left-24 top-[40%] md:top-1/2 -translate-y-1/2 z-20 max-w-[calc(100%-3rem)] md:max-w-xl pointer-events-none">
                 <AnimatePresence mode="wait">
                     <motion.div
@@ -121,7 +121,7 @@ export const Hero: React.FC = () => {
                     {nextServices.map((service, idx) => {
                         const targetIndex = SERVICES.findIndex(s => s.id === service.id);
                         const isActive = idx === 0;
-                        
+
                         return (
                             <motion.div
                                 key={`thumbnail-${service.id}`}
@@ -135,10 +135,10 @@ export const Hero: React.FC = () => {
                                     ${isActive ? 'border-brand/60 scale-105 z-30 shadow-brand/20' : 'border-white/10 opacity-60 hover:opacity-100'}`}
                                 onClick={() => handleThumbnailClick(targetIndex)}
                             >
-                                <Image 
-                                    src={service.image} 
-                                    alt={service.title} 
-                                    fill 
+                                <Image
+                                    src={service.image}
+                                    alt={service.title}
+                                    fill
                                     className={`object-cover transition-all duration-700 ${isActive ? 'scale-110 brightness-110' : 'group-hover:scale-110'}`}
                                     sizes="(max-width: 768px) 160px, 256px"
                                     priority={isActive}
