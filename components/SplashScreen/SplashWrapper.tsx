@@ -51,7 +51,7 @@ export const SplashWrapper: React.FC<SplashWrapperProps> = ({ children }) => {
                 transition={{ 
                     duration: 1.2, 
                     ease: [0.22, 1, 0.36, 1],
-                    delay: 0.8 // Matches the start of the clip-path lift
+                    delay: 0.2 // Matches the start of the clip-path lift
                 }}
             >
                 {children}

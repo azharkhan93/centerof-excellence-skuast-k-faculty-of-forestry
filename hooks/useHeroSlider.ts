@@ -1,7 +1,7 @@
 import { useState, useEffect, useCallback, useRef } from "react";
 import type { Service } from "@/constants";
 
-export const useHeroSlider = (services: Service[], delay = 3000, pause = 5000) => {
+export const useHeroSlider = (services: Service[], isLoaded: boolean = true, delay = 3000, pause = 5000) => {
     const [state, setState] = useState({
         index: 0,
         direction: 0,
@@ -38,10 +38,10 @@ export const useHeroSlider = (services: Service[], delay = 3000, pause = 5000) =
     }, [pause]);
 
     useEffect(() => {
-        if (!state.autoplay) return;
+        if (!state.autoplay || !isLoaded) return;
         const id = setInterval(() => move(state.index + 1), delay);
         return () => clearInterval(id);
-    }, [state.index, state.autoplay, move, delay]);
+    }, [state.index, state.autoplay, move, delay, isLoaded]);
 
     const getSvc = (offset: number) => services[(state.index + offset + services.length) % services.length];
 

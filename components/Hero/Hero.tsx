@@ -46,7 +46,7 @@ export const Hero: React.FC = () => {
         currentService,
         nextServices,
         totalSteps
-    } = useHeroSlider(translatedServices);
+    } = useHeroSlider(translatedServices, isLoaded);
 
     return (
         <section className="relative h-screen w-full overflow-hidden bg-black text-white ">
@@ -60,6 +60,7 @@ export const Hero: React.FC = () => {
                     initial="enter"
                     animate={isLoaded ? "center" : "enter"}
                     exit="exit"
+                    onAnimationComplete={() => setIsAnimating(false)}
                     className="absolute inset-0 z-0"
                 >
                     <Image
