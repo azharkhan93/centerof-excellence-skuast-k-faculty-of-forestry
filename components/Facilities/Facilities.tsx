@@ -8,11 +8,11 @@ import { FacilityCard } from "./FacilityCard";
 export const Facilities: React.FC = () => {
     return (
         <section className="relative py-24 md:py-32 overflow-hidden bg-white">
-            {/* Background Accents - Subtler for light theme */}
+           
             <div className="absolute top-0 right-0 w-[500px] h-[500px] bg-brand/5 blur-[120px] rounded-full pointer-events-none" />
             
             <div className="container mx-auto px-6 relative z-10">
-                {/* Header */}
+              
                 <div className="max-w-3xl mb-16 md:mb-24 text-center mx-auto">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -34,7 +34,7 @@ export const Facilities: React.FC = () => {
 
                 {/* Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-                    {FACILITIES_DATA.map((facility, index) => (
+                    {FACILITIES_DATA.slice(0, 4).map((facility, index) => (
                         <FacilityCard
                             key={facility.id}
                             {...facility}
