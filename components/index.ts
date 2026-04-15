@@ -21,7 +21,7 @@ export * from "./InnovationPillars/InnovationPillars";
 export * from "./SplashScreen/SplashWrapper";
 export * from "./Legal/PrivacyPolicy";
 export * from "./Legal/FAQ";
-export * from "./Facilities/Facilities";
+export * from "./Facilities";
 export * from "./LabTour/LabTour";
 export * from "./Team";
 export * from "./Gallery";

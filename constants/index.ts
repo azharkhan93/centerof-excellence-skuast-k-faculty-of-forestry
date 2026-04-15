@@ -369,32 +369,124 @@ export const TESTIMONIALS: Testimonial[] = [
 
 export const FACILITIES_DATA = [
     {
-        id: "lcmsmsq3",
-        title: "LC-MS/MS Q3",
-        description: "Triple Quadrupole Liquid Chromatography Mass Spectrometer for high-sensitivity quantitation.",
-        image: "/images/facilities/lcmsmsq3.png",
-        icon: "Microscope"
+        id: "solvent-extraction",
+        title: "Automated Solvent Extraction",
+        description: "High-throughput extraction system for complex metabolite recovery.",
+        features: [
+            "Extract 6 samples at once with 21+ solvents",
+            "Fast, efficient metabolite recovery",
+            "Supports species-specific methods"
+        ],
+        image: "/images/facilities/extraction.png",
+        icon: "FlaskConical"
     },
     {
-        id: "lcmsms",
-        title: "LC-MS/MS",
-        description: "Advanced tandem mass spectrometry for comprehensive metabolic profiling.",
-        image: "/images/facilities/lcmsms.png",
-        icon: "Zap"
-    },
-    {
-        id: "chromatography",
-        title: "Pure Chromatography",
-        description: "High-performance liquid chromatography for automated principal ingredient isolation.",
+        id: "parallel-evaporation",
+        title: "Parallel Evaporation System",
+        description: "Syncore Plus Analyst for simultaneous multi-sample concentration.",
+        features: [
+            "Simultaneous 6-sample concentration",
+            "Efficient solvent reuse",
+            "Rapid, maximum recovery"
+        ],
         image: "/images/facilities/chromatography.png",
         icon: "Waves"
     },
     {
-        id: "extraction",
-        title: "Extraction Unit",
-        description: "Specialized pilot-scale unit for medicinal plant active ingredient extraction.",
+        id: "lcmsms-q3",
+        title: "LC-MS/MS (Triple Quadrupole)",
+        description: "High-selectivity tandem mass spectrometry for molecule quantification.",
+        features: [
+            "High selectivity & sensitivity",
+            "Self-cleaning, low contamination",
+            "Ultra-fast polarity switching"
+        ],
+        image: "/images/facilities/lcmsmsq3.png",
+        icon: "Zap"
+    },
+    {
+        id: "chromatography",
+        title: "Pure Chromatography System",
+        description: "Automated high-resolution purification for active compounds.",
+        features: [
+            "Purifies active compounds (95–98% purity)",
+            "UV/ELSD detection for accurate ID",
+            "Scalable lab & pilot purification"
+        ],
+        image: "/images/facilities/chromatography.png",
+        icon: "Activity"
+    },
+    {
+        id: "ftir",
+        title: "FTIR Spectrometer",
+        description: "Molecular fingerprinting for identification of unknowns.",
+        features: [
+            "Identifies functional groups",
+            "Unique IR spectra generation",
+            "Molecular fingerprinting"
+        ],
+        image: "/images/facilities/lcmsms.png",
+        icon: "Fingerprint"
+    },
+    {
+        id: "uv-vis",
+        title: "UV-Visible Spectrophotometer",
+        description: "Double-beam design for stable and accurate UV-Vis measurements.",
+        features: [
+            "Double-beam optical design",
+            "Accurate & stable measurements",
+            "Quantitative concentration analysis"
+        ],
+        image: "/images/facilities/lcmsms.png",
+        icon: "Sun"
+    },
+    {
+        id: "freeze-dryer",
+        title: "Freeze Dryer",
+        description: "Automated sublimation system for stable lab and pilot use.",
+        features: [
+            "Stable vacuum & temperature",
+            "Reproducible drying cycles",
+            "Scalable lab & pilot use"
+        ],
         image: "/images/facilities/extraction.png",
-        icon: "FlaskConical"
+        icon: "Snowflake"
+    },
+    {
+        id: "spray-dryer",
+        title: "Spray Dryer",
+        description: "Rapid liquid-to-powder conversion with uniform particle size.",
+        features: [
+            "Uniform particle size control",
+            "Precise airflow & temperature",
+            "Analytical formulation support"
+        ],
+        image: "/images/facilities/extraction.png",
+        icon: "Wind"
+    },
+    {
+        id: "rt-pcr",
+        title: "Real-Time PCR Machine",
+        description: "High-sensitivity nucleic acid quantification in real time.",
+        features: [
+            "Gene expression analysis",
+            "Molecular authentication",
+            "Real-time quantification"
+        ],
+        image: "/images/facilities/lcmsmsq3.png",
+        icon: "Dna"
+    },
+    {
+        id: "gel-doc",
+        title: "Gel Documentation System",
+        description: "High-resolution visualization of DNA, RNA, and proteins.",
+        features: [
+            "High-res DNA/RNA imaging",
+            "Molecular band analysis",
+            "USB integration facility"
+        ],
+        image: "/images/facilities/lcmsmsq3.png",
+        icon: "Image"
     }
 ];
 
@@ -450,15 +542,9 @@ export interface NavLink {
 
 export const NAV_LINKS: NavLink[] = [
     { href: "/", labelKey: "home" },
-    // {
-    //     href: "/products",
-    //     labelKey: "products",
-    //     subLinks: [
-    //         { href: "/products/ishraff", labelKey: "ishraff", icon: "Boxes" }
-    //     ]
-    // },
-    { href: "/services", labelKey: "services" },
     { href: "/about", labelKey: "about" },
+    { href: "/facilities", labelKey: "facilities" },
+    { href: "/services", labelKey: "services" },
     { href: "/team", labelKey: "team" },
     { href: "/gallery", labelKey: "gallery" },
     { href: "/book-test", labelKey: "bookTest" },
