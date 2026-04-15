@@ -684,6 +684,37 @@ export const SERVICES_PAGE_DATA = {
             "Large scale extraction and distillation of MAPs",
             "Qualitative and quantitative testing of MAP extracts"
         ]
+    },
+    services: SERVICES,
+    whatYouGet: {
+        title: "Why Choose CoEHT",
+        subtitle: "Unmatched scientific precision and institutional support for Himalayan botanical research.",
+        values: [
+            {
+                id: 1,
+                title: "Certified Purity",
+                description: "Standardized protocols for ensuring MAP harvest quality and industrial credibility.",
+                icon: "Award"
+            },
+            {
+                id: 2,
+                title: "Expert Consulting",
+                description: "Direct access to field scientists and specialized researchers for technical guidance.",
+                icon: "Handshake"
+            },
+            {
+                id: 3,
+                title: "Rapid Turnaround",
+                description: "Efficient analysis workflows designed to accelerate your project timelines significantly.",
+                icon: "Lightbulb"
+            },
+            {
+                id: 4,
+                title: "Dedicated Support",
+                description: "End-to-end guidance from initial sample submission to final certified reporting.",
+                icon: "Headphones"
+            }
+        ]
     }
 };
 

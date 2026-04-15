@@ -73,7 +73,7 @@ export const useTestBooking = () => {
     };
 
     const totalCost = useMemo(() => {
-        if (!formData.occupation || formData.occupation === '') return 0;
+        if (!formData.occupation) return 0;
         
         // HADP Project Rule: Farmers are only free if registered
         if (formData.occupation === 'farmer' && formData.isHADP) return 0;
