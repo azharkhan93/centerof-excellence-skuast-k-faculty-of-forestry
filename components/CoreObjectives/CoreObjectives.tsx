@@ -13,7 +13,7 @@ const iconMap: Record<string, LucideIcon> = {
 
 import { useLoading } from "@/context/LoadingContext";
 
-const ObjectiveCard = ({ item, index }: { item: typeof OBJECTIVES_DATA[0], index: number }) => {
+const ObjectiveCard = ({ item, index }: { item: typeof OBJECTIVES_DATA.items[0], index: number }) => {
     const Icon = iconMap[item.iconName] || Sprout;
     const { isLoaded } = useLoading();
     
@@ -71,7 +71,7 @@ export const CoreObjectives: React.FC = () => {
                 </div>
 
                 <div className="grid md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
-                    {OBJECTIVES_DATA.map((item, index) => (
+                    {OBJECTIVES_DATA.items.map((item, index) => (
                         <ObjectiveCard key={item.id} item={item} index={index} />
                     ))}
                 </div>

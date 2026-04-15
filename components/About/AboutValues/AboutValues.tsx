@@ -29,7 +29,7 @@ export const AboutObjectives: React.FC = () => {
                             0{index + 1}
                         </div>
                         <p className="text-slate-600 leading-relaxed font-medium">
-                            {item}
+                            {item.description}
                         </p>
                     </motion.div>
                 ))}

@@ -896,9 +896,24 @@ export const GALLERY_DATA = [
 export const OBJECTIVES_DATA = {
     title: "Bioprospecting Herbal Resources for Bioeconomy",
     items: [
-        "To pioneer novel therapeutics by harnessing omics-driven biomarker identification, nano-technology, and advanced bioanalytics for transformative drug discovery",
-        "To explore elite germplasm of MAPs for sustainable production, active principal ingredients (APIs), and formulations for different industrial applications.",
-        "To foster knowledge-sharing among communities, industries and researchers in order to drive herbal innovation, commercialization and promotion of quality standards."
+        {
+            id: 1,
+            title: "Omics-Driven Therapeutics",
+            description: "To pioneer novel therapeutics by harnessing omics-driven biomarker identification, nano-technology, and advanced bioanalytics for transformative drug discovery",
+            iconName: "FlaskConical"
+        },
+        {
+            id: 2,
+            title: "Sustainable Industrial Formulations",
+            description: "To explore elite germplasm of MAPs for sustainable production, active principal ingredients (APIs), and formulations for different industrial applications.",
+            iconName: "Sprout"
+        },
+        {
+            id: 3,
+            title: "Knowledge-Sharing & Innovation",
+            description: "To foster knowledge-sharing among communities, industries and researchers in order to drive herbal innovation, commercialization and promotion of quality standards.",
+            iconName: "Users"
+        }
     ]
 };
 
