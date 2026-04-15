@@ -65,7 +65,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, locale,
                             <motion.div key={link.href} variants={linkVariants} className="overflow-hidden relative group">
                                 {link.subLinks ? (
                                     <div className="flex flex-col gap-4">
-                                        <div className="text-xl md:text-5xl font-bold text-gray-400 uppercase tracking-widest text-sm flex items-center justify-between py-2">
+                                        <div className="text-md md:text-5xl font-bold text-gray-400 uppercase tracking-widest text-sm flex items-center justify-between py-2">
                                             {t(link.labelKey)}
                                         </div>
                                         <div className="flex flex-col gap-4 pl-4 border-l border-white/10">
@@ -76,7 +76,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, locale,
                                                         key={sub.href}
                                                         href={`/${locale}${sub.href}`}
                                                         onClick={onClose}
-                                                        className="text-lg md:text-3xl font-bold hover:text-orange-400 transition-colors flex items-center gap-4"
+                                                        className="text-md md:text-3xl font-medium hover:text-orange-400 transition-colors flex items-center gap-4"
                                                     >
                                                         {IconComponent && <IconComponent className="w-6 h-6 text-orange-400" />}
                                                         {t(sub.labelKey)}
