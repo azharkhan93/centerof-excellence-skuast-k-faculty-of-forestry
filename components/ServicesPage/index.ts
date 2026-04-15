@@ -1,2 +1,2 @@
-export * from './ServiceSection';
-export * from './WhatYouGetSection';
+export * from './TestingAnalysis';
+export * from './ConsultingServices';

@@ -16,7 +16,7 @@ export default function Home() {
             <Testimonials />
             <AboutRD />
             <Facilities />
-            <WhoWeServe />
+            {/* <WhoWeServe /> */}
             <LabTour />
             {/* <CTA /> */}
             <ContactWidget />

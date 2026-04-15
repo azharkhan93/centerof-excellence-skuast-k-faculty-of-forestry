@@ -457,7 +457,7 @@ export const NAV_LINKS: NavLink[] = [
     //         { href: "/products/ishraff", labelKey: "ishraff", icon: "Boxes" }
     //     ]
     // },
-    // { href: "/services", labelKey: "services" },
+    { href: "/services", labelKey: "services" },
     { href: "/about", labelKey: "about" },
     { href: "/team", labelKey: "team" },
     { href: "/gallery", labelKey: "gallery" },
@@ -505,64 +505,98 @@ export const COMPANY_JOURNEY = [
 
 export const SERVICES_PAGE_DATA = {
     hero: {
-        title: "Services",
-        subtitle: "The Technology Key (TTK)",
-        description: "At The Technology Key (TTK), we specialize in delivering tailored technology services designed to meet the unique needs of your business. Our services are crafted to empower your organization and unlock its full potential. Explore our services and discover how we can help transform your business."
+        title: "Our Services",
+        subtitle: "Testing, Analysis & Consulting",
+        description: "The Centre of Excellence on Herbal Technology offers specialized scientific services to researchers, entrepreneurs, and government departments."
     },
-    services: [
-        {
-            id: "ui-ux",
-            title: "UI & UX Design",
-            description: "The Technology Key provides UI (User Interface) and UX (User Experience) design services, helping businesses create visually appealing, user-friendly, and intuitive applications, websites, and digital products. The company provides a range of services, from user research and wireframing to prototyping, usability testing, and interaction design.",
-            image: "/images/hero/web.png"
-        },
-        {
-            id: "app-dev",
-            title: "Application Development",
-            description: "One of main service that The Technology Key provide it is application development services, covering everything from mobile apps to custom web applications and enterprise software solutions. The company provides end-to-end services, including planning, design, development, testing, and ongoing support.",
-            image: "/images/hero/zenix_product_showcase_advanced_slate_1771189952426.png"
-        },
-        {
-            id: "tech-support",
-            title: "Technical Support",
-            description: "To help businesses and individuals troubleshoot and resolve various technical issues The Technology Key offer a range of support options, including help desk services, remote assistance, IT consulting, and managed services",
-            image: "/images/hero/devops.png"
-        },
-        {
-            id: "cyber-security",
-            title: "Cyber Security",
-            description: "We are very proud that our products designed to prioritize security, particularly when dealing with sensitive data such as financial information, personal details, or communication by using encryption, multi-factor authentication (MFA), and other security measures to protect our valuable clients from cyber threats.",
-            image: "/images/hero/cybersecurity_advanced_premium_slate_1771190420641.png"
-        }
-    ],
-    whatYouGet: {
-        title: "What You Get",
-        subtitle: "At The technology key (TTK), we believe that our success is what makes us successful. For this reason, we give important to",
-        values: [
+    testingAnalysis: {
+        title: "Testing and Analysis",
+        description: "Our comprehensive testing and analysis services are available to researchers, students, farmers, and entrepreneurs seeking accurate and reliable results. To ensure a smooth and efficient process, please adhere strictly to our established Standard Operating Procedures (SOPs).",
+        annexures: [
             {
-                id: "commitment",
-                title: "Commitment",
-                description: "We prioritize dedication and reliability, ensuring that promises are met with unwavering focus and consistency.",
-                icon: "Handshake"
+                id: "annexure-i",
+                title: "Researchers and Students Registry",
+                label: "ANNEXURE-I",
+                sopPath: "#",
+                formPath: "#",
+                color: "brand"
             },
             {
-                id: "quality",
-                title: "Quality",
-                description: "We are committed to delivering top-tier technology solutions tailored to your needs.",
-                icon: "Award"
-            },
-            {
-                id: "innovation",
-                title: "Innovation",
-                description: "We embrace creativity and forward-thinking, consistently developing new ideas and solutions to meet evolving needs.",
-                icon: "Lightbulb"
-            },
-            {
-                id: "support",
-                title: "Support",
-                description: "Your journey doesn’t end at implementation. We’re here to guide and support you every step of the way.",
-                icon: "Headphones"
+                id: "annexure-ii",
+                title: "Farmers and Entrepreneurs Registry",
+                label: "ANNEXURE-II",
+                sopPath: "#",
+                formPath: "#",
+                color: "slate"
             }
+        ],
+        categories: [
+            {
+                id: "chemical-profiling",
+                title: "Chemical Profiling",
+                items: [
+                    "Medicinal plants & wild edibles",
+                    "Underutilized crops and flora",
+                    "Nutraceuticals & Herbal extracts",
+                    "Honey and honey products",
+                    "Cosmetics and essential oils"
+                ],
+                icon: "FlaskConical"
+            },
+            {
+                id: "phytochemical",
+                title: "Phytochemical Analysis",
+                items: [
+                    "Secondary metabolites in Plants",
+                    "Microbial analysis",
+                    "Essential oil characterization"
+                ],
+                icon: "Microscope"
+            },
+            {
+                id: "herbal-science",
+                title: "Herbal Science & Technology",
+                items: [
+                    "Isolation of bioactive compounds",
+                    "Bioanalytical testing",
+                    "Drug discovery & Nanomaterials",
+                    "Species authentication & Tracing"
+                ],
+                icon: "Dna"
+            },
+            {
+                id: "agricultural",
+                title: "Agricultural & Allied Sciences",
+                items: [
+                    "Detection of pesticide residues",
+                    "Contaminants & Adulterants",
+                    "Plant disease identification",
+                    "Pathogen detection & Omics"
+                ],
+                icon: "Sprout"
+            },
+            {
+                id: "medical",
+                title: "Medical Sciences",
+                items: [
+                    "Toxicology screening & Drug testing",
+                    "Drug profiling",
+                    "Biomarker Identification",
+                    "Cell imaging & Bioactivity"
+                ],
+                icon: "Stethoscope"
+            }
+        ]
+    },
+    consulting: {
+        title: "Consulting Services",
+        items: [
+            "Integrated training on cultivation and pre-processing of MAPs",
+            "Quality seed and planting material of elite germplasm",
+            "Site surveys and techno-economic feasibility reports",
+            "Expert guidance on marketing strategies and industrial linkages",
+            "Large scale extraction and distillation of MAPs",
+            "Qualitative and quantitative testing of MAP extracts"
         ]
     }
 };
