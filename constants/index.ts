@@ -643,34 +643,80 @@ export const PILLARS_DATA = [
 ];
 
 // Team & Leadership Data
+export const INSTITUTIONAL_LEADERSHIP = [
+    {
+        id: "hvc",
+        name: "Prof. Nazir Ah Ganai",
+        role: "Hon'able Vice Chancellor",
+        organization: "SKUAST-Kashmir",
+        image: "/images/hero2.webp"
+    },
+    {
+        id: "dr",
+        name: "Prof. H R Naik",
+        role: "Director Research",
+        organization: "SKUAST-Kashmir",
+        image: "/images/hero2.webp"
+    },
+    {
+        id: "dean",
+        name: "Prof. AH Mughal",
+        role: "Dean Faculty of Forestry",
+        organization: "SKUAST-Kashmir",
+        image: "/images/hero2.webp"
+    },
+    {
+        id: "head-fpu",
+        name: "Dr. PA Sofi",
+        role: "Prof & Head FPU",
+        organization: "SKUAST-Kashmir",
+        image: "/images/hero2.webp"
+    }
+];
+
 export const PI_DATA = {
-    name: "Dr. Parvaiz Ahmad",
-    role: "Principal Investigator / Professor",
-    bio: "Leading the Centre of Excellence on Herbal Technology at SKUAST-K with a focus on plant physiology and Himalayan medicinal biodiversity.",
+    name: "Dr. Peerzada Ishtiyak Ahmad",
+    role: "PI & MAPs Expert",
+    specialty: "Expert in Medicinal and Aromatic Plants (MAPs) with specialized expertise in phytochemistry and drug discovery.",
     image: "/images/hero2.webp",
-    badges: ["Researcher", "Phytochemist", "Professor"]
+    badges: ["Researcher", "Phytochemist", "Professor"],
+    message: "Welcome to the Centre of excellence on herbal technology (CoEHT) at Faculty of Forestry SKUAST-Kashmir. Our centre is dedicated to providing high-quality analytical services to support research, industry, and regulatory compliance in the fields of agriculture, Medical, food safety, and MAPs sector.\n\nOur team is committed to generating reliable and accurate results using state-of-the-art analytical instruments and following international guidelines for sample testing and analysis.\n\nWe invite you to explore our facilities and services, and we look forward to collaborating with you to address your analytical needs."
 };
 
 export const TEAM_MEMBERS = [
     {
         id: 1,
-        name: "Dr. Mehreen Gul",
-        role: "Associate Professor",
-        specialty: "Phytochemistry",
+        name: "Dr. Tahir Mushtaq",
+        role: "Scientist",
+        specialty: "Specialist in silviculture and nursery technology of MAPs",
         image: "/images/hero2.webp"
     },
     {
         id: 2,
-        name: "Dr. Ishtiyaq Ahmad",
-        role: "Assistant Professor",
-        specialty: "Plant Taxonomy",
+        name: "Ms. Arfa ji",
+        role: "Young Professional III",
+        specialty: "Research expertise spanning molecular biology, nanobiotechnology and drug discovery.",
         image: "/images/hero2.webp"
     },
     {
         id: 3,
-        name: "Dr. Shaziya Hassan",
-        role: "Research Associate",
-        specialty: "Molecular Biology",
+        name: "Ms. Irtiqa Mohammad",
+        role: "Young Professional II",
+        specialty: "Researcher with expertise in phytochemistry and MAPs",
+        image: "/images/hero2.webp"
+    },
+    {
+        id: 4,
+        name: "Mr. Jan Mohammad",
+        role: "Field Assistant",
+        specialty: "Field and Lab Support Assistant",
+        image: "/images/hero2.webp"
+    },
+    {
+        id: 5,
+        name: "Research Scholars",
+        role: "Collaborative Research Unit",
+        specialty: "Ms Iqra, Ms Sabira, Ms Suraya",
         image: "/images/hero2.webp"
     }
 ];
