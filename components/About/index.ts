@@ -7,3 +7,4 @@ export * from "./AboutJourney";
 export * from "./AboutScope";
 export * from "./AboutRD";
 export * from "./WhyChoose";
+export * from "./AboutMandate";

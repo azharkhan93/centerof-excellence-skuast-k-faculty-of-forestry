@@ -170,35 +170,7 @@ export const ABOUT_MISSION = {
     image: "/images/hero2.webp"
 };
 
-export const OBJECTIVES_DATA = [
-    {
-        id: 1,
-        title: "Omics-Driven Therapeutics",
-        description: "To pioneer novel therapeutics by harnessing omics-driven biomarker identification, nano-technology, and advanced bioanalytics for transformative drug discovery.",
-        iconName: "Dna"
-    },
-    {
-        id: 2,
-        title: "Industrial Bioprospecting",
-        description: "To explore elite germplasm of MAPs for sustainable production, active principal ingredients (APIs), and formulations for different industrial applications.",
-        iconName: "FlaskConical"
-    },
-    {
-        id: 3,
-        title: "Knowledge Commercialization",
-        description: "To foster knowledge-sharing among communities, industries and researchers to drive herbal innovation, commercialization and promotion of quality standards.",
-        iconName: "Users"
-    }
-];
-
-export const SCOPE_DATA = [
-    "Natural Product Chemistry", "Phytochemistry", "Pharmacognosy", 
-    "Bio-prospecting Bioresources", "Molecular and Chemotaxonomy", 
-    "Process Optimization", "Herbal Formulations", "Encapsulation", 
-    "Quality Assurance and Safety", "Contamination and Toxicity testing", 
-    "Certification", "Innovation & Sustainability", "Design & Development", 
-    "Incubation & Entrepreneurship", "Mentorship & Networking"
-];
+// Institutional data relocated to bottom of file
 
 export const RD_PRIORITIES_DATA = [
     {
@@ -225,30 +197,30 @@ export const RD_PRIORITIES_DATA = [
         desc: "Studying ecological transformations and their influence on the variability of bioactive compounds in Himalayan flora.",
         icon: "Leaf"
     },
-    {
-        id: 5,
-        title: "Bioactive Isolation",
-        desc: "Phytochemical evaluation of crude extracts for quantification, characterization and isolation of bioactive compounds for industrial use.",
-        icon: "Beaker"
-    },
-    {
-        id: 6,
-        title: "Safety & Efficacy Models",
-        desc: "Evaluating efficacy and safety of novel therapeutic agents through in-vitro and in-vivo models.",
-        icon: "Stethoscope"
-    },
-    {
-        id: 7,
-        title: "Traditional Validation",
-        desc: "Documentation and scientific validation of indigenous herbal practices and integration of traditional knowledge through R&D.",
-        icon: "History"
-    },
-    {
-        id: 8,
-        title: "Certification Protocols",
-        desc: "Development of comprehensive contamination screening and certification protocols to ensure safety and market readiness.",
-        icon: "FileCheck"
-    }
+    // {
+    //     id: 5,
+    //     title: "Bioactive Isolation",
+    //     desc: "Phytochemical evaluation of crude extracts for quantification, characterization and isolation of bioactive compounds for industrial use.",
+    //     icon: "Beaker"
+    // },
+    // {
+    //     id: 6,
+    //     title: "Safety & Efficacy Models",
+    //     desc: "Evaluating efficacy and safety of novel therapeutic agents through in-vitro and in-vivo models.",
+    //     icon: "Stethoscope"
+    // },
+    // {
+    //     id: 7,
+    //     title: "Traditional Validation",
+    //     desc: "Documentation and scientific validation of indigenous herbal practices and integration of traditional knowledge through R&D.",
+    //     icon: "History"
+    // },
+    // {
+    //     id: 8,
+    //     title: "Certification Protocols",
+    //     desc: "Development of comprehensive contamination screening and certification protocols to ensure safety and market readiness.",
+    //     icon: "FileCheck"
+    // }
 ];
 
 export const PROCESS_DATA = [
@@ -920,3 +892,60 @@ export const GALLERY_DATA = [
         description: "In-situ studies of medicinal plant morphology."
     }
 ];
+
+export const OBJECTIVES_DATA = {
+    title: "Bioprospecting Herbal Resources for Bioeconomy",
+    items: [
+        "To pioneer novel therapeutics by harnessing omics-driven biomarker identification, nano-technology, and advanced bioanalytics for transformative drug discovery",
+        "To explore elite germplasm of MAPs for sustainable production, active principal ingredients (APIs), and formulations for different industrial applications.",
+        "To foster knowledge-sharing among communities, industries and researchers in order to drive herbal innovation, commercialization and promotion of quality standards."
+    ]
+};
+
+export const SCOPE_DATA = [
+    "Natural Product Chemistry",
+    "Phytochemistry",
+    "Pharmacognosy",
+    "Bio-prospecting Bioresources",
+    "Molecular",
+    "Chemotaxonomy",
+    "Process Optimization",
+    "Herbal Formulations",
+    "Encapsulation",
+    "Quality Assurance and Safety",
+    "Contamination and Toxicity testing",
+    "Certification",
+    "Innovation & Sustainability",
+    "Design",
+    "Development",
+    "Incubation & Entrepreneurship",
+    "Mentorship",
+    "Networking"
+];
+
+export const MANDATE_DATA = {
+    title: "Our Mandate",
+    subtitle: "Core Institutional Responsibilities",
+    items: [
+        {
+            title: "Conservation & Sustainable Use",
+            description: "To conserve priority medicinal and aromatic plant (MAP) species through germplasm banking, documentation, and ensuring long-term availability and sustainability."
+        },
+        {
+            title: "Standardization & Authentication",
+            description: "To develop and validate protocols for authentication, quality control, and standardization of herbal raw materials, extracts, and formulations."
+        },
+        {
+            title: "Phyto-chemicals Determination",
+            description: "Determination of Phyto-chemicals in agricultural/horticulture crops, medicinal plants and soil including fatty acids, vitamins, sugars, elemental, flavonoids, alkaloids, xanthones, terpenoids, phenols, steroids, plant hormones, etc."
+        },
+        {
+            title: "Capacity Building & Training",
+            description: "To conduct training programmes, and workshops for students, researchers, entrepreneurs, and local communities in herbal technology and entrepreneurship."
+        },
+        {
+            title: "Collaboration & Outreach",
+            description: "To act as a link between academia, industry, and policymakers, fostering collaborations for herbal sector growth, technology transfer, and socio-economic upliftment of communities."
+        }
+    ]
+};

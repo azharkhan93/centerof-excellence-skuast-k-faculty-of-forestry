@@ -4,10 +4,14 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { AboutVision } from "./AboutVision";
 import { AboutMission } from "./AboutMission";
+import { AboutObjectives } from "./AboutValues/AboutValues";
+import { AboutScope } from "./AboutScope";
 
 const tabs = [
     { id: "vision", label: "Our Vision", component: AboutVision },
-    { id: "mission", label: "Our Mission", component: AboutMission }
+    { id: "mission", label: "Our Mission", component: AboutMission },
+    { id: "objectives", label: "Objectives", component: AboutObjectives },
+    { id: "scope", label: "Technical Scope", component: AboutScope }
 ];
 
 export const AboutTabsSection: React.FC = () => {
