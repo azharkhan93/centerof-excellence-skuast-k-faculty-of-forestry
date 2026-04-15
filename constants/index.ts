@@ -964,3 +964,14 @@ export const MANDATE_DATA = {
         // }
     ]
 };
+
+export const SERVED_AUDIENCE = [
+    { title: "Research & Academic Institutions", icon: "GraduationCap" },
+    { title: "Farmers & Growers", icon: "Sprout" },
+    { title: "Entrepreneurs", icon: "Lightbulb" },
+    { title: "Forest & Police Department", icon: "Shield" },
+    { title: "Pharmaceutical Industry", icon: "FlaskConical" },
+    { title: "Agriculture & Horticulture", icon: "Leaf" },
+    { title: "Veterinary & Fisheries", icon: "Waves" },
+    { title: "Medical Colleges", icon: "Stethoscope" }
+];

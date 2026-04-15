@@ -8,3 +8,4 @@ export * from "./AboutScope";
 export * from "./AboutRD";
 export * from "./WhyChoose";
 export * from "./AboutMandate";
+export * from "./WhoWeServe";

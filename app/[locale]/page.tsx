@@ -1,4 +1,4 @@
-import { Hero, Stats, About, CoreObjectives, AboutMandate, InnovationPillars, Process, Services, Testimonials, Facilities, LabTour, CTA, ContactWidget, ProductHighlight, AboutMission, WhyChoose, AboutRD } from "@/components";
+import { Hero, Stats, About, CoreObjectives, AboutMandate, WhoWeServe, InnovationPillars, Process, Services, Testimonials, Facilities, LabTour, CTA, ContactWidget, ProductHighlight, AboutMission, WhyChoose, AboutRD } from "@/components";
 
 export default function Home() {
     return (
@@ -10,11 +10,13 @@ export default function Home() {
              <About />  */}
             <CoreObjectives />
             <AboutMandate />
+            <WhoWeServe />
             <InnovationPillars />
             <Process />
             <Testimonials />
             <AboutRD />
             <Facilities />
+            <WhoWeServe />
             <LabTour />
             {/* <CTA /> */}
             <ContactWidget />
