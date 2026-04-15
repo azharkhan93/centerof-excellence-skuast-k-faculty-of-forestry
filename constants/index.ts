@@ -542,12 +542,12 @@ export interface NavLink {
 
 export const NAV_LINKS: NavLink[] = [
     { href: "/", labelKey: "home" },
+    { href: "/book-test", labelKey: "bookTest" },
+    { href: "/services", labelKey: "services" },
     { href: "/about", labelKey: "about" },
     { href: "/facilities", labelKey: "facilities" },
-    { href: "/services", labelKey: "services" },
     { href: "/team", labelKey: "team" },
     { href: "/gallery", labelKey: "gallery" },
-    { href: "/book-test", labelKey: "bookTest" },
     { href: "/contact", labelKey: "contact" }
 ];
 
