@@ -72,6 +72,9 @@ export const Hero: React.FC = () => {
                 </motion.div>
             </AnimatePresence>
 
+           
+<div className="absolute inset-0 z-10 bg-gradient-to-r from-black/30 via-black/20 to-black/10 md:from-black/70 md:via-black/40 md:to-transparent" />
+
 
             {/* Content Section */}
             <div className="absolute left-6 md:left-24 top-[40%] md:top-1/2 -translate-y-1/2 z-20 max-w-[calc(100%-3rem)] md:max-w-xl pointer-events-none">
