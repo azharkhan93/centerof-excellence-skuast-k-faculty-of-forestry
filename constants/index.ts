@@ -98,8 +98,8 @@ export const FOOTER_SECTIONS: FooterSection[] = [
 ];
 
 export const SOCIAL_LINKS: SocialLink[] = [
-    { id: 1, name: "GitHub", href: "https://github.com", icon: "github" },
-    { id: 2, name: "Twitter", href: "https://twitter.com", icon: "twitter" },
+    // { id: 1, name: "GitHub", href: "https://github.com", icon: "github" },
+    // { id: 2, name: "Twitter", href: "https://twitter.com", icon: "twitter" },
     { id: 3, name: "LinkedIn", href: "https://linkedin.com", icon: "linkedin" },
     { id: 4, name: "Facebook", href: "https://facebook.com", icon: "facebook" }
 ];
