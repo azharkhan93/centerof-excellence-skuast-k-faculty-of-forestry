@@ -15,7 +15,7 @@ import {
     ArrowUpRight
 } from "lucide-react";
 import { useTranslations, useLocale } from 'next-intl';
-import { SOCIAL_LINKS, CONTACT_INFO, COMPANY_INFO } from "@/constants";
+import { SOCIAL_LINKS, CONTACT_INFO, COMPANY_INFO, NAV_LINKS } from "@/constants";
 import { Modal, PrivacyPolicy, FAQ } from "@/components";
 
 const socialIconMap = {
@@ -27,6 +27,7 @@ const socialIconMap = {
 
 export const Footer: React.FC = () => {
     const t = useTranslations('footer');
+    const n = useTranslations('nav');
     const locale = useLocale();
     const currentYear = new Date().getFullYear();
     
@@ -40,12 +41,13 @@ export const Footer: React.FC = () => {
     const footerSections = useMemo(() => [
         {
             id: 1,
-            title: t('services.title'),
+            title: t('services.title'), // This is now 'Navigation' in en.json
             links: [
-                { id: 1, label: t('services.mobileDev'), href: "/services" },
-                { id: 2, label: t('services.security'), href: "/services" },
-                { id: 3, label: t('services.cloud'), href: "/services" },
-                { id: 4, label: t('services.webDev'), href: "/services" }
+                ...NAV_LINKS.map((link, idx) => ({
+                    id: idx + 1,
+                    label: n(link.labelKey),
+                    href: link.href
+                }))
             ]
         },
         {
@@ -53,8 +55,9 @@ export const Footer: React.FC = () => {
             title: t('company.title'),
             links: [
                 { id: 1, label: t('company.about'), href: "/about" },
-                { id: 2, label: t('company.products'), href: "/products" },
-                { id: 3, label: t('company.contact'), href: "/contact" }
+                { id: 2, label: t('company.training'), href: "/training-and-internships" },
+                { id: 3, label: t('company.products'), href: "/products" },
+                { id: 4, label: t('company.contact'), href: "/contact" }
             ]
         },
         {
@@ -66,7 +69,7 @@ export const Footer: React.FC = () => {
                 { id: 3, label: t('legal.cookies'), onClick: () => setShowPrivacy(true) }
             ]
         }
-    ], [t]);
+    ], [t, n]);
 
     return (
         <footer className="relative bg-slate-950 text-gray-300 overflow-hidden">

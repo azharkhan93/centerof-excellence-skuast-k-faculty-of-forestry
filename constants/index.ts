@@ -1095,3 +1095,78 @@ export const SERVED_AUDIENCE = [
     { title: "Veterinary & Fisheries", icon: "Waves" },
     { title: "Medical Colleges", icon: "Stethoscope" }
 ];
+
+export const TRAINING_PAGE_DATA = {
+    hero: {
+        title: "Practical Trainings and Workshops",
+        description: "Specialized short-term practical training programs designed to enhance technical skills and industry knowledge in the herbal sector."
+    },
+    workshops: {
+        overview: "We provide specialized short-term practical training programs and hands-on workshops on 'Instrumentation and Analytical Techniques of Medicinal and Aromatic Plants' designed for professionals, students, and industry stakeholders. These sessions aim to enhance technical skills, industry knowledge, and practical expertise through interactive learning experiences.",
+        programs: [
+            {
+                id: "one-day",
+                title: "Program Highlights (One Day)",
+                highlights: [
+                    "Introduction to key medicinal and aromatic plant species, economic importance, and global market trends.",
+                    "Overview to species authentication techniques: DNA barcoding, PCR.",
+                    "Overview to basics of plant extraction methods, phytochemical analysis, and quality control techniques.",
+                    "Overview to basics of chromatography (LCMS/MS, Flash) and spectroscopy (UV-Vis, IR etc)."
+                ],
+                details: {
+                    eligibility: "Open to graduates and above in Science or Engineering disciplines",
+                    seats: "Maximum 20 participants (First come first serve basis)",
+                    fee: "INR 2,000 per participant (excluding Tax)",
+                    schedule: "Open throughout the year",
+                    certification: "Certificate provided on successful completion"
+                }
+            },
+            {
+                id: "one-week",
+                title: "Program Highlights (One Week)",
+                highlights: [
+                    "Detailed insights into key species, properties, and commercial demand.",
+                    "Understanding industrial relevance and market potential.",
+                    "Overview of DNA extraction, Gel electrophoresis, Primer designing and PCR amplification",
+                    "Master different methods for plant material extraction and quality checks.",
+                    "Advanced chromatography (LCMS/MS, GC-MS, Flash) techniques",
+                    "Advanced spectroscopy methods (FTIR, UV).",
+                    "Interactive Expert Sessions: Engage with field experts to address queries and challenges.",
+                    "Networking opportunities with peers and professionals."
+                ],
+                details: {
+                    eligibility: "Open to graduates and above in Science or Engineering disciplines",
+                    seats: "Maximum 20 participants (First come first serve basis)",
+                    fee: "INR 10,000 per participant (excluding Tax)",
+                    schedule: "Conducted once or twice a year as per requirement",
+                    certification: "Certificate provided on successful completion",
+                    note: "A special discount of 50% shall be provided to self-funded student researchers."
+                }
+            }
+        ]
+    }
+};
+
+export const INTERNSHIP_PAGE_DATA = {
+    hero: {
+        title: "Internship Programs",
+        description: "Gain hands-on experience and valuable insights in herbal technology and natural product research alongside leading experts."
+    },
+    overview: "We offer internship programs designed for students, researchers, and professionals who wish to gain hands-on experience and valuable insights in the field of herbal technology, analytical techniques, product development and natural product research, where you will work alongside experts on cutting-edge projects.",
+    highlights: {
+        duration: "3 to 6 months",
+        mode: "On-site (as per project requirements)",
+        eligibility: [
+            "Undergraduate, postgraduate, and Ph.D. students in Medicinal and Aromatic Plants, Forestry, Botany, Pharmacy, Biotechnology, Chemistry, Agriculture, AYUSH or related disciplines.",
+            "Professionals seeking industrial or research exposure in herbal technology."
+        ],
+        areasOfWork: [
+            "Extraction & standardization of herbal compounds",
+            "Herbal formulations & product development",
+            "Quality control & analytical techniques",
+            "Pharmacological & toxicological studies",
+            "Cultivation & conservation of medicinal plants",
+            "Regulatory aspects & intellectual property rights"
+        ]
+    }
+};

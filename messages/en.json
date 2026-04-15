@@ -159,13 +159,17 @@
     "company": {
       "title": "Company",
       "about": "About Us",
-      "services": "Services",
+      "services": "Navigation",
+      "training": "Trainings & Internships",
       "careers": "Careers",
       "contact": "Contact",
       "products": "Products"
     },
+    "navigation": {
+      "title": "Navigation"
+    },
     "services": {
-      "title": "Services",
+      "title": "Navigation",
       "webDev": "Web Development",
       "mobileDev": "Mobile Development",
       "cloud": "Cloud Solutions",

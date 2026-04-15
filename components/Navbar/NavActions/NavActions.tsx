@@ -14,11 +14,11 @@ export const NavActions: React.FC<NavActionsProps> = ({ locale, t }) => {
     return (
         <div className="hidden lg:flex items-center gap-4">
             {/* <LanguageSwitcher /> */}
-            <Link href={`/${locale}/contact`}>
+            {/* <Link href={`/${locale}/contact`}>
                 <Button variant="primary" size="md">
                     {t('contact')}
                 </Button>
-            </Link>
+            </Link> */}
         </div>
     );
 };

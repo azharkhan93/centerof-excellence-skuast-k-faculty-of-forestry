@@ -25,3 +25,4 @@ export * from "./Facilities";
 export * from "./LabTour/LabTour";
 export * from "./Team";
 export * from "./Gallery";
+export * from "./TrainingInternships";
