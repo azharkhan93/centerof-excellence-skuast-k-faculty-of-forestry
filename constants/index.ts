@@ -954,13 +954,13 @@ export const MANDATE_DATA = {
             title: "Phyto-chemicals Determination",
             description: "Determination of Phyto-chemicals in agricultural/horticulture crops, medicinal plants and soil including fatty acids, vitamins, sugars, elemental, flavonoids, alkaloids, xanthones, terpenoids, phenols, steroids, plant hormones, etc."
         },
-        {
-            title: "Capacity Building & Training",
-            description: "To conduct training programmes, and workshops for students, researchers, entrepreneurs, and local communities in herbal technology and entrepreneurship."
-        },
-        {
-            title: "Collaboration & Outreach",
-            description: "To act as a link between academia, industry, and policymakers, fostering collaborations for herbal sector growth, technology transfer, and socio-economic upliftment of communities."
-        }
+        // {
+        //     title: "Capacity Building & Training",
+        //     description: "To conduct training programmes, and workshops for students, researchers, entrepreneurs, and local communities in herbal technology and entrepreneurship."
+        // },
+        // {
+        //     title: "Collaboration & Outreach",
+        //     description: "To act as a link between academia, industry, and policymakers, fostering collaborations for herbal sector growth, technology transfer, and socio-economic upliftment of communities."
+        // }
     ]
 };

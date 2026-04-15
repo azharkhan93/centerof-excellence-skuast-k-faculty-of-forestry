@@ -15,7 +15,7 @@ export default function AboutPage() {
             <About />
             <AboutTabsSection />
             {/* <WhyChoose /> */}
-            <AboutRD />
+            
             <AboutJourney />
         </div>
     );
