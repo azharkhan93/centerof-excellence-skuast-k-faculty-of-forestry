@@ -15,7 +15,7 @@ export const useHeroSlider = (services: Service[], isLoaded: boolean = true, del
             const nextMod = (next + services.length) % services.length;
             if (s.isAnimating || nextMod === s.index) return s;
 
-            // Calculate smart direction for circular wrapping
+         
             let direction = nextMod > s.index ? 1 : -1;
             
             // Handle wrap-around cases

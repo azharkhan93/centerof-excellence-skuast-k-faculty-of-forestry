@@ -90,8 +90,8 @@ export const BookingForm: React.FC = () => {
                 {/* Sticky-style Bottom Actions */}
                 <div className="mt-12 pt-8 border-t border-slate-100 flex items-center justify-between">
                     <div>
-                        {/* Hide total on first step as requested */}
-                        {step !== 0 && step !== 3 && (
+                        {/* Hide total on first step and for HADP Farmers as requested */}
+                        {step !== 0 && step !== 3 && !(formData.occupation === 'farmer' && formData.isHADP) && (
                             <div className="flex flex-col animate-in fade-in slide-in-from-left-4">
                                 <span className="text-[9px] font-black uppercase tracking-[0.2em] text-slate-400 mb-1">Estimated Total</span>
                                 <span className="text-xl font-bold text-slate-900">₹{totalCost.toLocaleString('en-IN')} <span className="text-[10px] text-slate-400 font-medium">*Excl. Tax</span></span>

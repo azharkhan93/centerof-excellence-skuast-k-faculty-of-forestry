@@ -46,7 +46,11 @@ export const ReviewSubmit: React.FC<ReviewSubmitProps> = ({ formData, totalCost,
             <div className="p-6 rounded-2xl bg-slate-900 text-white flex items-center justify-between">
                 <div>
                     <span className="text-[9px] font-black uppercase tracking-[0.2em] text-slate-500">Summary Submission</span>
-                    <h5 className="font-bold text-sm text-brand-light">₹{totalCost.toLocaleString('en-IN')} ESTIMATED TOTAL</h5>
+                    <h5 className="font-bold text-sm text-brand-light">
+                        {formData.occupation === 'farmer' && formData.isHADP 
+                            ? 'FREE (HADP PROJECT)' 
+                            : `₹${totalCost.toLocaleString('en-IN')} ESTIMATED TOTAL`}
+                    </h5>
                 </div>
                 <div className="flex items-center gap-2 text-brand-light text-[10px] font-black uppercase tracking-widest bg-white/5 px-4 py-2 rounded-xl border border-white/10">
                     <CheckCircle2 size={16} /> Digital Review Required
