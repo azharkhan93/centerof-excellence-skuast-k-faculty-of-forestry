@@ -126,7 +126,7 @@ export const COMPANY_INFO = {
         "/images/skuast-logo.png"
     ],
     tagline: "Excellence in Research & Innovation",
-    description: "The Centre of Excellence on Herbal Technology at SKUAST-Kashmir is dedicated to advancing the science and technology of herbal products and forestry research."
+    description: "Centre of excellence on herbal technology (CoEHT) is a state-of-the-art laboratory established in 2023 at FOF SKUAST-K Srinagar.CoEHT RCRQA is the only laboratory in the UTs of J&K with muiltidisciplinary facilities under one roof "
 };
 
 export const STATS_DATA = [
