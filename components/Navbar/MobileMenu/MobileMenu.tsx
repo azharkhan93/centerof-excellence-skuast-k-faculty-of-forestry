@@ -122,7 +122,7 @@ export const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose, locale,
                             <LanguageSwitcher />
                         </div> */}
                         <Link href={`/${locale}/contact`} onClick={onClose}>
-                            <Button variant="primary" size="lg" className="w-full justify-center text-lg">
+                            <Button variant="primary" size="md" className="w-full justify-center text-lg">
                                 {t('contact')}
                             </Button>
                         </Link>

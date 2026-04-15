@@ -1282,3 +1282,27 @@ export const BOOKING_TERMS = [
     "Results are strictly for academic/research purposes and hold no legal validity.",
     "The PI, CoEHT reserves the right to accept or reject any application without assigning reasons."
 ];
+
+// --- BOOKING FORM CONSTANTS ---
+
+export const OCCUPATION_OPTIONS = [
+    { label: "Entrepreneur", value: "entrepreneur" },
+    { label: "Scientist", value: "scientist" },
+    { label: "Student Researcher", value: "student" },
+    { label: "Farmer", value: "farmer" }
+];
+
+export const SPECIMEN_TYPE_OPTIONS = [
+    { label: "Plant / Plant Part", value: "Plant" },
+    { label: "Honey", value: "Honey" },
+    { label: "NTFPs", value: "NTFPs" },
+    { label: "Essential Oil", value: "Essential oil" },
+    { label: "Herbal Formulation", value: "Herbal Products" },
+    { label: "Other", value: "Other" }
+];
+
+export const PURPOSE_OPTIONS = [
+    { label: "Academic Research", value: "academic" },
+    { label: "Commercial / Industrial", value: "commercial" },
+    { label: "Other (Please specify below)", value: "other" }
+];
