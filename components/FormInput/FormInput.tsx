@@ -15,6 +15,7 @@ interface FormInputProps {
     variant?: "dark" | "light";
     rows?: number; 
     options?: { label: string; value: string }[]; 
+    prefix?: string;
 }
 
 export const FormInput: React.FC<FormInputProps> = ({
@@ -29,7 +30,8 @@ export const FormInput: React.FC<FormInputProps> = ({
     containerClassName = "",
     variant = "dark",
     rows = 4,
-    options = []
+    options = [],
+    prefix
 }) => {
     const isDark = variant === "dark";
 
@@ -48,29 +50,23 @@ export const FormInput: React.FC<FormInputProps> = ({
     const finalInputClasses = `${inputBase} ${inputTheme} ${className}`;
 
     const renderInput = () => {
+        const inputProps = {
+            name,
+            value,
+            onChange: onChange as any,
+            required,
+            placeholder,
+            className: `${finalInputClasses} ${prefix ? (isDark ? 'pl-16' : 'pl-16') : ''} ${type === "textarea" ? 'resize-none' : ''}`,
+            rows: type === "textarea" ? rows : undefined,
+        };
+
         if (type === "textarea") {
-            return (
-                <textarea
-                    name={name}
-                    value={value}
-                    onChange={onChange as any}
-                    required={required}
-                    rows={rows}
-                    placeholder={placeholder}
-                    className={`${finalInputClasses} resize-none`}
-                />
-            );
+            return <textarea {...inputProps} />;
         }
 
         if (type === "select") {
             return (
-                <select
-                    name={name}
-                    value={value}
-                    onChange={onChange as any}
-                    required={required}
-                    className={finalInputClasses}
-                >
+                <select {...inputProps} className={finalInputClasses}>
                     {options.map((option) => (
                         <option key={option.value} value={option.value} className={isDark ? "bg-slate-900" : "bg-white"}>
                             {option.label}
@@ -81,15 +77,18 @@ export const FormInput: React.FC<FormInputProps> = ({
         }
 
         return (
-            <input
-                type={type}
-                name={name}
-                value={value}
-                onChange={onChange as any}
-                required={required}
-                placeholder={placeholder}
-                className={finalInputClasses}
-            />
+            <div className="relative group">
+                {prefix && (
+                    <div className={`absolute left-0 top-0 bottom-0 flex items-center px-4 font-black text-xs tracking-widest border-r transition-colors ${
+                        isDark 
+                        ? 'text-slate-500 bg-slate-800/80 border-slate-700' 
+                        : 'text-brand bg-slate-100 border-slate-200'
+                    } rounded-l-xl`}>
+                        {prefix}
+                    </div>
+                )}
+                <input type={type} {...inputProps} />
+            </div>
         );
     };
 

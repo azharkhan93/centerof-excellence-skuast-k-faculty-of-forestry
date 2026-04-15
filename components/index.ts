@@ -26,3 +26,5 @@ export * from "./LabTour/LabTour";
 export * from "./Team";
 export * from "./Gallery";
 export * from "./TrainingInternships";
+export * from "./BookingForm";
+export * from "./Dropdown";

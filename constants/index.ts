@@ -1170,3 +1170,84 @@ export const INTERNSHIP_PAGE_DATA = {
         ]
     }
 };
+
+export const TEST_CATEGORIES = [
+    { id: "gen", label: "General Assays" },
+    { id: "phyto", label: "Phytochemical Analysis" },
+    { id: "instr", label: "Instrumental Analysis" },
+    { id: "nutri", label: "Nutritional Analysis" },
+    { id: "nano", label: "Nanomaterial Synthesis" },
+    { id: "qual", label: "Quality Testing" },
+    { id: "bio", label: "Biological Activity" }
+];
+
+export const PRICING_DATABASE = [
+    // General
+    { id: "dna", cat: "gen", title: "DNA Barcoding", prices: { entrepreneur: 4500, scientist: 4000, student: 3500, farmer: 3000 }, unit: "sample" },
+    { id: "ext", cat: "gen", title: "Extraction", prices: { entrepreneur: 1000, scientist: 700, student: 500, farmer: 300 }, unit: "solvent" },
+    
+    // Phytochemical
+    { id: "phy_scr", cat: "phyto", title: "Qualitative Phytochemical Screening", prices: { entrepreneur: 3000, scientist: 2500, student: 2000, farmer: 1500 }, unit: "sample" },
+    { id: "tot_phe", cat: "phyto", title: "Total Phenolic Content", prices: { entrepreneur: 2000, scientist: 1500, student: 1200, farmer: 1000 }, unit: "sample" },
+    { id: "tot_fla", cat: "phyto", title: "Total Flavonoid Content", prices: { entrepreneur: 2000, scientist: 1500, student: 1200, farmer: 1000 }, unit: "sample" },
+    { id: "tot_alk", cat: "phyto", title: "Total Alkaloid Content", prices: { entrepreneur: 2000, scientist: 1500, student: 1200, farmer: 1000 }, unit: "sample" },
+
+    // Instrumental
+    { id: "lcms", cat: "instr", title: "LC-MS/MS", prices: { entrepreneur: 6500, scientist: 6000, student: 5500, farmer: 5000 }, unit: "compound" },
+    { id: "flash", cat: "instr", title: "FLASH/PREP Chromatography", prices: { entrepreneur: 14000, scientist: 13500, student: 13000, farmer: 12500 }, unit: "compound" },
+    { id: "uv_vis", cat: "instr", title: "UV-Visible Spectrophotometry", prices: { entrepreneur: 1200, scientist: 800, student: 700, farmer: 500 }, unit: "sample" },
+    { id: "ftir", cat: "instr", title: "FTIR Analysis", prices: { entrepreneur: 1200, scientist: 800, student: 700, farmer: 500 }, unit: "sample" },
+
+    // Nutritional
+    { id: "ash", cat: "nutri", title: "Ash content", prices: { entrepreneur: 400, scientist: 350, student: 300, farmer: 250 }, unit: "sample" },
+    { id: "mst_n", cat: "nutri", title: "Moisture content", prices: { entrepreneur: 400, scientist: 350, student: 300, farmer: 250 }, unit: "sample" },
+    { id: "fat", cat: "nutri", title: "Crude fat", prices: { entrepreneur: 400, scientist: 350, student: 300, farmer: 250 }, unit: "sample" },
+    { id: "prot", cat: "nutri", title: "Crude protein", prices: { entrepreneur: 400, scientist: 350, student: 300, farmer: 250 }, unit: "sample" },
+    { id: "enrg", cat: "nutri", title: "Energy", prices: { entrepreneur: 400, scientist: 350, student: 300, farmer: 250 }, unit: "sample" },
+    { id: "fibr", cat: "nutri", title: "Fiber", prices: { entrepreneur: 400, scientist: 350, student: 300, farmer: 250 }, unit: "sample" },
+    { id: "carb", cat: "nutri", title: "Carbohydrate", prices: { entrepreneur: 400, scientist: 350, student: 300, farmer: 250 }, unit: "sample" },
+
+    // Nanomaterial
+    { id: "ag_np", cat: "nano", title: "Silver Nanoparticles", prices: { entrepreneur: 3500, scientist: 3000, student: 2500, farmer: 2000 }, unit: "sample" },
+    { id: "zn_np", cat: "nano", title: "Zinc Nanoparticles", prices: { entrepreneur: 3500, scientist: 3000, student: 2500, farmer: 2000 }, unit: "sample" },
+    { id: "cu_np", cat: "nano", title: "Copper Nanoparticles", prices: { entrepreneur: 3500, scientist: 3000, student: 2500, farmer: 2000 }, unit: "sample" },
+    { id: "mg_np", cat: "nano", title: "Magnesium Nanoparticles", prices: { entrepreneur: 3500, scientist: 3000, student: 2500, farmer: 2000 }, unit: "sample" },
+    { id: "mn_np", cat: "nano", title: "Manganese Nanoparticles", prices: { entrepreneur: 3500, scientist: 3000, student: 2500, farmer: 2000 }, unit: "sample" },
+    { id: "nano_em", cat: "nano", title: "Nano emulsions", prices: { entrepreneur: 3500, scientist: 3000, student: 2500, farmer: 2000 }, unit: "sample" },
+
+    // Quality Testing
+    { id: "ph", cat: "qual", title: "pH", prices: { entrepreneur: 400, scientist: 300, student: 250, farmer: 200 }, unit: "sample" },
+    { id: "sp_gr", cat: "qual", title: "Specific Gravity", prices: { entrepreneur: 1000, scientist: 800, student: 700, farmer: 500 }, unit: "sample" },
+    { id: "ref_ind", cat: "qual", title: "Refractive Index", prices: { entrepreneur: 1000, scientist: 800, student: 700, farmer: 500 }, unit: "sample" },
+    { id: "tfm", cat: "qual", title: "Total Fatty Matter", prices: { entrepreneur: 1000, scientist: 800, student: 700, farmer: 500 }, unit: "sample" },
+    { id: "mst_q", cat: "qual", title: "Moisture content (Quality)", prices: { entrepreneur: 800, scientist: 600, student: 450, farmer: 400 }, unit: "sample" },
+    { id: "acid", cat: "qual", title: "Free acidity", prices: { entrepreneur: 1000, scientist: 800, student: 700, farmer: 500 }, unit: "sample" },
+    { id: "red_sug", cat: "qual", title: "Total reducing sugar", prices: { entrepreneur: 1500, scientist: 1100, student: 900, farmer: 700 }, unit: "sample" },
+    { id: "sucr", cat: "qual", title: "Sucrose", prices: { entrepreneur: 1500, scientist: 1100, student: 900, farmer: 700 }, unit: "sample" },
+    { id: "opt_den", cat: "qual", title: "Optical density", prices: { entrepreneur: 800, scientist: 600, student: 450, farmer: 400 }, unit: "sample" },
+    { id: "fiehe", cat: "qual", title: "Fiehe's test", prices: { entrepreneur: 1000, scientist: 800, student: 700, farmer: 500 }, unit: "sample" },
+    { id: "organo", cat: "qual", title: "Organoleptic tests", prices: { entrepreneur: 1000, scientist: 800, student: 700, farmer: 500 }, unit: "sample" },
+    { id: "tox", cat: "qual", title: "Toxicity analysis", prices: { entrepreneur: 4000, scientist: 3500, student: 3000, farmer: 2500 }, unit: "sample" },
+
+    // Biological
+    { id: "dpph", cat: "bio", title: "DPPH Antioxidant assay", prices: { entrepreneur: 2000, scientist: 1500, student: 1200, farmer: 1000 }, unit: "sample" },
+    { id: "frap", cat: "bio", title: "FRAP Antioxidant assay", prices: { entrepreneur: 2000, scientist: 1500, student: 1200, farmer: 1000 }, unit: "sample" },
+    { id: "antidiab", cat: "bio", title: "alpha-amylase antidiabetic assay", prices: { entrepreneur: 3000, scientist: 2500, student: 2000, farmer: 1500 }, unit: "sample" },
+    { id: "anti_disc", cat: "bio", title: "Antimicrobial disc diffusion", prices: { entrepreneur: 2000, scientist: 1500, student: 1200, farmer: 1000 }, unit: "Strain/sample" },
+    { id: "mic", cat: "bio", title: "MIC determination", prices: { entrepreneur: 2000, scientist: 1500, student: 1200, farmer: 1000 }, unit: "Strain/sample" },
+    { id: "mbc", cat: "bio", title: "MBC determination", prices: { entrepreneur: 2000, scientist: 1500, student: 1200, farmer: 1000 }, unit: "Strain/sample" },
+    { id: "poison", cat: "bio", title: "Poison food technique", prices: { entrepreneur: 2000, scientist: 1500, student: 1200, farmer: 1000 }, unit: "Strain/sample" }
+];
+
+export const BOOKING_TERMS = [
+    "Submit duly-filled, signed and complete application form to PI, CoEHT, SKUAST-K Kashmir.",
+    "Incomplete application, improperly filled, or lacking essential sample details are liable to be rejected.",
+    "Samples must be in sufficient quantity (Extract Min. 250g, Raw Material Min. 500g), properly labelled and of good quality.",
+    "Processing of samples granted only after full payment is made in advance. Payments are non-refundable.",
+    "Applicants must follow all lab rules and use equipment responsibly. User bears all costs for any damage.",
+    "Applicants shall duly acknowledge the CoEHT facility in all publications, patents, and reports.",
+    "Samples analyzed on first-come, first-served basis. Time required depends on complexity.",
+    "Results shared via email. Queries must be raised within 5 days of report generation.",
+    "Results are strictly for academic/research purposes and hold no legal validity.",
+    "The PI, CoEHT reserves the right to accept or reject any application without assigning reasons."
+];
