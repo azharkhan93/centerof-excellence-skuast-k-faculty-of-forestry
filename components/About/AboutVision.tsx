@@ -31,12 +31,12 @@ export const AboutVision: React.FC = () => {
                     </span>
                 </div>
                 
-                <h2 className="text-4xl font-bold text-slate-900 mb-8 leading-tight tracking-tight">
-                    Bridging tradition with <br />
-                    <span className="text-brand">high-precision science.</span>
+                <h2 className="text-3xl font-bold text-slate-900 mb-8 leading-tight tracking-tight">
+                    Reimagining traditions <br />
+                    <span className="text-brand">for global wellness.</span>
                 </h2>
                 
-                <p className="text-slate-500 text-lg leading-relaxed mb-10 font-medium">
+                <p className="text-slate-600 text-lg leading-relaxed mb-10 font-medium">
                     {ABOUT_VISION.content}
                 </p>
 

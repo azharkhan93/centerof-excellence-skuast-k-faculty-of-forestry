@@ -136,24 +136,118 @@ export const STATS_DATA = [
     { id: 4, label: "Tech Developed", value: "10+", icon: "Cpu" }
 ];
 
+export const ABOUT_INFO = {
+    badge: "Integrated Institutional Model",
+    title: "Centre of Excellence",
+    subtitle: "on Herbal Technology",
+    description: "The Centre of Excellence on Herbal Technology (CoEHT), established under the prestigious HADP scheme of the Government of J&K in 2023-24, is dedicated to advancing research, fostering innovation, and supporting incubation in the Medicinal and Aromatic Plants (MAPs) sector to build a technology-driven bioeconomy. \n\nEquipped with state-of-art research facilities, a MAPs germplasm bank, herbarium specimens, and a crude drug repository, the centre provides advanced analytical and technological support for the herbal sector. CoEHT holds the distinction of authenticating temperate MAP species and raw herbal drugs through traditional macroscopic examination and advanced molecular techniques, ensuring the credibility and reliability of resources for research and pharmaceutical applications.",
+    points: [
+        "Temperate MAP Species Authentication",
+        "Himalayan Germplasm Bank & Repository",
+        "HADP Scheme Government Integration",
+        "Translational Bioeconomy Development"
+    ]
+};
+
+// About Page Vision & Mission
+export const ABOUT_VISION = {
+    title: "Our Vision",
+    badge: "Future Perspective",
+    content: "Reimagining the herbal traditions of North-Western Himalaya to drive global health and wellness innovations, socio-ecological resilience, and economic prosperity.",
+    image: "/images/hero2.webp"
+};
+
+export const ABOUT_MISSION = {
+    title: "Our Mission",
+    badge: "Core Purpose",
+    content: "Strengthen the MAPs sector through translational research, innovation, and incubation for transforming the traditional raw botanical trade into high-value herbal extracts and products.",
+    points: [
+        "Translational Research Leadership",
+        "Innovation in MAPs Sector",
+        "Incubation for High-value Trade",
+        "Traditional Heritage Transformation"
+    ],
+    image: "/images/hero2.webp"
+};
+
 export const OBJECTIVES_DATA = [
     {
         id: 1,
-        title: "Sustainable Production",
-        description: "To identify elite germplasm of MAPs for sustainable production and efficient commercialization.",
-        iconName: "Sprout"
+        title: "Omics-Driven Therapeutics",
+        description: "To pioneer novel therapeutics by harnessing omics-driven biomarker identification, nano-technology, and advanced bioanalytics for transformative drug discovery.",
+        iconName: "Dna"
     },
     {
         id: 2,
-        title: "Industrial Applications",
-        description: "To explore species for Active Principal Ingredients (APIs) and formulations for different industrial applications.",
+        title: "Industrial Bioprospecting",
+        description: "To explore elite germplasm of MAPs for sustainable production, active principal ingredients (APIs), and formulations for different industrial applications.",
         iconName: "FlaskConical"
     },
     {
         id: 3,
-        title: "Knowledge Sharing",
-        description: "To foster knowledge-sharing among communities, industries and researchers to drive herbal innovations.",
+        title: "Knowledge Commercialization",
+        description: "To foster knowledge-sharing among communities, industries and researchers to drive herbal innovation, commercialization and promotion of quality standards.",
         iconName: "Users"
+    }
+];
+
+export const SCOPE_DATA = [
+    "Natural Product Chemistry", "Phytochemistry", "Pharmacognosy", 
+    "Bio-prospecting Bioresources", "Molecular and Chemotaxonomy", 
+    "Process Optimization", "Herbal Formulations", "Encapsulation", 
+    "Quality Assurance and Safety", "Contamination and Toxicity testing", 
+    "Certification", "Innovation & Sustainability", "Design & Development", 
+    "Incubation & Entrepreneurship", "Mentorship & Networking"
+];
+
+export const RD_PRIORITIES_DATA = [
+    {
+        id: 1,
+        title: "Conservation of RET Species",
+        desc: "Resource assessment, collection, characterization, and conservation of rare, endangered and threatened (RET) species of MAPs and wildedibles.",
+        icon: "Shield"
+    },
+    {
+        id: 2,
+        title: "Sustainable Mass Production",
+        desc: "Developing mass-production, sustainable harvesting, extraction and processing technologies for medicinal and aromatic plants.",
+        icon: "Factory"
+    },
+    {
+        id: 3,
+        title: "Molecular Authentication",
+        desc: "Molecular and chemotaxonomic studies for species authentication and quality assurance to ensure market credibility.",
+        icon: "Dna"
+    },
+    {
+        id: 4,
+        title: "Ecological Transformations",
+        desc: "Studying ecological transformations and their influence on the variability of bioactive compounds in Himalayan flora.",
+        icon: "Leaf"
+    },
+    {
+        id: 5,
+        title: "Bioactive Isolation",
+        desc: "Phytochemical evaluation of crude extracts for quantification, characterization and isolation of bioactive compounds for industrial use.",
+        icon: "Beaker"
+    },
+    {
+        id: 6,
+        title: "Safety & Efficacy Models",
+        desc: "Evaluating efficacy and safety of novel therapeutic agents through in-vitro and in-vivo models.",
+        icon: "Stethoscope"
+    },
+    {
+        id: 7,
+        title: "Traditional Validation",
+        desc: "Documentation and scientific validation of indigenous herbal practices and integration of traditional knowledge through R&D.",
+        icon: "History"
+    },
+    {
+        id: 8,
+        title: "Certification Protocols",
+        desc: "Development of comprehensive contamination screening and certification protocols to ensure safety and market readiness.",
+        icon: "FileCheck"
     }
 ];
 
@@ -184,26 +278,50 @@ export const PROCESS_DATA = [
     }
 ];
 
-// About Page Vision & Mission
-export const ABOUT_VISION = {
-    title: "Our Vision",
-    badge: "Future Perspective",
-    content: "To be a global vanguard in Himalayan herbal technology, bridging ancient wisdom with modern high-precision science for sustainable human welfare. We envision a future where traditional pharmacology and molecular science collaborate to unlock the full therapeutic potential of Himalayan biodiversity.",
-    image: "/images/hero2.webp"
-};
-
-export const ABOUT_MISSION = {
-    title: "Our Mission",
-    badge: "Core Purpose",
-    content: "To provide world-class technical support to researchers, farmers, and entrepreneurs through advanced phytochemical evaluation, innovation in extraction processes, and conservation of Himalayan medicinal biodiversity. We are committed to transforming the herbal sector into a high-value industrial powerhouse.",
-    points: [
-        "Advanced Phytochemical Characterization",
-        "Sustainable Agriculture & Quality Control",
-        "Entrepreneurship Development",
-        "Biodiversity Mapping & Conservation"
-    ],
-    image: "/images/hero2.webp"
-};
+export const WHY_CHOOSE_DATA = [
+    {
+        id: 1,
+        title: "Authenticity & Trust",
+        desc: "Validated germplasm ensures genuine, reliable plant material and institutional credibility.",
+        icon: "ShieldCheck"
+    },
+    {
+        id: 2,
+        title: "State-of-the-Art Labs",
+        desc: "End-to-end capabilities from sample preparation to high-end instrumentation halls.",
+        icon: "Cpu"
+    },
+    {
+        id: 3,
+        title: "Interdisciplinary Expertise",
+        desc: "Integration of botany, phytochemistry, and pharmacology under one institutional roof.",
+        icon: "Network"
+    },
+    {
+        id: 4,
+        title: "Innovation & Linkages",
+        desc: "Encouraging collaborative research, product development, and global value-chain linkages.",
+        icon: "Lightbulb"
+    },
+    {
+        id: 5,
+        title: "Internships & Training",
+        desc: "Specialized practical training and workshops on MAPs instrumentation for global stakeholders.",
+        icon: "GraduationCap"
+    },
+    {
+        id: 6,
+        title: "21-Day Turnaround",
+        desc: "Rapid analytical results ensuring you win the market quicker through high-velocity data.",
+        icon: "Timer"
+    },
+    {
+        id: 7,
+        title: "Cost-Efficient Services",
+        desc: "Highest precision analytical services at significantly lower industrial operational costs.",
+        icon: "BadgeDollarSign"
+    }
+];
 
 // Product Types
 export interface Product {
@@ -385,10 +503,30 @@ export const CORE_VALUES = [
 ];
 
 export const COMPANY_JOURNEY = [
-    { id: 1, year: "2018", key: "foundation" },
-    { id: 2, year: "2021", key: "analytical" },
-    { id: 3, year: "2023", key: "innovation_hub" },
-    { id: 4, year: "2024", key: "global_reach" }
+    { 
+        id: 1, 
+        year: "2023-24", 
+        title: "Centre Establishment",
+        desc: "CoEHT was established at Faculty of Forestry SKUAST-Kashmir under the Holistic Agriculture Development Programme (HADP) to advance herbal technology." 
+    },
+    { 
+        id: 2, 
+        year: "2023-24", 
+        title: "Germplasm Conservation",
+        desc: "Expansion of Himalayan biodiversity through the establishment of a dedicated germplasm bank for rare and endangered medicinal plants." 
+    },
+    { 
+        id: 3, 
+        year: "2024", 
+        title: "Advanced Lab Setup",
+        desc: "Commissioned state-of-the-art analytical facilities and high-precision instrumentation at the Faculty of Forestry SKUAST-K." 
+    },
+    { 
+        id: 4, 
+        year: "2024", 
+        title: "National Coordination",
+        desc: "Appointed as the coordinating centre for RCFC North II and the Research Centre for Residue & Quality Analysis at SKUAST-K." 
+    }
 ];
 
 

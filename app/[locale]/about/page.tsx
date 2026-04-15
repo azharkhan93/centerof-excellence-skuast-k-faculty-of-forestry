@@ -1,4 +1,4 @@
-import { About, AboutTabsSection, AboutValues, AboutJourney, PageHeader } from "@/components";
+import { About, AboutTabsSection, AboutObjectives, WhyChoose, AboutScope, AboutRD, AboutJourney, PageHeader } from "@/components";
 import { useTranslations } from "next-intl";
 
 export default function AboutPage() {
@@ -14,7 +14,10 @@ export default function AboutPage() {
 
             <About />
             <AboutTabsSection />
-            <AboutValues />
+            <AboutObjectives />
+            <WhyChoose />
+            <AboutScope />
+            <AboutRD />
             <AboutJourney />
         </div>
     );

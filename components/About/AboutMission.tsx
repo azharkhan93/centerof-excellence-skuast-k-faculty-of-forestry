@@ -32,12 +32,12 @@ export const AboutMission: React.FC = () => {
                     </span>
                 </div>
 
-                <h2 className="text-4xl  font-bold text-slate-900 mb-8 leading-tight tracking-tight">
-                    Transforming the herbal <br />
-                    <span className="text-brand">industrial powerhouse.</span>
+                <h2 className="text-3xl font-bold text-slate-900 mb-8 leading-tight tracking-tight">
+                    Strengthening the MAPs sector <br />
+                    <span className="text-brand">through translational research.</span>
                 </h2>
 
-                <p className="text-slate-500 text-lg leading-relaxed mb-12 font-medium max-w-2xl">
+                <p className="text-slate-600 text-lg leading-relaxed mb-12 font-medium max-w-2xl">
                     {ABOUT_MISSION.content}
                 </p>
                 
