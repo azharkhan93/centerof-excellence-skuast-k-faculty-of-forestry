@@ -130,7 +130,7 @@ export const BookingForm: React.FC = () => {
                             disabled={step === 0}
                             className={step === 0 ? 'hidden' : ''}
                         >
-                            <ChevronLeft size={18} className="mr-2" /> Back
+                            <ChevronLeft size={18} /> Back
                         </Button>
                         <Button 
                             onClick={() => {
@@ -161,7 +161,7 @@ export const BookingForm: React.FC = () => {
                             }}
                             disabled={step === 3 && !formData.acknowledged}
                         >
-                            {step === 3 ? 'Confirm & Submit' : 'Continue'} <ChevronRight size={18} className="ml-2" />
+                            {step === 3 ? 'Confirm & Submit' : 'Continue'} <ChevronRight size={18} />
                         </Button>
                     </div>
                 </div>
@@ -314,14 +314,13 @@ const ApplicantBio: React.FC<{ formData: any, updateField: any }> = ({ formData,
             <p className="text-slate-500 text-sm font-medium">Administrative details for analytical reporting.</p>
         </div>
         
-        <div className="grid md:grid-cols-2 gap-x-8 gap-y-6">
+        <div className="grid md:grid-cols-3 gap-x-8 gap-y-6">
             <FormInput 
                 label="Full Name" 
                 variant="light"
                 value={formData.applicantName} 
                 onChange={(e) => updateField('applicantName', e.target.value)} 
                 placeholder="Enter your name" 
-                containerClassName="md:col-span-2"
             />
             
             <FormInput 
@@ -349,7 +348,7 @@ const ApplicantBio: React.FC<{ formData: any, updateField: any }> = ({ formData,
                 label="Email Address" 
                 variant="light"
                 type="email"
-                containerClassName="md:col-span-2"
+                containerClassName="md:col-span-3"
                 value={formData.email} 
                 onChange={(e) => updateField('email', e.target.value)} 
                 placeholder="Result reports will be sent here" 
@@ -360,14 +359,14 @@ const ApplicantBio: React.FC<{ formData: any, updateField: any }> = ({ formData,
                 variant="light"
                 type="textarea"
                 rows={2}
-                containerClassName="md:col-span-2"
+                containerClassName="md:col-span-3"
                 value={formData.address} 
                 onChange={(e) => updateField('address', e.target.value)} 
                 placeholder="Full mailing address" 
             />
 
             {(formData.isHADP || formData.isStudentResearcher) && (
-                <div className="md:col-span-2 space-y-6 pt-6 border-t border-slate-100 animate-in fade-in slide-in-from-bottom-4">
+                <div className="md:col-span-3 space-y-6 pt-6 border-t border-slate-100 animate-in fade-in slide-in-from-bottom-4">
                     <h4 className="text-[10px] font-black uppercase tracking-widest text-brand">Institutional Verification Required</h4>
                     
                     {formData.isHADP && formData.occupation === 'farmer' && (
@@ -405,7 +404,7 @@ const SampleProfile: React.FC<{ formData: any, updateField: any }> = ({ formData
             <p className="text-slate-500 text-sm font-medium">Technical details regarding the provided samples.</p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-x-8 gap-y-6">
+        <div className="grid md:grid-cols-3 gap-x-8 gap-y-6">
             <Dropdown 
                 label="Type of Specimen" 
                 value={formData.sampleType}
@@ -424,7 +423,6 @@ const SampleProfile: React.FC<{ formData: any, updateField: any }> = ({ formData
 
             <Dropdown 
                 label="Research / Commercial Purpose" 
-                className="md:col-span-2"
                 value={formData.purpose}
                 onChange={(val: string) => updateField('purpose', val)}
                 options={PURPOSE_OPTIONS}
@@ -436,7 +434,7 @@ const SampleProfile: React.FC<{ formData: any, updateField: any }> = ({ formData
                     variant="light"
                     type="textarea"
                     rows={2}
-                    containerClassName="md:col-span-2"
+                    containerClassName="md:col-span-3"
                     value={formData.purposeOther} 
                     onChange={(e) => updateField('purposeOther', e.target.value)} 
                     placeholder="Describe specific analysis goals" 

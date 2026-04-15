@@ -49,7 +49,7 @@ export const Button: React.FC<ButtonProps> = ({
             {isLoading ? (
                 <span className="mr-2 h-4 w-4 animate-spin rounded-full  border-2 border-current border-t-transparent" />
             ) : null}
-            <span className="relative z-10">{children}</span>
+            <span className="relative z-10 flex items-center justify-center gap-2">{children}</span>
         </button>
     );
 };
