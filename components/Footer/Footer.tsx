@@ -187,7 +187,14 @@ export const Footer: React.FC = () => {
                             <div>
                                 <h4 className="text-white font-semibold text-sm mb-1">{t('contactInfo.address')}</h4>
                                 <p className="text-gray-400 text-sm leading-relaxed">
-                                    {CONTACT_INFO.address}<br />{CONTACT_INFO.city}, {CONTACT_INFO.state} {CONTACT_INFO.zip}
+                                    {CONTACT_INFO.address}
+                                    {(CONTACT_INFO.city || CONTACT_INFO.state || CONTACT_INFO.zip) && (
+                                        <>
+                                            <br />
+                                            {CONTACT_INFO.city && `${CONTACT_INFO.city}, `}
+                                            {CONTACT_INFO.state} {CONTACT_INFO.zip}
+                                        </>
+                                    )}
                                 </p>
                             </div>
                         </div>
