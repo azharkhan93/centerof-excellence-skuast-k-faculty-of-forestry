@@ -84,7 +84,7 @@ export const BrandingSection: React.FC = () => {
                     <motion.div 
                         initial={{ x: "-100%" }} 
                         animate={{ x: "0%" }} 
-                        transition={{ duration: 2.2, ease: "easeInOut", delay: 0.2 }} 
+                        transition={{ duration: 1.0, ease: "easeInOut", delay: 0.2 }} 
                         className="absolute inset-0 bg-brand" 
                     />
                     <motion.div 

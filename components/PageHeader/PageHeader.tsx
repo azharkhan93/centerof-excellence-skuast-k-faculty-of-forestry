@@ -18,9 +18,9 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
 }) => {
     return (
         <section className={`relative pt-40 pb-28 overflow-hidden ${bgColor} border-b border-white/5`}>
-            {/* High-End Institutional Background */}
+            
             <div className="absolute inset-0 z-0">
-                {/* Brand Gradients */}
+               
                 <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-brand/30 rounded-full blur-[160px] -translate-y-1/2 translate-x-1/2" />
                 <div className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-brand-light/20 rounded-full blur-[140px] translate-y-1/2 -translate-x-1/4" />
                 
@@ -33,7 +33,7 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
                     }} 
                 />
                 
-                {/* Subtle Botanical Texture (Geometric) */}
+               
                 <div className="absolute inset-0 opacity-[0.03]"
                     style={{ 
                         backgroundImage: `radial-gradient(circle at 2px 2px, #fff 1px, transparent 0)`,

@@ -6,7 +6,7 @@ export const SPRING_EASE: CubicBezier = [0.22, 1, 0.36, 1];
 export const SPLASH_TRANSITION = {
     duration: 1.2,
     ease: SPLASH_TRANSITION_EASE,
-    delay: 2.2
+    delay: 0.8
 };
 
 export const GRID_CONFIG = {

@@ -28,7 +28,7 @@ export const SplashWrapper: React.FC<SplashWrapperProps> = ({ children }) => {
             setIsLoaded(true);
             // Restore scrolling after delay
             document.body.style.overflow = "unset";
-        }, 3000); // Unified timing for branding display
+        }, 1500); // Unified timing for branding display
 
         return () => {
             clearTimeout(timer);
@@ -51,7 +51,7 @@ export const SplashWrapper: React.FC<SplashWrapperProps> = ({ children }) => {
                 transition={{ 
                     duration: 1.2, 
                     ease: [0.22, 1, 0.36, 1],
-                    delay: 2.2 // Matches the start of the clip-path lift
+                    delay: 0.8 // Matches the start of the clip-path lift
                 }}
             >
                 {children}

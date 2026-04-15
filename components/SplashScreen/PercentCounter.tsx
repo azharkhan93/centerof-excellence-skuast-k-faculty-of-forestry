@@ -8,7 +8,7 @@ export const PercentCounter: React.FC = () => {
 
     useEffect(() => {
         const controls = animate(0, 100, {
-            duration: 2.5,
+            duration: 1.2,
             ease: "easeInOut",
             onUpdate: (v) => setCount(Math.round(v))
         });
