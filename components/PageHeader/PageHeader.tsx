@@ -56,7 +56,7 @@ export const PageHeader: React.FC<PageHeaderProps> = ({
                             </span>
                         </div>
 
-                        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-8 tracking-tighter leading-[1.1]">
+                        <h1 className="text-4xl md:text-5xl  font-bold text-white mb-8 tracking-tighter leading-[1.1]">
                             {title}
                         </h1>
 
