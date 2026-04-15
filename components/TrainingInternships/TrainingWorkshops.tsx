@@ -25,10 +25,10 @@ export const TrainingWorkshops: React.FC = () => {
                         <span className="text-brand font-black tracking-[0.4em] uppercase text-[10px] block mb-4">
                             Skill Development
                         </span>
-                        <h2 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tighter mb-8 leading-[1.1]">
+                        <h2 className="text-4xl font-black text-slate-900 tracking-tighter mb-8 leading-[1.1]">
                             Practical Trainings & <span className="text-brand">Workshops</span>
                         </h2>
-                        <p className="text-slate-600 text-lg md:text-xl leading-relaxed font-medium">
+                        <p className="text-slate-600 text-lg md:text-md leading-relaxed font-medium">
                             {workshops.overview}
                         </p>
                     </motion.div>
