@@ -8,7 +8,7 @@ import { WHY_CHOOSE_DATA } from "@/constants";
 
 export const WhyChoose: React.FC = () => {
     return (
-        <section className="py-24 bg-white overflow-hidden">
+        <section className=" md:pb-0 pb-11 md:py-24 bg-white overflow-hidden">
             <div className="container mx-auto px-6 max-w-7xl">
                 <div className="flex flex-col md:grid md:grid-cols-12 gap-20 items-center">
                     
