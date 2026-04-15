@@ -43,10 +43,10 @@ export const DesktopNav: React.FC<DesktopNavProps> = ({ locale, t }) => {
                     ) : (
                         <Link
                             href={link.href === "/" ? `/${locale}` : `/${locale}${link.href}`}
-                            className="hover:text-orange-400 transition-colors uppercase tracking-widest text-[10px] relative group block py-2"
+                            className="hover:text-orange-500 transition-colors uppercase tracking-widest text-[10px] relative group block py-2"
                         >
                             {t(link.labelKey)}
-                            <span className="absolute bottom-1 left-0 w-0 h-[1px] bg-orange-400 transition-all duration-300 group-hover:w-full" />
+                            <span className="absolute bottom-1 left-0 w-0 h-[1px] bg-brand transition-all duration-300 group-hover:w-full" />
                         </Link>
                     )}
                 </div>
