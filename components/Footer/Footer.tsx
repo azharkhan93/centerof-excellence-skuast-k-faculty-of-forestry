@@ -56,7 +56,6 @@ export const Footer: React.FC = () => {
             links: [
                 { id: 1, label: t('company.about'), href: "/about" },
                 { id: 2, label: t('company.training'), href: "/training-and-internships" },
-                { id: 3, label: t('company.products'), href: "/products" },
                 { id: 4, label: t('company.contact'), href: "/contact" }
             ]
         },
